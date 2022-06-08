@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace Management_System
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -35,8 +35,8 @@ namespace Management_System
                 {
                     MessageBox.Show("Добре дошли, " + textBox1.Text + "!");
                     this.Hide();
-                    //Form2 frm = new Form2();
-                    //frm.Show();
+                    Menu frm = new Menu();
+                    frm.Show();
 
                 }
                 else
