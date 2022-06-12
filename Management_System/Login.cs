@@ -12,7 +12,6 @@ namespace Management_System
             InitializeComponent();
         }
 
-
         public string cs = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\Management_System\Management_System\DB_System.mdf;Integrated Security = True";
         public SqlConnection myconnection = default(SqlConnection);
         public SqlCommand mycommand = default(SqlCommand);

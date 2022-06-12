@@ -20,8 +20,8 @@ namespace Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            //Form3 frm = new Form3();
-            //frm.Show();
+            Inventory frm = new Inventory();
+            frm.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
