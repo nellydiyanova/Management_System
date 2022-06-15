@@ -13,23 +13,23 @@ namespace Management_System
         }
 
         public string cs = @"Data Source = (LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\source\repos\Management_System\Management_System\DB_System.mdf;Integrated Security = True";
-        public SqlConnection myconnection = default(SqlConnection);
-        public SqlCommand mycommand = default(SqlCommand);
+        public SqlConnection myConnection = default(SqlConnection);
+        public SqlCommand myCommand = default(SqlCommand);
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                myconnection = new SqlConnection(cs);
-                mycommand = new SqlCommand("Select * from Users where username=@username and password=@password", myconnection);
+                myConnection = new SqlConnection(cs);
+                myCommand = new SqlCommand("Select * from Users where username=@username and password=@password", myConnection);
                 SqlParameter uUsername = new SqlParameter("@username", SqlDbType.VarChar);
                 SqlParameter uPassword = new SqlParameter("@password", SqlDbType.VarChar);
                 uUsername.Value = textBox1.Text;
                 uPassword.Value = textBox2.Text;
-                mycommand.Parameters.Add(uUsername);
-                mycommand.Parameters.Add(uPassword);
-                mycommand.Connection.Open();
-                SqlDataReader myreader = mycommand.ExecuteReader(CommandBehavior.CloseConnection);
+                myCommand.Parameters.Add(uUsername);
+                myCommand.Parameters.Add(uPassword);
+                myCommand.Connection.Open();
+                SqlDataReader myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
                 if (myreader.Read() == true)
                 {
                     MessageBox.Show("Добре дошли, " + textBox1.Text + "!");
@@ -46,9 +46,9 @@ namespace Management_System
                     textBox1.Focus();
                 }
 
-                if (myconnection.State == ConnectionState.Open)
+                if (myConnection.State == ConnectionState.Open)
                 {
-                    myconnection.Dispose();
+                    myConnection.Dispose();
                 }
 
             }
