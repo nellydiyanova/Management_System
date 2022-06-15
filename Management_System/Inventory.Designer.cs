@@ -29,6 +29,7 @@ namespace Management_System
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Inventory");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
@@ -39,6 +40,10 @@ namespace Management_System
             this.treeView1.Font = new System.Drawing.Font("Californian FB", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Node0";
+            treeNode1.Text = "Inventory";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1});
             this.treeView1.Size = new System.Drawing.Size(236, 417);
             this.treeView1.TabIndex = 0;
             // 

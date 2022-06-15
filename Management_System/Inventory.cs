@@ -15,21 +15,32 @@ namespace Management_System
         Login frm = new Login();
         SqlConnection myconnection;
         SqlCommand mycommand = default(SqlCommand);
-        SqlDataAdapter adapt, adapt1;
+        SqlDataAdapter adapt;
         DataTable dt = new DataTable();
-        
-        private void displayData()
+        DataTable dt1 = new DataTable();
+
+        private void displayData1()
+        {
+            myconnection.Open();
+            adapt = new SqlDataAdapter("Select product_name from Inventory", myconnection);
+            adapt.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                TreeNode childnode = treeView1.Nodes[0];
+                childnode.Nodes.Add(dr["product_name"].ToString());
+            }
+            myconnection.Close();
+        }
+
+        private void displayData2()
         {
             myconnection.Open();
             adapt = new SqlDataAdapter("Select warehouse from Warehouses", myconnection);
-            adapt1 = new SqlDataAdapter("Select product_name from Inventory", myconnection);
-            adapt.Fill(dt);
-            adapt1.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
+            adapt.Fill(dt1);
+            foreach (DataRow dr in dt1.Rows)
             {
-                TreeNode node = new TreeNode(dr["warehouse"].ToString());
-                node.Nodes.Add(dr["product_name"].ToString());
-                treeView1.Nodes.Add(node);
+                TreeNode parentnode = new TreeNode(dr["warehouse"].ToString());
+                treeView1.Nodes.Add(parentnode);
             }
             myconnection.Close();
         }
@@ -39,11 +50,12 @@ namespace Management_System
             try
             {
                 myconnection = new SqlConnection(frm.cs);
-                mycommand = new SqlCommand("Select * from Warehouses", myconnection);
+                mycommand = new SqlCommand("Select product_name from Inventory", myconnection);
                 myconnection.Open();
                 mycommand.ExecuteNonQuery();
                 myconnection.Close();
-                displayData();
+                displayData1();
+                displayData2();
                 if (myconnection.State == ConnectionState.Open)
                 {
                     myconnection.Dispose();
