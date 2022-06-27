@@ -99,7 +99,6 @@ namespace Management_System
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            this.treeView1.SelectedNode = this.treeView1.Nodes[0];
             if (this.treeView1.Nodes[0].IsSelected)
             {
                 textBox1.Clear();
@@ -113,55 +112,69 @@ namespace Management_System
                 textBox9.Clear();
                 textBox10.Clear();
                 comboBox1.Text = "";
+            }
+
+            var selectedNode = treeView1.SelectedNode;
+            if (selectedNode != null)
+            {
+                if (selectedNode.Parent == null)
+                {
+                    groupBox1.Visible = true;
+                    groupBox2.Visible = false;
+                    myConnection = new SqlConnection(frm.cs);
+                    myCommand = new SqlCommand("Select * from Warehouses where warehouse=@warehouse", myConnection);
+                    myConnection.Open();
+                    myCommand.Parameters.AddWithValue("@warehouse", e.Node.Text);
+                    myConnection.Close();
+                    displayData3();
+                    myCommand.Connection.Open();
+                    SqlDataReader myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+                    if (myreader.Read() == true)
+                    {
+                        textBox1.Text = myreader["id_warehouse"].ToString();
+                        textBox2.Text = myreader["warehouse"].ToString();
+                        textBox3.Text = myreader["address"].ToString();
+                        textBox4.Text = myreader["zip_code"].ToString();
+                    }
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+                }
+                else
+                if (selectedNode.Parent != null)
+                {
+                    groupBox1.Visible = false;
+                    groupBox2.Visible = true;
+                    myConnection = new SqlConnection(frm.cs);
+                    myCommand = new SqlCommand("Select * from Inventory where product_name=@product_name", myConnection);
+                    myConnection.Open();
+                    myCommand.Parameters.AddWithValue("@product_name", e.Node.Text);
+                    myConnection.Close();
+                    displayData4();
+                    myCommand.Connection.Open();
+                    SqlDataReader myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+                    if (myreader.Read() == true)
+                    {
+                        textBox5.Text = myreader["id_product"].ToString();
+                        textBox6.Text = myreader["warehouse"].ToString();
+                        textBox7.Text = myreader["product_name"].ToString();
+                        textBox8.Text = myreader["delivery_price"].ToString();
+                        textBox9.Text = myreader["sale_price"].ToString();
+                        textBox10.Text = myreader["measure"].ToString();
+                        comboBox1.Text = myreader["supplier"].ToString();
+                    }
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+                }
+            }
+            else
+            {
                 groupBox1.Visible = false;
                 groupBox2.Visible = false;
             }
-
-                groupBox1.Visible = true;
-                myConnection = new SqlConnection(frm.cs);
-                myCommand = new SqlCommand("Select * from Warehouses where warehouse=@warehouse", myConnection);
-                myConnection.Open();
-                myCommand.Parameters.AddWithValue("@warehouse", e.Node.Text);
-                myConnection.Close();
-                displayData3();
-                myCommand.Connection.Open();
-                SqlDataReader myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
-                if (myreader.Read() == true)
-                {
-                    textBox1.Text = myreader["id_warehouse"].ToString();
-                    textBox2.Text = myreader["warehouse"].ToString();
-                    textBox3.Text = myreader["address"].ToString();
-                    textBox4.Text = myreader["zip_code"].ToString();
-                }
-                if (myConnection.State == ConnectionState.Open)
-                {
-                    myConnection.Dispose();
-                }
-
-
-                groupBox2.Visible = true;
-                myConnection = new SqlConnection(frm.cs);
-                myCommand = new SqlCommand("Select * from Inventory where product_name=@product_name", myConnection);
-                myConnection.Open();
-                myCommand.Parameters.AddWithValue("@product_name", e.Node.Text);
-                myConnection.Close();
-                displayData4();
-                myCommand.Connection.Open();
-                myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
-                if (myreader.Read() == true)
-                {
-                    textBox5.Text = myreader["id_product"].ToString();
-                    textBox6.Text = myreader["warehouse"].ToString();
-                    textBox7.Text = myreader["product_name"].ToString();
-                    textBox8.Text = myreader["delivery_price"].ToString();
-                    textBox9.Text = myreader["sale_price"].ToString();
-                    textBox10.Text = myreader["measure"].ToString();
-                    comboBox1.Text = myreader["supplier"].ToString();
-                }
-                if (myConnection.State == ConnectionState.Open)
-                {
-                    myConnection.Dispose();
-                }
         }
 
         private void button1_Click(object sender, EventArgs e)
