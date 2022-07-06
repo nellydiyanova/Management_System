@@ -65,6 +65,13 @@ namespace Management_System
 
         private void Inventory_Load(object sender, EventArgs e)
         {
+            TreeNode parentnode = new TreeNode("Inventory");
+            treeView1.Nodes.Add(parentnode);
+            /*foreach (TreeNode node in treeView1.Nodes)
+            {
+                node.Checked = false;
+                treeView1.SelectedNode = null;
+            }*/
             pictureBox1.Visible = true;
             pictureBox2.Visible = true;
             groupBox1.Visible = false;
@@ -109,6 +116,11 @@ namespace Management_System
 
         private void новСкладToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*foreach (TreeNode node in treeView1.Nodes)
+            {
+                node.Checked = false;
+                treeView1.SelectedNode = null;
+            }*/
             pictureBox1.Visible = false;
             pictureBox2.Visible = true;
             groupBox1.Visible = true;
@@ -117,6 +129,7 @@ namespace Management_System
             textBox2.Clear();
             textBox3.Clear();
             textBox4.Clear();
+
             textBox5.Clear();
             textBox6.Clear();
             textBox7.Clear();
@@ -193,9 +206,10 @@ namespace Management_System
                 button2.Enabled = false;
                 button2.BackColor = System.Drawing.Color.Red;
             }
+
             else
             {
-                if (selectedNode != null)
+                if (selectedNode != treeView1.Nodes[0] && selectedNode != null)
                 {
                     if (selectedNode.Parent == null)
                     {
@@ -266,11 +280,11 @@ namespace Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            TreeNode selectedNode = treeView1.SelectedNode;
+            if (selectedNode != treeView1.Nodes[0] && textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
             {
                 try
                 {
-                    textBox1.Enabled = false;
                     myConnection = new SqlConnection(frm.cs);
                     myCommand = new SqlCommand("update Warehouses set warehouse=@warehouse, address=@address, zip_code=@zip_code where id_warehouse=@id_warehouse", myConnection);
                     myConnection.Open();
@@ -285,17 +299,13 @@ namespace Management_System
                     {
                         myConnection.Dispose();
                     }
-
-                    TreeNode node = new TreeNode(textBox2.Text);
-                    //treeView1.Nodes.Add(node);
-                    //treeView1.SelectedNode(node);
-
-                    treeView1.SelectedNode.Text=textBox2.Text;
+                    treeView1.SelectedNode.Text = textBox2.Text;
                     textBox1.Clear();
                     textBox2.Clear();
                     textBox3.Clear();
                     textBox4.Clear();
                     groupBox1.Visible = false;
+                    
                 }
                 catch (Exception ex)
                 {
@@ -321,7 +331,6 @@ namespace Management_System
                     {
                         myConnection.Dispose();
                     }
-
                     TreeNode node = new TreeNode(textBox2.Text);
                     treeView1.Nodes.Add(node);
                     textBox1.Clear();
@@ -329,6 +338,8 @@ namespace Management_System
                     textBox3.Clear();
                     textBox4.Clear();
                     groupBox1.Visible = false;
+                    pictureBox1.Visible = true;
+                    
                 }
                 catch (Exception ex)
                 {
@@ -336,11 +347,16 @@ namespace Management_System
                 }
                 //MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        
         }
 
         private void новаСтокаToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            foreach (TreeNode node in treeView1.Nodes)
+            {
+                node.Checked = false;
+                treeView1.SelectedNode = null;
+            }
+            //treeView1.SelectedNode = null;
             pictureBox1.Visible = true;
             pictureBox2.Visible = false;
             groupBox1.Visible = false;
@@ -376,9 +392,46 @@ namespace Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            TreeNode selectedNode = treeView1.SelectedNode;
+            if (selectedNode != treeView1.Nodes[0] && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && textBox10.Text != "")
+             {
+                try
+                {
+                    myConnection = new SqlConnection(frm.cs);
+                    myCommand = new SqlCommand("update Inventory set id_product=@id_product, product_name=@product_name, delivery_price=@delivery_price, sale_price=@sale_price, measure=@measure, supplier=@supplier, warehouse=@warehouse  where id_product=@id_product", myConnection);
+                    myConnection.Open();
+                    myCommand.Parameters.AddWithValue("@id_product", textBox5.Text);
+                    myCommand.Parameters.AddWithValue("@warehouse", textBox6.Text);
+                    myCommand.Parameters.AddWithValue("@product_name", textBox7.Text);
+                    myCommand.Parameters.AddWithValue("@delivery_price", textBox8.Text);
+                    myCommand.Parameters.AddWithValue("@sale_price", textBox9.Text);
+                    myCommand.Parameters.AddWithValue("@measure", textBox10.Text);
+                    myCommand.Parameters.AddWithValue("@supplier", comboBox1.Text);
+                    myCommand.ExecuteNonQuery();
+                    myConnection.Close();
+                    MessageBox.Show("Успешна редакция!");
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+                    treeView1.SelectedNode.Text = textBox7.Text;
+                    textBox5.Clear();
+                    textBox6.Clear();
+                    textBox7.Clear();
+                    textBox8.Clear();
+                    textBox9.Clear();
+                    textBox10.Clear();
+                    groupBox2.Visible = false;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
             {
-                if (textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && textBox10.Text != "")
+                try
                 {
                     myConnection = new SqlConnection(frm.cs);
                     myCommand = new SqlCommand("insert into Inventory(id_product, product_name, delivery_price, sale_price, measure, supplier, warehouse) values(@id_product, @product_name, @delivery_price, @sale_price, @measure, @supplier, @warehouse)", myConnection);
@@ -397,7 +450,6 @@ namespace Management_System
                     {
                         myConnection.Dispose();
                     }
-
                     TreeNode node = new TreeNode(textBox7.Text);
                     TreeNode childnode = treeView1.Nodes[0];
                     childnode.Nodes.Add(node);
@@ -408,16 +460,88 @@ namespace Management_System
                     textBox9.Clear();
                     textBox10.Clear();
                     groupBox2.Visible = false;
+                    pictureBox2.Visible = true;
                 }
-                else
+
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                //MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void стоковаСправкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Stock_reference frm = new Stock_reference();
+            frm.Show();
+        }
+
+        private void изтриванеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TreeNode selectedNode = treeView1.SelectedNode;
+            if (selectedNode != treeView1.Nodes[0] && textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                try
+                {
+                    myConnection = new SqlConnection(frm.cs);
+                    myCommand = new SqlCommand("delete Warehouses where id_warehouse=@id_warehouse", myConnection);
+                    myConnection.Open();
+                    myCommand.Parameters.AddWithValue("@id_warehouse", textBox1.Text);
+                    myCommand.ExecuteNonQuery();
+                    myConnection.Close();
+                    MessageBox.Show("Успешно изтрит склад!");
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
+                    groupBox1.Visible = false;
+                    pictureBox1.Visible = true;
+                    treeView1.SelectedNode.Remove();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-            catch (Exception ex)
+            else
+            if (selectedNode != treeView1.Nodes[0] && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && textBox10.Text != "")
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+
+                    myConnection = new SqlConnection(frm.cs);
+                    myCommand = new SqlCommand("delete Inventory where id_product=@id_product", myConnection);
+                    myConnection.Open();
+                    myCommand.Parameters.AddWithValue("@id_product", textBox5.Text);
+                    myCommand.ExecuteNonQuery();
+                    myConnection.Close();
+                    MessageBox.Show("Успешно изтрита стока!");
+                    
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+                    textBox5.Clear();
+                    textBox6.Clear();
+                    textBox7.Clear();
+                    textBox8.Clear();
+                    textBox9.Clear();
+                    textBox10.Clear();
+                    groupBox2.Visible = false;
+                    pictureBox2.Visible = true;
+
+                    treeView1.SelectedNode.Remove();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             } 
         }
     }

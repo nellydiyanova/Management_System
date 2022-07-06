@@ -67,6 +67,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_SystemDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_SystemDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Inventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +92,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stock_reference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock_reference.Designer.cs">
+      <DependentUpon>Stock_reference.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +117,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Stock_reference.resx">
+      <DependentUpon>Stock_reference.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App1.config" />
     <None Include="DB_SystemDataSet.xsc">
       <DependentUpon>DB_SystemDataSet.xsd</DependentUpon>
@@ -117,6 +131,17 @@
     </None>
     <None Include="DB_SystemDataSet.xss">
       <DependentUpon>DB_SystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet1.xsc">
+      <DependentUpon>DB_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet1.xss">
+      <DependentUpon>DB_SystemDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
