@@ -83,11 +83,11 @@ namespace Management_System
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(150, 172);
+            this.button2.Location = new System.Drawing.Point(145, 173);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 43);
+            this.button2.Size = new System.Drawing.Size(150, 43);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Фирми и клиенти";
+            this.button2.Text = "Клиенти и доставчици";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -97,7 +97,7 @@ namespace Management_System
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(288, 172);
+            this.button3.Location = new System.Drawing.Point(307, 172);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 43);
             this.button3.TabIndex = 3;
@@ -111,7 +111,7 @@ namespace Management_System
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(416, 172);
+            this.button4.Location = new System.Drawing.Point(425, 172);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 43);
             this.button4.TabIndex = 4;
@@ -190,7 +190,7 @@ namespace Management_System
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(150, 331);
+            this.button10.Location = new System.Drawing.Point(157, 331);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(110, 43);
             this.button10.TabIndex = 10;
@@ -325,7 +325,7 @@ namespace Management_System
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Menu";
             this.Text = "Меню";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

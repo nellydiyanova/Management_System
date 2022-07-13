@@ -51,6 +51,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +72,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_SystemDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet2.xsd</DependentUpon>
     </Compile>
     <Compile Include="Inventory.cs">
       <SubType>Form</SubType>
@@ -142,6 +148,17 @@
     </None>
     <None Include="DB_SystemDataSet1.xss">
       <DependentUpon>DB_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet2.xsc">
+      <DependentUpon>DB_SystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet2.xss">
+      <DependentUpon>DB_SystemDataSet2.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

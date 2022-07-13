@@ -24,26 +24,33 @@ namespace Management_System
                 myCommand = new SqlCommand("Select * from Users where username=@username and password=@password", myConnection);
                 SqlParameter uUsername = new SqlParameter("@username", SqlDbType.VarChar);
                 SqlParameter uPassword = new SqlParameter("@password", SqlDbType.VarChar);
-                uUsername.Value = textBox1.Text;
+                uUsername.Value = comboBox1.Text;
                 uPassword.Value = textBox2.Text;
                 myCommand.Parameters.Add(uUsername);
                 myCommand.Parameters.Add(uPassword);
                 myCommand.Connection.Open();
                 SqlDataReader myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
                 if (myreader.Read() == true)
                 {
-                    MessageBox.Show("Добре дошли, " + textBox1.Text + "!");
+                    MessageBox.Show("Добре дошли, " + comboBox1.Text);
                     this.Hide();
                     Menu frm = new Menu();
                     frm.Show();
-
                 }
+
+                else
+                if (comboBox1.Text == "" || textBox2.Text == "")
+                {
+                    MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 else
                 {
-                    MessageBox.Show("Невалидни данни!", "Достъп отказан", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textBox1.Clear();
+                    MessageBox.Show("Невалидни данни!", "Достъп отказан!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    comboBox1.Text = "";
                     textBox2.Clear();
-                    textBox1.Focus();
+                    comboBox1.Focus();
                 }
 
                 if (myConnection.State == ConnectionState.Open)
@@ -56,6 +63,12 @@ namespace Management_System
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'dB_SystemDataSet2.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.dB_SystemDataSet2.Users);
 
         }
     }
