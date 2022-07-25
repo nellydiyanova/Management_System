@@ -71,7 +71,7 @@ namespace Management_System
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(24, 172);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 43);
+            this.button1.Size = new System.Drawing.Size(117, 43);
             this.button1.TabIndex = 1;
             this.button1.Text = "Номенклатура";
             this.button1.UseVisualStyleBackColor = false;
@@ -83,11 +83,11 @@ namespace Management_System
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(145, 173);
+            this.button2.Location = new System.Drawing.Point(157, 172);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(150, 43);
+            this.button2.Size = new System.Drawing.Size(110, 43);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Клиенти и доставчици";
+            this.button2.Text = "Картотека";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -97,7 +97,7 @@ namespace Management_System
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(307, 172);
+            this.button3.Location = new System.Drawing.Point(288, 172);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 43);
             this.button3.TabIndex = 3;
@@ -111,7 +111,7 @@ namespace Management_System
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(425, 172);
+            this.button4.Location = new System.Drawing.Point(416, 172);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 43);
             this.button4.TabIndex = 4;
