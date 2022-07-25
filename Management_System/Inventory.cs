@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -71,8 +72,6 @@ namespace Management_System
             TreeNode firtsnode = treeView1.Nodes[0];
             firtsnode.ImageIndex = 2;
             firtsnode.SelectedImageIndex = 2;
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = true;
             groupBox1.Visible = false;
             groupBox2.Visible = false;
             textBox1.Enabled = true;
@@ -115,8 +114,6 @@ namespace Management_System
 
         private void новСкладToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pictureBox1.Visible = false;
-            pictureBox2.Visible = true;
             groupBox1.Visible = true;
             groupBox2.Visible = false;
             textBox1.Clear();
@@ -177,7 +174,6 @@ namespace Management_System
                     textBox3.Clear();
                     textBox4.Clear();
                     groupBox1.Visible = false;
-                    pictureBox1.Visible = true;
                 }
 
                 catch (Exception ex)
@@ -214,7 +210,6 @@ namespace Management_System
                     textBox3.Clear();
                     textBox4.Clear();
                     groupBox1.Visible = false;
-                    pictureBox1.Visible = true;
                 }
 
                 catch (Exception ex)
@@ -237,8 +232,6 @@ namespace Management_System
                 treeView1.SelectedNode = null;
             }
 
-            pictureBox1.Visible = true;
-            pictureBox2.Visible = false;
             groupBox1.Visible = false;
             groupBox2.Visible = true;
             textBox1.Clear();
@@ -305,7 +298,6 @@ namespace Management_System
                     textBox10.Clear();
                     comboBox1.Text = "";
                     groupBox2.Visible = false;
-                    pictureBox2.Visible = true;
                 }
 
                 catch (Exception ex)
@@ -351,7 +343,6 @@ namespace Management_System
                     textBox10.Clear();
                     comboBox1.Text = "";
                     groupBox2.Visible = false;
-                    pictureBox2.Visible = true;
                 }
 
                 catch (Exception ex)
@@ -398,7 +389,6 @@ namespace Management_System
                     textBox3.Clear();
                     textBox4.Clear();
                     groupBox1.Visible = false;
-                    pictureBox1.Visible = true;
                 }
 
                 catch (Exception ex)
@@ -433,7 +423,6 @@ namespace Management_System
                     textBox9.Clear();
                     textBox10.Clear();
                     groupBox2.Visible = false;
-                    pictureBox2.Visible = true;
                 }
 
                 catch (Exception ex)
@@ -470,8 +459,6 @@ namespace Management_System
 
             if (selectedNode == treeView1.Nodes[0])
             {
-                pictureBox1.Visible = true;
-                pictureBox2.Visible = true;
                 groupBox1.Visible = false;
                 groupBox2.Visible = false;
                 textBox1.Clear();
@@ -508,8 +495,6 @@ namespace Management_System
                 {
                     if (selectedNode.Parent == null)
                     {
-                        pictureBox1.Visible = false;
-                        pictureBox2.Visible = true;
                         groupBox1.Visible = true;
                         groupBox2.Visible = false;
                         myConnection = new SqlConnection(frm.cs);
@@ -538,8 +523,6 @@ namespace Management_System
                     else
                     if (selectedNode.Parent != null)
                     {
-                        pictureBox1.Visible = true;
-                        pictureBox2.Visible = false;
                         groupBox1.Visible = false;
                         groupBox2.Visible = true;
                         myConnection = new SqlConnection(frm.cs);
@@ -571,17 +554,94 @@ namespace Management_System
 
                 else
                 {
-                    pictureBox1.Visible = true;
-                    pictureBox2.Visible = true;
                     groupBox1.Visible = false;
                     groupBox2.Visible = false;
                 }
             }
         }
 
+
+        public TreeNode Find(TreeNodeCollection nodes, string key)
+        {
+            key = key.ToUpper();
+            Stack<TreeNode> stackNodes = new Stack<TreeNode>();
+            foreach (TreeNode item in nodes)
+            {
+                stackNodes.Push(item);
+            }
+
+            while (stackNodes.Count > 0)
+            {
+                TreeNode currentNode = stackNodes.Pop();
+                if (currentNode.Text.ToUpper() == key)
+                    return currentNode;
+                else
+                    foreach (TreeNode item in currentNode.Nodes)
+                    {
+                        stackNodes.Push(item);
+                    }
+            }
+
+            return null;
+        }
+
+
+        private void textBox11_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                var searchFor = textBox11.Text.Trim().ToUpper();
+                if (searchFor != "")
+                {
+                    if (treeView1.Nodes.Count > 0)
+                    {
+                        if (SearchRecursive(treeView1.Nodes, searchFor))
+                        {
+                            treeView1.SelectedNode.Expand();
+                            treeView1.Focus();
+                        }
+                    }
+                }
+            }
+        }
+
+        private bool SearchRecursive(IEnumerable nodes, string searchFor)
+        {
+            foreach (TreeNode node in nodes)
+            {
+                if (node.Text.ToUpper().Contains(searchFor))
+                {
+                    treeView1.SelectedNode = node;
+                    node.BackColor = Color.Yellow;
+                }
+                else
+                {
+                    node.BackColor = Color.Empty;
+                }
+
+                if (SearchRecursive(node.Nodes, searchFor))
+                {
+                    return true;
+                }
+            }
+
+            return false; 
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            var searchFor = textBox11.Text.Trim().ToUpper();
+            if (searchFor != "")
+            {
+                if (treeView1.Nodes.Count > 0)
+                {
+                    if (SearchRecursive(treeView1.Nodes, searchFor))
+                    {
+                        treeView1.SelectedNode.Expand();
+                        treeView1.Focus();
+                    }
+                }
+            }
         }
     }
 }
