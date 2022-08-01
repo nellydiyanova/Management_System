@@ -20,7 +20,7 @@ namespace Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Filing_cabinet frm = new Filing_cabinet();
+            Filling_cabinet frm = new Filling_cabinet();
             frm.Show();
         }
 
