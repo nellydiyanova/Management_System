@@ -67,6 +67,8 @@ namespace Management_System
 
         private void Inventory_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_SystemDataSet6.Suppliers' table. You can move, or remove it, as needed.
+            this.suppliersTableAdapter.Fill(this.dB_SystemDataSet6.Suppliers);
             TreeNode parentnode = new TreeNode("Inventory");
             treeView1.Nodes.Add(parentnode);
             TreeNode firtsnode = treeView1.Nodes[0];
@@ -89,6 +91,8 @@ namespace Management_System
             button2.Enabled = true;
             button1.BackColor = System.Drawing.Color.LightGreen;
             button2.BackColor = System.Drawing.Color.LightGreen;
+            button4.BackColor = System.Drawing.Color.LightGreen;
+            button5.BackColor = System.Drawing.Color.LightGreen;
 
             try
             {
@@ -139,10 +143,10 @@ namespace Management_System
             textBox9.Enabled = true;
             textBox10.Enabled = true;
             comboBox1.Enabled = true;
-            button1.Enabled = true;
-            button2.Enabled = true;
-            button1.BackColor = System.Drawing.Color.LightGreen;
-            button2.BackColor = System.Drawing.Color.LightGreen;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button4.Enabled = true;
+            button5.Enabled = true;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -169,42 +173,6 @@ namespace Management_System
                     }
 
                     treeView1.SelectedNode.Text = textBox2.Text;
-                    textBox1.Clear();
-                    textBox2.Clear();
-                    textBox3.Clear();
-                    textBox4.Clear();
-                    groupBox1.Visible = false;
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-            else
-            if (textBox1.Text != "" && textBox2.Text != "")
-            {
-                try
-                {
-                    myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("insert into Warehouses(id_warehouse, warehouse, address, zip_code) values(@id_warehouse, @warehouse, @address, @zip_code)", myConnection);
-                    myConnection.Open();
-                    myCommand.Parameters.AddWithValue("@id_warehouse", textBox1.Text);
-                    myCommand.Parameters.AddWithValue("@warehouse", textBox2.Text);
-                    myCommand.Parameters.AddWithValue("@address", textBox3.Text);
-                    myCommand.Parameters.AddWithValue("@zip_code", textBox4.Text);
-                    myCommand.ExecuteNonQuery();
-                    myConnection.Close();
-                    MessageBox.Show("Успешно въведен нов склад!");
-
-                    if (myConnection.State == ConnectionState.Open)
-                    {
-                        myConnection.Dispose();
-                    }
-
-                    TreeNode node = new TreeNode(textBox2.Text);
-                    treeView1.Nodes.Add(node);
                     textBox1.Clear();
                     textBox2.Clear();
                     textBox3.Clear();
@@ -257,10 +225,10 @@ namespace Management_System
             textBox9.Enabled = true;
             textBox10.Enabled = true;
             comboBox1.Enabled = true;
-            button1.Enabled = true;
-            button2.Enabled = true;
-            button1.BackColor = System.Drawing.Color.LightGreen;
-            button2.BackColor = System.Drawing.Color.LightGreen;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button4.Enabled = false;
+            button5.Enabled = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -290,51 +258,6 @@ namespace Management_System
                     }
 
                     treeView1.SelectedNode.Text = textBox7.Text;
-                    textBox5.Clear();
-                    textBox6.Clear();
-                    textBox7.Clear();
-                    textBox8.Clear();
-                    textBox9.Clear();
-                    textBox10.Clear();
-                    comboBox1.Text = "";
-                    groupBox2.Visible = false;
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-            else
-            if (textBox5.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "")
-            {
-                try
-                {
-                    myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("insert into Inventory(id_product, product_name, delivery_price, sale_price, measure, supplier, warehouse) values(@id_product, @product_name, @delivery_price, @sale_price, @measure, @supplier, @warehouse)", myConnection);
-                    myConnection.Open();
-                    myCommand.Parameters.AddWithValue("@id_product", textBox5.Text);
-                    myCommand.Parameters.AddWithValue("@warehouse", textBox6.Text);
-                    myCommand.Parameters.AddWithValue("@product_name", textBox7.Text);
-                    myCommand.Parameters.AddWithValue("@delivery_price", textBox8.Text);
-                    myCommand.Parameters.AddWithValue("@sale_price", textBox9.Text);
-                    myCommand.Parameters.AddWithValue("@measure", textBox10.Text);
-                    myCommand.Parameters.AddWithValue("@supplier", comboBox1.Text);
-                    myCommand.ExecuteNonQuery();
-                    myConnection.Close();
-                    MessageBox.Show("Успешно въведена нова стока!");
-
-                    if (myConnection.State == ConnectionState.Open)
-                    {
-                        myConnection.Dispose();
-                    }
-
-                    TreeNode node = new TreeNode(textBox7.Text);
-                    TreeNode childnode = treeView1.Nodes[0];
-                    childnode.Nodes.Add(node);
-                    node.ImageIndex = 1;
-                    node.SelectedImageIndex = 1;
                     textBox5.Clear();
                     textBox6.Clear();
                     textBox7.Clear();
@@ -452,8 +375,8 @@ namespace Management_System
             comboBox1.Enabled = true;
             button1.Enabled = true;
             button2.Enabled = true;
-            button1.BackColor = System.Drawing.Color.LightGreen;
-            button2.BackColor = System.Drawing.Color.LightGreen;
+            button4.Enabled = false;
+            button5.Enabled = false;
 
             TreeNode selectedNode = treeView1.SelectedNode;
 
@@ -484,9 +407,9 @@ namespace Management_System
                 comboBox1.Text = "";
                 comboBox1.Enabled = false;
                 button1.Enabled = false;
-                button1.BackColor = System.Drawing.Color.Red;
                 button2.Enabled = false;
-                button2.BackColor = System.Drawing.Color.Red;
+                button4.Enabled = false;
+                button5.Enabled = false;
             }
 
             else
@@ -640,7 +563,110 @@ namespace Management_System
                         treeView1.SelectedNode.Expand();
                         treeView1.Focus();
                     }
+                    else
+                    {
+                        MessageBox.Show("Няма съответствие в търсенето!");
+                    }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Напишете нещо :)");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                try
+                {
+                    myConnection = new SqlConnection(frm.cs);
+                    myCommand = new SqlCommand("insert into Warehouses(id_warehouse, warehouse, address, zip_code) values(@id_warehouse, @warehouse, @address, @zip_code)", myConnection);
+                    myConnection.Open();
+                    myCommand.Parameters.AddWithValue("@id_warehouse", textBox1.Text);
+                    myCommand.Parameters.AddWithValue("@warehouse", textBox2.Text);
+                    myCommand.Parameters.AddWithValue("@address", textBox3.Text);
+                    myCommand.Parameters.AddWithValue("@zip_code", textBox4.Text);
+                    myCommand.ExecuteNonQuery();
+                    myConnection.Close();
+                    MessageBox.Show("Успешно въведен нов склад!");
+
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+
+                    TreeNode node = new TreeNode(textBox2.Text);
+                    treeView1.Nodes.Add(node);
+                    textBox1.Clear();
+                    textBox2.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
+                    groupBox1.Visible = false;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (textBox5.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && textBox10.Text != "")
+            {
+                try
+                {
+                    myConnection = new SqlConnection(frm.cs);
+                    myCommand = new SqlCommand("insert into Inventory(id_product, product_name, delivery_price, sale_price, measure, supplier, warehouse) values(@id_product, @product_name, @delivery_price, @sale_price, @measure, @supplier, @warehouse)", myConnection);
+                    myConnection.Open();
+                    myCommand.Parameters.AddWithValue("@id_product", textBox5.Text);
+                    myCommand.Parameters.AddWithValue("@warehouse", textBox6.Text);
+                    myCommand.Parameters.AddWithValue("@product_name", textBox7.Text);
+                    myCommand.Parameters.AddWithValue("@delivery_price", textBox8.Text);
+                    myCommand.Parameters.AddWithValue("@sale_price", textBox9.Text);
+                    myCommand.Parameters.AddWithValue("@measure", textBox10.Text);
+                    myCommand.Parameters.AddWithValue("@supplier", comboBox1.Text);
+                    myCommand.ExecuteNonQuery();
+                    myConnection.Close();
+                    MessageBox.Show("Успешно въведена нова стока!");
+
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+
+                    TreeNode node = new TreeNode(textBox7.Text);
+                    TreeNode childnode = treeView1.Nodes[0];
+                    childnode.Nodes.Add(node);
+                    node.ImageIndex = 1;
+                    node.SelectedImageIndex = 1;
+                    textBox5.Clear();
+                    textBox6.Clear();
+                    textBox7.Clear();
+                    textBox8.Clear();
+                    textBox9.Clear();
+                    textBox10.Clear();
+                    comboBox1.Text = "";
+                    groupBox2.Visible = false;
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
