@@ -64,18 +64,18 @@ namespace Management_System
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet6 = new Management_System.DB_SystemDataSet6();
             this.label11 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.dB_SystemDataSet6 = new Management_System.DB_SystemDataSet6();
-            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suppliersTableAdapter = new Management_System.DB_SystemDataSet6TableAdapters.SuppliersTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -397,6 +397,16 @@ namespace Management_System
             this.comboBox1.TabIndex = 19;
             this.comboBox1.ValueMember = "supplier";
             // 
+            // suppliersBindingSource
+            // 
+            this.suppliersBindingSource.DataMember = "Suppliers";
+            this.suppliersBindingSource.DataSource = this.dB_SystemDataSet6;
+            // 
+            // dB_SystemDataSet6
+            // 
+            this.dB_SystemDataSet6.DataSetName = "DB_SystemDataSet6";
+            this.dB_SystemDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -438,16 +448,6 @@ namespace Management_System
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dB_SystemDataSet6
-            // 
-            this.dB_SystemDataSet6.DataSetName = "DB_SystemDataSet6";
-            this.dB_SystemDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // suppliersBindingSource
-            // 
-            this.suppliersBindingSource.DataMember = "Suppliers";
-            this.suppliersBindingSource.DataSource = this.dB_SystemDataSet6;
-            // 
             // suppliersTableAdapter
             // 
             this.suppliersTableAdapter.ClearBeforeFill = true;
@@ -477,8 +477,8 @@ namespace Management_System
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

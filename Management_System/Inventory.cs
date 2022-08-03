@@ -46,6 +46,7 @@ namespace Management_System
                 TreeNode parentnode = new TreeNode(dr["warehouse"].ToString());
                 treeView1.Nodes.Add(parentnode);
             }
+
             myConnection.Close();
         }
 
@@ -103,7 +104,6 @@ namespace Management_System
                 myConnection.Close();
                 displayData1();
                 displayData2();
-
                 if (myConnection.State == ConnectionState.Open)
                 {
                     myConnection.Dispose();
@@ -130,6 +130,7 @@ namespace Management_System
             textBox8.Clear();
             textBox9.Clear();
             textBox10.Clear();
+            textBox11.Clear();
             comboBox1.Text = "";
             textBox1.Focus();
             textBox1.Enabled = true;
@@ -166,7 +167,6 @@ namespace Management_System
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
                     MessageBox.Show("Успешно редактиран склад!");
-
                     if (myConnection.State == ConnectionState.Open)
                     {
                         myConnection.Dispose();
@@ -212,6 +212,7 @@ namespace Management_System
             textBox8.Clear();
             textBox9.Clear();
             textBox10.Clear();
+            textBox11.Clear();
             comboBox1.Text = "";
             textBox5.Focus();
             textBox1.Enabled = true;
@@ -251,7 +252,6 @@ namespace Management_System
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
                     MessageBox.Show("Успешно редактирана стока!");
-
                     if (myConnection.State == ConnectionState.Open)
                     {
                         myConnection.Dispose();
@@ -300,7 +300,6 @@ namespace Management_System
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
                     MessageBox.Show("Успешно изтрит склад!");
-
                     if (myConnection.State == ConnectionState.Open)
                     {
                         myConnection.Dispose();
@@ -332,7 +331,6 @@ namespace Management_System
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
                     MessageBox.Show("Успешно изтрита стока!");
-
                     if (myConnection.State == ConnectionState.Open)
                     {
                         myConnection.Dispose();
@@ -379,7 +377,6 @@ namespace Management_System
             button5.Enabled = false;
 
             TreeNode selectedNode = treeView1.SelectedNode;
-
             if (selectedNode == treeView1.Nodes[0])
             {
                 groupBox1.Visible = false;
@@ -428,7 +425,6 @@ namespace Management_System
                         displayData3();
                         myCommand.Connection.Open();
                         SqlDataReader myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
-
                         if (myreader.Read() == true)
                         {
                             textBox1.Text = myreader["id_warehouse"].ToString();
@@ -456,7 +452,6 @@ namespace Management_System
                         displayData4();
                         myCommand.Connection.Open();
                         SqlDataReader myreader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
-
                         if (myreader.Read() == true)
                         {
                             textBox5.Text = myreader["id_product"].ToString();
@@ -497,7 +492,10 @@ namespace Management_System
             {
                 TreeNode currentNode = stackNodes.Pop();
                 if (currentNode.Text.ToUpper() == key)
+                {
                     return currentNode;
+                }
+                    
                 else
                     foreach (TreeNode item in currentNode.Nodes)
                     {
@@ -507,7 +505,6 @@ namespace Management_System
 
             return null;
         }
-
 
         private void textBox11_KeyUp(object sender, KeyEventArgs e)
         {
@@ -563,15 +560,7 @@ namespace Management_System
                         treeView1.SelectedNode.Expand();
                         treeView1.Focus();
                     }
-                    else
-                    {
-                        MessageBox.Show("Няма съответствие в търсенето!");
-                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show("Напишете нещо :)");
             }
         }
 
@@ -591,7 +580,6 @@ namespace Management_System
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
                     MessageBox.Show("Успешно въведен нов склад!");
-
                     if (myConnection.State == ConnectionState.Open)
                     {
                         myConnection.Dispose();
@@ -637,7 +625,6 @@ namespace Management_System
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
                     MessageBox.Show("Успешно въведена нова стока!");
-
                     if (myConnection.State == ConnectionState.Open)
                     {
                         myConnection.Dispose();
