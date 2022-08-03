@@ -25,7 +25,7 @@ namespace Management_System
                 SqlParameter uUsername = new SqlParameter("@username", SqlDbType.VarChar);
                 SqlParameter uPassword = new SqlParameter("@password", SqlDbType.VarChar);
                 uUsername.Value = comboBox1.Text;
-                uPassword.Value = textBox2.Text;
+                uPassword.Value = textBox1.Text;
                 myCommand.Parameters.Add(uUsername);
                 myCommand.Parameters.Add(uPassword);
                 myCommand.Connection.Open();
@@ -33,24 +33,24 @@ namespace Management_System
 
                 if (myreader.Read() == true)
                 {
-                    MessageBox.Show("Добре дошли, " + comboBox1.Text);
+                    MessageBox.Show("Добре дошли, " + comboBox1.Text + "! :)");
                     this.Hide();
                     Menu frm = new Menu();
                     frm.Show();
                 }
 
                 else
-                if (comboBox1.Text == "" || textBox2.Text == "")
+                if (comboBox1.Text == "" || textBox1.Text == "")
                 {
                     MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox1.Focus();
                 }
 
                 else
                 {
                     MessageBox.Show("Невалидни данни!", "Достъп отказан!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    comboBox1.Text = "";
-                    textBox2.Clear();
-                    comboBox1.Focus();
+                    textBox1.Clear();
+                    textBox1.Focus();
                 }
 
                 if (myConnection.State == ConnectionState.Open)
@@ -70,7 +70,6 @@ namespace Management_System
         {
             // TODO: This line of code loads data into the 'dB_SystemDataSet2.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.dB_SystemDataSet2.Users);
-
         }
     }
 }

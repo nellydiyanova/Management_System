@@ -70,7 +70,7 @@ namespace Management_System
         {
             // TODO: This line of code loads data into the 'dB_SystemDataSet6.Suppliers' table. You can move, or remove it, as needed.
             this.suppliersTableAdapter.Fill(this.dB_SystemDataSet6.Suppliers);
-            TreeNode parentnode = new TreeNode("Inventory");
+            TreeNode parentnode = new TreeNode("Номенклатура");
             treeView1.Nodes.Add(parentnode);
             TreeNode firtsnode = treeView1.Nodes[0];
             firtsnode.ImageIndex = 2;

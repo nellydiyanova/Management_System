@@ -32,10 +32,6 @@ namespace Management_System
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stock_reference));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SystemDataSet1 = new Management_System.DB_SystemDataSet1();
-            this.inventoryTableAdapter = new Management_System.DB_SystemDataSet1TableAdapters.InventoryTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
             this.idproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deliverypriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +40,10 @@ namespace Management_System
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.warehouseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet1 = new Management_System.DB_SystemDataSet1();
+            this.inventoryTableAdapter = new Management_System.DB_SystemDataSet1TableAdapters.InventoryTableAdapter();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet1)).BeginInit();
@@ -51,6 +51,7 @@ namespace Management_System
             // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -63,11 +64,55 @@ namespace Management_System
             this.supplierDataGridViewTextBoxColumn,
             this.warehouseDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.inventoryBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 9);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 356);
-            this.dataGridView1.TabIndex = 0;
+            // 
+            // idproductDataGridViewTextBoxColumn
+            // 
+            this.idproductDataGridViewTextBoxColumn.DataPropertyName = "id_product";
+            resources.ApplyResources(this.idproductDataGridViewTextBoxColumn, "idproductDataGridViewTextBoxColumn");
+            this.idproductDataGridViewTextBoxColumn.Name = "idproductDataGridViewTextBoxColumn";
+            // 
+            // productnameDataGridViewTextBoxColumn
+            // 
+            this.productnameDataGridViewTextBoxColumn.DataPropertyName = "product_name";
+            resources.ApplyResources(this.productnameDataGridViewTextBoxColumn, "productnameDataGridViewTextBoxColumn");
+            this.productnameDataGridViewTextBoxColumn.Name = "productnameDataGridViewTextBoxColumn";
+            // 
+            // deliverypriceDataGridViewTextBoxColumn
+            // 
+            this.deliverypriceDataGridViewTextBoxColumn.DataPropertyName = "delivery_price";
+            resources.ApplyResources(this.deliverypriceDataGridViewTextBoxColumn, "deliverypriceDataGridViewTextBoxColumn");
+            this.deliverypriceDataGridViewTextBoxColumn.Name = "deliverypriceDataGridViewTextBoxColumn";
+            // 
+            // salepriceDataGridViewTextBoxColumn
+            // 
+            this.salepriceDataGridViewTextBoxColumn.DataPropertyName = "sale_price";
+            resources.ApplyResources(this.salepriceDataGridViewTextBoxColumn, "salepriceDataGridViewTextBoxColumn");
+            this.salepriceDataGridViewTextBoxColumn.Name = "salepriceDataGridViewTextBoxColumn";
+            // 
+            // measureDataGridViewTextBoxColumn
+            // 
+            this.measureDataGridViewTextBoxColumn.DataPropertyName = "measure";
+            resources.ApplyResources(this.measureDataGridViewTextBoxColumn, "measureDataGridViewTextBoxColumn");
+            this.measureDataGridViewTextBoxColumn.Name = "measureDataGridViewTextBoxColumn";
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
+            resources.ApplyResources(this.quantityDataGridViewTextBoxColumn, "quantityDataGridViewTextBoxColumn");
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            // 
+            // supplierDataGridViewTextBoxColumn
+            // 
+            this.supplierDataGridViewTextBoxColumn.DataPropertyName = "supplier";
+            resources.ApplyResources(this.supplierDataGridViewTextBoxColumn, "supplierDataGridViewTextBoxColumn");
+            this.supplierDataGridViewTextBoxColumn.Name = "supplierDataGridViewTextBoxColumn";
+            // 
+            // warehouseDataGridViewTextBoxColumn
+            // 
+            this.warehouseDataGridViewTextBoxColumn.DataPropertyName = "warehouse";
+            resources.ApplyResources(this.warehouseDataGridViewTextBoxColumn, "warehouseDataGridViewTextBoxColumn");
+            this.warehouseDataGridViewTextBoxColumn.Name = "warehouseDataGridViewTextBoxColumn";
             // 
             // inventoryBindingSource
             // 
@@ -85,82 +130,19 @@ namespace Management_System
             // 
             // button1
             // 
+            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Location = new System.Drawing.Point(338, 383);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 45);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "ОК";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // idproductDataGridViewTextBoxColumn
-            // 
-            this.idproductDataGridViewTextBoxColumn.DataPropertyName = "id_product";
-            this.idproductDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idproductDataGridViewTextBoxColumn.Name = "idproductDataGridViewTextBoxColumn";
-            this.idproductDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // productnameDataGridViewTextBoxColumn
-            // 
-            this.productnameDataGridViewTextBoxColumn.DataPropertyName = "product_name";
-            this.productnameDataGridViewTextBoxColumn.HeaderText = "Продукт";
-            this.productnameDataGridViewTextBoxColumn.Name = "productnameDataGridViewTextBoxColumn";
-            this.productnameDataGridViewTextBoxColumn.Width = 200;
-            // 
-            // deliverypriceDataGridViewTextBoxColumn
-            // 
-            this.deliverypriceDataGridViewTextBoxColumn.DataPropertyName = "delivery_price";
-            this.deliverypriceDataGridViewTextBoxColumn.HeaderText = "Доставна цена";
-            this.deliverypriceDataGridViewTextBoxColumn.Name = "deliverypriceDataGridViewTextBoxColumn";
-            this.deliverypriceDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // salepriceDataGridViewTextBoxColumn
-            // 
-            this.salepriceDataGridViewTextBoxColumn.DataPropertyName = "sale_price";
-            this.salepriceDataGridViewTextBoxColumn.HeaderText = "Продажна цена";
-            this.salepriceDataGridViewTextBoxColumn.Name = "salepriceDataGridViewTextBoxColumn";
-            this.salepriceDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // measureDataGridViewTextBoxColumn
-            // 
-            this.measureDataGridViewTextBoxColumn.DataPropertyName = "measure";
-            this.measureDataGridViewTextBoxColumn.HeaderText = "Мярка";
-            this.measureDataGridViewTextBoxColumn.Name = "measureDataGridViewTextBoxColumn";
-            this.measureDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Количество";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            // 
-            // supplierDataGridViewTextBoxColumn
-            // 
-            this.supplierDataGridViewTextBoxColumn.DataPropertyName = "supplier";
-            this.supplierDataGridViewTextBoxColumn.HeaderText = "Доставчик";
-            this.supplierDataGridViewTextBoxColumn.Name = "supplierDataGridViewTextBoxColumn";
-            // 
-            // warehouseDataGridViewTextBoxColumn
-            // 
-            this.warehouseDataGridViewTextBoxColumn.DataPropertyName = "warehouse";
-            this.warehouseDataGridViewTextBoxColumn.HeaderText = "Склад";
-            this.warehouseDataGridViewTextBoxColumn.Name = "warehouseDataGridViewTextBoxColumn";
-            this.warehouseDataGridViewTextBoxColumn.Width = 60;
-            // 
             // Stock_reference
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 441);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
-            this.Font = new System.Drawing.Font("Californian FB", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Stock_reference";
-            this.Text = "Stock reference";
             this.Load += new System.EventHandler(this.Stock_reference_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();

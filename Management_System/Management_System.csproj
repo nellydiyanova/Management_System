@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authorization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authorization.Designer.cs">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB_SystemDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -98,6 +104,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_SystemDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_SystemDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet8.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Filling_cabinet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +138,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Passwords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Passwords.Designer.cs">
+      <DependentUpon>Passwords.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stock_reference.cs">
@@ -130,17 +152,47 @@
     <Compile Include="Stock_reference.Designer.cs">
       <DependentUpon>Stock_reference.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Authorization.bg-BG.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authorization.resx">
+      <DependentUpon>Authorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Filling_cabinet.bg-BG.resx">
+      <DependentUpon>Filling_cabinet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Filling_cabinet.resx">
       <DependentUpon>Filling_cabinet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.bg-BG.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory.bg.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.bg-BG.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.bg.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu.bg-BG.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Passwords.bg-BG.resx">
+      <DependentUpon>Passwords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Passwords.resx">
+      <DependentUpon>Passwords.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,6 +204,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Stock_reference.bg-BG.resx">
+      <DependentUpon>Stock_reference.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stock_reference.resx">
       <DependentUpon>Stock_reference.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +287,28 @@
     </None>
     <None Include="DB_SystemDataSet6.xss">
       <DependentUpon>DB_SystemDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet7.xsc">
+      <DependentUpon>DB_SystemDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet7.xss">
+      <DependentUpon>DB_SystemDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet8.xsc">
+      <DependentUpon>DB_SystemDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet8.xss">
+      <DependentUpon>DB_SystemDataSet8.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
