@@ -34,7 +34,6 @@ namespace Management_System
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.клиентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дистрибуториToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.служителиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -73,24 +72,6 @@ namespace Management_System
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.новКлиентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.новДистрибуторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,14 +100,6 @@ namespace Management_System
             this.suppliersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet4 = new Management_System.DB_SystemDataSet4();
             this.suppliersTableAdapter = new Management_System.DB_SystemDataSet4TableAdapters.SuppliersTableAdapter();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet5 = new Management_System.DB_SystemDataSet5();
             this.usersTableAdapter = new Management_System.DB_SystemDataSet5TableAdapters.UsersTableAdapter();
@@ -136,7 +109,6 @@ namespace Management_System
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
@@ -144,7 +116,6 @@ namespace Management_System
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
@@ -154,34 +125,26 @@ namespace Management_System
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.клиентиToolStripMenuItem,
-            this.дистрибуториToolStripMenuItem,
-            this.служителиToolStripMenuItem});
+            this.дистрибуториToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
             // клиентиToolStripMenuItem
             // 
-            resources.ApplyResources(this.клиентиToolStripMenuItem, "клиентиToolStripMenuItem");
             this.клиентиToolStripMenuItem.Name = "клиентиToolStripMenuItem";
+            resources.ApplyResources(this.клиентиToolStripMenuItem, "клиентиToolStripMenuItem");
             this.клиентиToolStripMenuItem.Click += new System.EventHandler(this.клиентиToolStripMenuItem_Click);
             // 
             // дистрибуториToolStripMenuItem
             // 
-            resources.ApplyResources(this.дистрибуториToolStripMenuItem, "дистрибуториToolStripMenuItem");
             this.дистрибуториToolStripMenuItem.Name = "дистрибуториToolStripMenuItem";
+            resources.ApplyResources(this.дистрибуториToolStripMenuItem, "дистрибуториToolStripMenuItem");
             this.дистрибуториToolStripMenuItem.Click += new System.EventHandler(this.дистрибуториToolStripMenuItem_Click);
-            // 
-            // служителиToolStripMenuItem
-            // 
-            resources.ApplyResources(this.служителиToolStripMenuItem, "служителиToolStripMenuItem");
-            this.служителиToolStripMenuItem.Name = "служителиToolStripMenuItem";
-            this.служителиToolStripMenuItem.Click += new System.EventHandler(this.служителиToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox8);
@@ -200,21 +163,22 @@ namespace Management_System
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // button4
             // 
-            resources.ApplyResources(this.button4, "button4");
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
-            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -301,7 +265,6 @@ namespace Management_System
             // 
             // groupBox2
             // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.textBox16);
@@ -320,21 +283,22 @@ namespace Management_System
             this.groupBox2.Controls.Add(this.textBox9);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
             // button5
             // 
-            resources.ApplyResources(this.button5, "button5");
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.button5, "button5");
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button2
             // 
-            resources.ApplyResources(this.button2, "button2");
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -419,118 +383,6 @@ namespace Management_System
             resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
             // 
-            // groupBox3
-            // 
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Controls.Add(this.label24);
-            this.groupBox3.Controls.Add(this.textBox24);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Controls.Add(this.textBox23);
-            this.groupBox3.Controls.Add(this.textBox22);
-            this.groupBox3.Controls.Add(this.textBox21);
-            this.groupBox3.Controls.Add(this.textBox20);
-            this.groupBox3.Controls.Add(this.textBox19);
-            this.groupBox3.Controls.Add(this.textBox18);
-            this.groupBox3.Controls.Add(this.textBox17);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label19);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // label24
-            // 
-            resources.ApplyResources(this.label24, "label24");
-            this.label24.Name = "label24";
-            // 
-            // textBox24
-            // 
-            resources.ApplyResources(this.textBox24, "textBox24");
-            this.textBox24.Name = "textBox24";
-            // 
-            // button3
-            // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // textBox23
-            // 
-            resources.ApplyResources(this.textBox23, "textBox23");
-            this.textBox23.Name = "textBox23";
-            // 
-            // textBox22
-            // 
-            resources.ApplyResources(this.textBox22, "textBox22");
-            this.textBox22.Name = "textBox22";
-            // 
-            // textBox21
-            // 
-            resources.ApplyResources(this.textBox21, "textBox21");
-            this.textBox21.Name = "textBox21";
-            // 
-            // textBox20
-            // 
-            resources.ApplyResources(this.textBox20, "textBox20");
-            this.textBox20.Name = "textBox20";
-            // 
-            // textBox19
-            // 
-            resources.ApplyResources(this.textBox19, "textBox19");
-            this.textBox19.Name = "textBox19";
-            // 
-            // textBox18
-            // 
-            resources.ApplyResources(this.textBox18, "textBox18");
-            this.textBox18.Name = "textBox18";
-            this.textBox18.UseSystemPasswordChar = true;
-            // 
-            // textBox17
-            // 
-            resources.ApplyResources(this.textBox17, "textBox17");
-            this.textBox17.Name = "textBox17";
-            // 
-            // label23
-            // 
-            resources.ApplyResources(this.label23, "label23");
-            this.label23.Name = "label23";
-            // 
-            // label22
-            // 
-            resources.ApplyResources(this.label22, "label22");
-            this.label22.Name = "label22";
-            // 
-            // label21
-            // 
-            resources.ApplyResources(this.label21, "label21");
-            this.label21.Name = "label21";
-            // 
-            // label20
-            // 
-            resources.ApplyResources(this.label20, "label20");
-            this.label20.Name = "label20";
-            // 
-            // label19
-            // 
-            resources.ApplyResources(this.label19, "label19");
-            this.label19.Name = "label19";
-            // 
-            // label18
-            // 
-            resources.ApplyResources(this.label18, "label18");
-            this.label18.Name = "label18";
-            // 
-            // label17
-            // 
-            resources.ApplyResources(this.label17, "label17");
-            this.label17.Name = "label17";
-            // 
             // menuStrip2
             // 
             resources.ApplyResources(this.menuStrip2, "menuStrip2");
@@ -542,25 +394,24 @@ namespace Management_System
             // 
             // новКлиентToolStripMenuItem
             // 
-            resources.ApplyResources(this.новКлиентToolStripMenuItem, "новКлиентToolStripMenuItem");
             this.новКлиентToolStripMenuItem.Name = "новКлиентToolStripMenuItem";
+            resources.ApplyResources(this.новКлиентToolStripMenuItem, "новКлиентToolStripMenuItem");
             this.новКлиентToolStripMenuItem.Click += new System.EventHandler(this.новКлиентToolStripMenuItem_Click);
             // 
             // новДистрибуторToolStripMenuItem
             // 
-            resources.ApplyResources(this.новДистрибуторToolStripMenuItem, "новДистрибуторToolStripMenuItem");
             this.новДистрибуторToolStripMenuItem.Name = "новДистрибуторToolStripMenuItem";
+            resources.ApplyResources(this.новДистрибуторToolStripMenuItem, "новДистрибуторToolStripMenuItem");
             this.новДистрибуторToolStripMenuItem.Click += new System.EventHandler(this.новДистрибуторToolStripMenuItem_Click);
             // 
             // изтрийToolStripMenuItem
             // 
-            resources.ApplyResources(this.изтрийToolStripMenuItem, "изтрийToolStripMenuItem");
             this.изтрийToolStripMenuItem.Name = "изтрийToolStripMenuItem";
+            resources.ApplyResources(this.изтрийToolStripMenuItem, "изтрийToolStripMenuItem");
             this.изтрийToolStripMenuItem.Click += new System.EventHandler(this.изтрийToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -574,6 +425,7 @@ namespace Management_System
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
             this.dataGridView1.DataSource = this.clientsBindingSource;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -651,7 +503,6 @@ namespace Management_System
             // 
             // dataGridView2
             // 
-            resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -665,6 +516,7 @@ namespace Management_System
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15});
             this.dataGridView2.DataSource = this.suppliersBindingSource1;
+            resources.ApplyResources(this.dataGridView2, "dataGridView2");
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
@@ -740,75 +592,6 @@ namespace Management_System
             // 
             this.suppliersTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridView3
-            // 
-            resources.ApplyResources(this.dataGridView3, "dataGridView3");
-            this.dataGridView3.AllowUserToDeleteRows = false;
-            this.dataGridView3.AutoGenerateColumns = false;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewTextBoxColumn17,
-            this.dataGridViewTextBoxColumn18,
-            this.dataGridViewTextBoxColumn19,
-            this.dataGridViewTextBoxColumn20,
-            this.dataGridViewTextBoxColumn21,
-            this.dataGridViewTextBoxColumn22});
-            this.dataGridView3.DataSource = this.usersBindingSource1;
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.ReadOnly = true;
-            this.dataGridView3.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellClick);
-            this.dataGridView3.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView3_RowHeaderMouseClick);
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.DataPropertyName = "username";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn16, "dataGridViewTextBoxColumn16");
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn17
-            // 
-            this.dataGridViewTextBoxColumn17.DataPropertyName = "name";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn17, "dataGridViewTextBoxColumn17");
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            this.dataGridViewTextBoxColumn17.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.DataPropertyName = "personal_number";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn18, "dataGridViewTextBoxColumn18");
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn19
-            // 
-            this.dataGridViewTextBoxColumn19.DataPropertyName = "city";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn19, "dataGridViewTextBoxColumn19");
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            this.dataGridViewTextBoxColumn19.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.DataPropertyName = "address";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn20, "dataGridViewTextBoxColumn20");
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            this.dataGridViewTextBoxColumn20.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn21
-            // 
-            this.dataGridViewTextBoxColumn21.DataPropertyName = "phone";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn21, "dataGridViewTextBoxColumn21");
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            this.dataGridViewTextBoxColumn21.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.DataPropertyName = "email";
-            resources.ApplyResources(this.dataGridViewTextBoxColumn22, "dataGridViewTextBoxColumn22");
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            this.dataGridViewTextBoxColumn22.ReadOnly = true;
-            // 
             // usersBindingSource1
             // 
             this.usersBindingSource1.DataMember = "Users";
@@ -828,10 +611,8 @@ namespace Management_System
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
@@ -845,8 +626,6 @@ namespace Management_System
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -855,7 +634,6 @@ namespace Management_System
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
@@ -871,7 +649,6 @@ namespace Management_System
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem клиентиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem дистрибуториToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem служителиToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.BindingSource companiesBindingSource;
         private System.Windows.Forms.TextBox textBox8;
@@ -936,22 +713,6 @@ namespace Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem новКлиентToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem новДистрибуторToolStripMenuItem;
@@ -964,12 +725,9 @@ namespace Management_System
         private DB_SystemDataSet4 dB_SystemDataSet4;
         private System.Windows.Forms.BindingSource suppliersBindingSource1;
         private DB_SystemDataSet4TableAdapters.SuppliersTableAdapter suppliersTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private DB_SystemDataSet5 dB_SystemDataSet5;
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private DB_SystemDataSet5TableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
@@ -978,13 +736,6 @@ namespace Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridViewTextBoxColumn clientDataGridViewTextBoxColumn;

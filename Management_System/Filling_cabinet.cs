@@ -37,28 +37,14 @@ namespace Management_System
             myConnection.Close();
         }
 
-        private void displayData3()
-        {
-            myConnection.Open();
-            DataTable dt = new DataTable();
-            adapt = new SqlDataAdapter("select * from Users", myConnection);
-            adapt.Fill(dt);
-            dataGridView3.DataSource = dt;
-            myConnection.Close();
-        }
-
         private void Filling_cabinet_Load(object sender, EventArgs e)
         {
             dataGridView1.Visible = false;
             dataGridView2.Visible = false;
-            dataGridView3.Visible = false;
             groupBox1.Visible = false;
             groupBox2.Visible = false;
-            groupBox3.Visible = false;
-            textBox18.Enabled = false;
             button1.BackColor = System.Drawing.Color.LightGreen;
             button2.BackColor = System.Drawing.Color.LightGreen;
-            button3.BackColor = System.Drawing.Color.LightGreen;
             button4.BackColor = System.Drawing.Color.LightGreen;
             button5.BackColor = System.Drawing.Color.LightGreen;
         }
@@ -67,10 +53,8 @@ namespace Management_System
         {
             dataGridView1.Visible = true;
             dataGridView2.Visible = false;
-            dataGridView3.Visible = false;
             groupBox1.Visible = true;
             groupBox2.Visible = false;
-            groupBox3.Visible = false;
             // TODO: This line of code loads data into the 'dB_SystemDataSet3.Clients' table. You can move, or remove it, as needed.
             this.clientsTableAdapter.Fill(this.dB_SystemDataSet3.Clients);
         }
@@ -79,24 +63,10 @@ namespace Management_System
         {
             dataGridView1.Visible = false;
             dataGridView2.Visible = true;
-            dataGridView3.Visible = false;
             groupBox1.Visible = false;
             groupBox2.Visible = true;
-            groupBox3.Visible = false;
             // TODO: This line of code loads data into the 'dB_SystemDataSet4.Suppliers' table. You can move, or remove it, as needed.
             this.suppliersTableAdapter.Fill(this.dB_SystemDataSet4.Suppliers);
-        }
-
-        private void служителиToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            dataGridView1.Visible = false;
-            dataGridView2.Visible = false;
-            dataGridView3.Visible = true;
-            groupBox1.Visible = false;
-            groupBox2.Visible = false;
-            groupBox3.Visible = true;
-            // TODO: This line of code loads data into the 'dB_SystemDataSet5.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.dB_SystemDataSet5.Users);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -111,7 +81,6 @@ namespace Management_System
             textBox8.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             button1.Enabled = true;
             button2.Enabled = false;
-            button3.Enabled = false;
             button4.Enabled = false;
             button5.Enabled = false;
         }
@@ -128,23 +97,6 @@ namespace Management_System
             textBox16.Text = dataGridView2.CurrentRow.Cells[7].Value.ToString();
             button1.Enabled = false;
             button2.Enabled = true;
-            button3.Enabled = false;
-            button4.Enabled = false;
-            button5.Enabled = false;
-        }
-
-        private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            textBox17.Text = dataGridView3.CurrentRow.Cells[0].Value.ToString();
-            textBox18.Text = dataGridView3.CurrentRow.Cells[1].Value.ToString();
-            textBox19.Text = dataGridView3.CurrentRow.Cells[2].Value.ToString();
-            textBox20.Text = dataGridView3.CurrentRow.Cells[3].Value.ToString();
-            textBox21.Text = dataGridView3.CurrentRow.Cells[4].Value.ToString();
-            textBox22.Text = dataGridView3.CurrentRow.Cells[5].Value.ToString();
-            textBox23.Text = dataGridView3.CurrentRow.Cells[6].Value.ToString();
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = true;
             button4.Enabled = false;
             button5.Enabled = false;
         }
@@ -153,10 +105,8 @@ namespace Management_System
         {
             dataGridView1.Visible = true;
             dataGridView2.Visible = false;
-            dataGridView3.Visible = false;
             groupBox1.Visible = true;
             groupBox2.Visible = false;
-            groupBox3.Visible = false;
             textBox1.Clear();
             textBox2.Clear();
             textBox3.Clear();
@@ -167,9 +117,9 @@ namespace Management_System
             textBox8.Clear();
             button1.Enabled = false;
             button2.Enabled = false;
-            button3.Enabled = true;
             button4.Enabled = true;
             button5.Enabled = false;
+            textBox1.Focus();
             // TODO: This line of code loads data into the 'dB_SystemDataSet3.Clients' table. You can move, or remove it, as needed.
             this.clientsTableAdapter.Fill(this.dB_SystemDataSet3.Clients);
         }
@@ -238,10 +188,8 @@ namespace Management_System
         {
             dataGridView1.Visible = false;
             dataGridView2.Visible = true;
-            dataGridView3.Visible = false;
             groupBox1.Visible = false;
             groupBox2.Visible = true;
-            groupBox3.Visible = false;
             textBox9.Clear();
             textBox10.Clear();
             textBox11.Clear();
@@ -252,9 +200,9 @@ namespace Management_System
             textBox16.Clear();
             button1.Enabled = false;
             button2.Enabled = false;
-            button3.Enabled = true;
             button4.Enabled = false;
             button5.Enabled = true;
+            textBox9.Focus();
             // TODO: This line of code loads data into the 'dB_SystemDataSet4.Suppliers' table. You can move, or remove it, as needed.
             this.suppliersTableAdapter.Fill(this.dB_SystemDataSet4.Suppliers);
         }
@@ -317,64 +265,6 @@ namespace Management_System
             textBox14.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
             textBox15.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
             textBox16.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (textBox17.Text != "")
-            {
-                try
-                {
-                    myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("update Users set username=@username, password=@password, name=@name, personal_number=@personal_number, address=@address, phone=@phone, email=@email where username=@username", myConnection);
-                    myConnection.Open();
-                    myCommand.Parameters.AddWithValue("@username", textBox17.Text);
-                    myCommand.Parameters.AddWithValue("@password", textBox18.Text);
-                    myCommand.Parameters.AddWithValue("@name", textBox19.Text);
-                    myCommand.Parameters.AddWithValue("@personal_number", textBox20.Text);
-                    myCommand.Parameters.AddWithValue("@city", textBox21.Text);
-                    myCommand.Parameters.AddWithValue("@address", textBox22.Text);
-                    myCommand.Parameters.AddWithValue("@phone", textBox23.Text);
-                    myCommand.Parameters.AddWithValue("@email", textBox24.Text);
-                    myCommand.ExecuteNonQuery();
-                    myConnection.Close();
-                    MessageBox.Show("Успешно редактиран служител!");
-                    displayData3();
-                    if (myConnection.State == ConnectionState.Open)
-                    {
-                        myConnection.Dispose();
-                    }
-
-                    textBox17.Clear();
-                    textBox18.Clear();
-                    textBox20.Clear();
-                    textBox21.Clear();
-                    textBox22.Clear();
-                    textBox23.Clear();
-                    textBox24.Clear();
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void dataGridView3_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            textBox17.Text = dataGridView3.Rows[e.RowIndex].Cells[0].Value.ToString();
-            textBox19.Text = dataGridView3.Rows[e.RowIndex].Cells[1].Value.ToString();
-            textBox20.Text = dataGridView3.Rows[e.RowIndex].Cells[2].Value.ToString();
-            textBox21.Text = dataGridView3.Rows[e.RowIndex].Cells[3].Value.ToString();
-            textBox22.Text = dataGridView3.Rows[e.RowIndex].Cells[4].Value.ToString();
-            textBox23.Text = dataGridView3.Rows[e.RowIndex].Cells[5].Value.ToString();
-            textBox24.Text = dataGridView3.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -539,12 +429,6 @@ namespace Management_System
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-
-            else
-            if (textBox17.Text != "")
-            {
-                MessageBox.Show("Не може да изтривате служители!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             else
