@@ -16,6 +16,8 @@ namespace Management_System
         public SqlConnection myConnection = default(SqlConnection);
         public SqlCommand myCommand = default(SqlCommand);
 
+        public static string passingText;
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -34,6 +36,7 @@ namespace Management_System
                 if (myreader.Read() == true)
                 {
                     MessageBox.Show("Добре дошли, " + comboBox1.Text + "! :)");
+                    passingText = comboBox1.Text;
                     this.Hide();
                     Menu frm = new Menu();
                     frm.Show();

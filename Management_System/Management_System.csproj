@@ -79,6 +79,51 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_SystemDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_SystemDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet18.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DB_SystemDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -143,6 +188,18 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="New_order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_order.Designer.cs">
+      <DependentUpon>New_order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
     <Compile Include="Passwords.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +250,12 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="New_order.resx">
+      <DependentUpon>New_order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Passwords.bg-BG.resx">
       <DependentUpon>Passwords.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +300,105 @@
     </None>
     <None Include="DB_SystemDataSet1.xss">
       <DependentUpon>DB_SystemDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet10.xsc">
+      <DependentUpon>DB_SystemDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet10.xss">
+      <DependentUpon>DB_SystemDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet11.xsc">
+      <DependentUpon>DB_SystemDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet11.xss">
+      <DependentUpon>DB_SystemDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet12.xsc">
+      <DependentUpon>DB_SystemDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet12.xss">
+      <DependentUpon>DB_SystemDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet13.xsc">
+      <DependentUpon>DB_SystemDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet13.xss">
+      <DependentUpon>DB_SystemDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet14.xsc">
+      <DependentUpon>DB_SystemDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet14.xss">
+      <DependentUpon>DB_SystemDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet15.xsc">
+      <DependentUpon>DB_SystemDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet15.xss">
+      <DependentUpon>DB_SystemDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet16.xsc">
+      <DependentUpon>DB_SystemDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet16.xss">
+      <DependentUpon>DB_SystemDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet17.xsc">
+      <DependentUpon>DB_SystemDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet17.xss">
+      <DependentUpon>DB_SystemDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet18.xsc">
+      <DependentUpon>DB_SystemDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet18.xss">
+      <DependentUpon>DB_SystemDataSet18.xsd</DependentUpon>
     </None>
     <None Include="DB_SystemDataSet2.xsc">
       <DependentUpon>DB_SystemDataSet2.xsd</DependentUpon>

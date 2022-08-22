@@ -105,26 +105,26 @@ namespace Management_System
             // 
             // новСкладToolStripMenuItem
             // 
-            resources.ApplyResources(this.новСкладToolStripMenuItem, "новСкладToolStripMenuItem");
             this.новСкладToolStripMenuItem.Name = "новСкладToolStripMenuItem";
+            resources.ApplyResources(this.новСкладToolStripMenuItem, "новСкладToolStripMenuItem");
             this.новСкладToolStripMenuItem.Click += new System.EventHandler(this.новСкладToolStripMenuItem_Click);
             // 
             // новаСтокаToolStripMenuItem
             // 
-            resources.ApplyResources(this.новаСтокаToolStripMenuItem, "новаСтокаToolStripMenuItem");
             this.новаСтокаToolStripMenuItem.Name = "новаСтокаToolStripMenuItem";
+            resources.ApplyResources(this.новаСтокаToolStripMenuItem, "новаСтокаToolStripMenuItem");
             this.новаСтокаToolStripMenuItem.Click += new System.EventHandler(this.новаСтокаToolStripMenuItem_Click);
             // 
             // стоковаСправкаToolStripMenuItem
             // 
-            resources.ApplyResources(this.стоковаСправкаToolStripMenuItem, "стоковаСправкаToolStripMenuItem");
             this.стоковаСправкаToolStripMenuItem.Name = "стоковаСправкаToolStripMenuItem";
+            resources.ApplyResources(this.стоковаСправкаToolStripMenuItem, "стоковаСправкаToolStripMenuItem");
             this.стоковаСправкаToolStripMenuItem.Click += new System.EventHandler(this.стоковаСправкаToolStripMenuItem_Click);
             // 
             // изтриванеToolStripMenuItem
             // 
-            resources.ApplyResources(this.изтриванеToolStripMenuItem, "изтриванеToolStripMenuItem");
             this.изтриванеToolStripMenuItem.Name = "изтриванеToolStripMenuItem";
+            resources.ApplyResources(this.изтриванеToolStripMenuItem, "изтриванеToolStripMenuItem");
             this.изтриванеToolStripMenuItem.Click += new System.EventHandler(this.изтриванеToolStripMenuItem_Click);
             // 
             // label1
@@ -169,7 +169,6 @@ namespace Management_System
             // 
             // groupBox1
             // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -180,25 +179,26 @@ namespace Management_System
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox1);
+            resources.ApplyResources(this.groupBox1, "groupBox1");
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
             // button4
             // 
-            resources.ApplyResources(this.button4, "button4");
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.button4, "button4");
             this.button4.Name = "button4";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
-            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -265,7 +265,6 @@ namespace Management_System
             // 
             // groupBox2
             // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label11);
@@ -282,26 +281,27 @@ namespace Management_System
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.textBox5);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
             // button5
             // 
-            resources.ApplyResources(this.button5, "button5");
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.button5, "button5");
             this.button5.Name = "button5";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // comboBox1
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.suppliersBindingSource, "supplier", true));
             this.comboBox1.DataSource = this.suppliersBindingSource;
             this.comboBox1.DisplayMember = "supplier";
             this.comboBox1.FormattingEnabled = true;
+            resources.ApplyResources(this.comboBox1, "comboBox1");
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.ValueMember = "supplier";
             // 
@@ -322,10 +322,10 @@ namespace Management_System
             // 
             // button2
             // 
-            resources.ApplyResources(this.button2, "button2");
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -338,8 +338,8 @@ namespace Management_System
             // 
             // button3
             // 
-            resources.ApplyResources(this.button3, "button3");
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.button3, "button3");
             this.button3.Name = "button3";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
