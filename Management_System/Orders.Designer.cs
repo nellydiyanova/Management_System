@@ -37,8 +37,6 @@ namespace Management_System
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SystemDataSet11 = new Management_System.DB_SystemDataSet11();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -58,6 +56,8 @@ namespace Management_System
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet11 = new Management_System.DB_SystemDataSet11();
             this.inventoryTableAdapter = new Management_System.DB_SystemDataSet11TableAdapters.InventoryTableAdapter();
             this.clientsTableAdapter = new Management_System.DB_SystemDataSet12TableAdapters.ClientsTableAdapter();
             this.statusTableAdapter = new Management_System.DB_SystemDataSet13TableAdapters.StatusTableAdapter();
@@ -65,9 +65,6 @@ namespace Management_System
             this.новаПоръчкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.изтрийПоръчкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ordersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SystemDataSet15 = new Management_System.DB_SystemDataSet15();
-            this.ordersTableAdapter1 = new Management_System.DB_SystemDataSet15TableAdapters.OrdersTableAdapter();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,15 +73,19 @@ namespace Management_System
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ordersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet15 = new Management_System.DB_SystemDataSet15();
+            this.ordersTableAdapter1 = new Management_System.DB_SystemDataSet15TableAdapters.OrdersTableAdapter();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet10)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet11)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).BeginInit();
@@ -107,6 +108,7 @@ namespace Management_System
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox2);
@@ -137,7 +139,7 @@ namespace Management_System
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button1.Location = new System.Drawing.Point(119, 430);
+            this.button1.Location = new System.Drawing.Point(39, 429);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 35);
             this.button1.TabIndex = 28;
@@ -153,16 +155,6 @@ namespace Management_System
             this.label2.Size = new System.Drawing.Size(133, 19);
             this.label2.TabIndex = 25;
             this.label2.Text = "Съставил документа:";
-            // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataMember = "Inventory";
-            this.inventoryBindingSource.DataSource = this.dB_SystemDataSet11;
-            // 
-            // dB_SystemDataSet11
-            // 
-            this.dB_SystemDataSet11.DataSetName = "DB_SystemDataSet11";
-            this.dB_SystemDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox2
             // 
@@ -322,6 +314,16 @@ namespace Management_System
             this.label1.TabIndex = 0;
             this.label1.Text = "№ на документ:";
             // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "Inventory";
+            this.inventoryBindingSource.DataSource = this.dB_SystemDataSet11;
+            // 
+            // dB_SystemDataSet11
+            // 
+            this.dB_SystemDataSet11.DataSetName = "DB_SystemDataSet11";
+            this.dB_SystemDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // inventoryTableAdapter
             // 
             this.inventoryTableAdapter.ClearBeforeFill = true;
@@ -379,20 +381,6 @@ namespace Management_System
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // ordersBindingSource1
-            // 
-            this.ordersBindingSource1.DataMember = "Orders";
-            this.ordersBindingSource1.DataSource = this.dB_SystemDataSet15;
-            // 
-            // dB_SystemDataSet15
-            // 
-            this.dB_SystemDataSet15.DataSetName = "DB_SystemDataSet15";
-            this.dB_SystemDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ordersTableAdapter1
-            // 
-            this.ordersTableAdapter1.ClearBeforeFill = true;
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -448,6 +436,34 @@ namespace Management_System
             this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
             this.usernameDataGridViewTextBoxColumn.Width = 80;
             // 
+            // ordersBindingSource1
+            // 
+            this.ordersBindingSource1.DataMember = "Orders";
+            this.ordersBindingSource1.DataSource = this.dB_SystemDataSet15;
+            // 
+            // dB_SystemDataSet15
+            // 
+            this.dB_SystemDataSet15.DataSetName = "DB_SystemDataSet15";
+            this.dB_SystemDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // ordersTableAdapter1
+            // 
+            this.ordersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button2.Location = new System.Drawing.Point(188, 429);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 35);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Справка";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Orders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -468,12 +484,12 @@ namespace Management_System
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet10)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet11)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -530,5 +546,6 @@ namespace Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -51,7 +51,6 @@ namespace Management_System
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -64,6 +63,7 @@ namespace Management_System
             this.supplierDataGridViewTextBoxColumn,
             this.warehouseDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.inventoryBindingSource;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             // 
             // idproductDataGridViewTextBoxColumn
@@ -130,8 +130,8 @@ namespace Management_System
             // 
             // button1
             // 
-            resources.ApplyResources(this.button1, "button1");
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.button1, "button1");
             this.button1.Name = "button1";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -140,6 +140,7 @@ namespace Management_System
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Stock_reference";

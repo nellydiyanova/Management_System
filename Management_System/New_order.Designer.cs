@@ -85,6 +85,8 @@ namespace Management_System
             this.clientsTableAdapter = new Management_System.DB_SystemDataSet16TableAdapters.ClientsTableAdapter();
             this.statusTableAdapter = new Management_System.DB_SystemDataSet17TableAdapters.StatusTableAdapter();
             this.cartTableAdapter = new Management_System.DB_SystemDataSet18TableAdapters.CartTableAdapter();
+            this.button6 = new System.Windows.Forms.Button();
+            this.receiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).BeginInit();
@@ -96,6 +98,7 @@ namespace Management_System
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -144,7 +147,7 @@ namespace Management_System
             this.salepriceDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn,
             this.fullpriceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.cartBindingSource;
+            this.dataGridView1.DataSource = this.receiptBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(10, 217);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -381,11 +384,11 @@ namespace Management_System
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button5.Location = new System.Drawing.Point(623, 433);
+            this.button5.Location = new System.Drawing.Point(507, 432);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(132, 35);
+            this.button5.Size = new System.Drawing.Size(113, 35);
             this.button5.TabIndex = 17;
-            this.button5.Text = "Готово";
+            this.button5.Text = "Запази";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -577,12 +580,31 @@ namespace Management_System
             // 
             this.cartTableAdapter.ClearBeforeFill = true;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button6.Location = new System.Drawing.Point(635, 432);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(113, 35);
+            this.button6.TabIndex = 25;
+            this.button6.Text = "Фактура";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // receiptBindingSource
+            // 
+            this.receiptBindingSource.DataSource = typeof(Management_System.Receipt);
+            // 
             // New_order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1062, 479);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button5);
@@ -608,6 +630,7 @@ namespace Management_System
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -669,5 +692,7 @@ namespace Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn salepriceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullpriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.BindingSource receiptBindingSource;
     }
 }

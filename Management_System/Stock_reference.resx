@@ -117,28 +117,122 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;idproductDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="quantityDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Количество</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Stock reference</value>
+  <data name="idproductDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>ID</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="idproductDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
     <value>40</value>
   </data>
+  <data name="productnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Продукт</value>
+  </data>
+  <data name="productnameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="deliverypriceDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Доставна цена</value>
+  </data>
+  <data name="deliverypriceDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="salepriceDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Продажна цена</value>
+  </data>
+  <data name="salepriceDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>85</value>
+  </data>
+  <data name="measureDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Мярка</value>
+  </data>
+  <data name="measureDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="quantityDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="supplierDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Доставчик</value>
+  </data>
+  <data name="warehouseDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
+    <value>Склад</value>
+  </data>
+  <data name="warehouseDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <metadata name="inventoryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>176, 17</value>
+  </metadata>
+  <metadata name="dB_SystemDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 9</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="dataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>776, 356</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="inventoryTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>357, 17</value>
+  </metadata>
+  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>338, 383</value>
+  </data>
+  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>136, 45</value>
+  </data>
+  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="button1.Text" xml:space="preserve">
+    <value>ОК</value>
+  </data>
+  <data name="&gt;&gt;button1.Name" xml:space="preserve">
+    <value>button1</value>
+  </data>
+  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>8, 18</value>
   </data>
-  <data name="&gt;&gt;inventoryTableAdapter.Type" xml:space="preserve">
-    <value>Management_System.DB_SystemDataSet1TableAdapters.InventoryTableAdapter, DB_SystemDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>805, 441</value>
   </data>
-  <data name="idproductDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>ID</value>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Californian FB, 11.25pt</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -3108,176 +3202,82 @@
         AP5/AAA=
 </value>
   </data>
-  <data name="&gt;&gt;deliverypriceDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>deliverypriceDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;inventoryBindingSource.Name" xml:space="preserve">
-    <value>inventoryBindingSource</value>
-  </data>
-  <data name="&gt;&gt;dB_SystemDataSet1.Type" xml:space="preserve">
-    <value>Management_System.DB_SystemDataSet1, DB_SystemDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>776, 356</value>
-  </data>
-  <data name="&gt;&gt;salepriceDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>salepriceDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="measureDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Мярка</value>
-  </data>
-  <data name="&gt;&gt;warehouseDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>warehouseDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="productnameDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>200</value>
-  </data>
-  <data name="salepriceDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Продажна цена</value>
-  </data>
-  <data name="warehouseDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Склад</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
   </data>
-  <data name="&gt;&gt;supplierDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>supplierDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>805, 441</value>
-  </data>
-  <data name="&gt;&gt;supplierDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="deliverypriceDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;quantityDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;deliverypriceDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;measureDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>measureDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="supplierDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Доставчик</value>
-  </data>
-  <data name="&gt;&gt;quantityDataGridViewTextBoxColumn.Name" xml:space="preserve">
-    <value>quantityDataGridViewTextBoxColumn</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Stock_reference</value>
-  </data>
-  <data name="deliverypriceDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Доставна цена</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;inventoryTableAdapter.Name" xml:space="preserve">
-    <value>inventoryTableAdapter</value>
-  </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 9</value>
-  </data>
-  <data name="&gt;&gt;inventoryBindingSource.Type" xml:space="preserve">
-    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="measureDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="&gt;&gt;productnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Stock reference</value>
   </data>
   <data name="&gt;&gt;idproductDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>idproductDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="warehouseDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <data name="dataGridView1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="&gt;&gt;salepriceDataGridViewTextBoxColumn.Type" xml:space="preserve">
+  <data name="&gt;&gt;idproductDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;productnameDataGridViewTextBoxColumn.Name" xml:space="preserve">
     <value>productnameDataGridViewTextBoxColumn</value>
   </data>
-  <data name="productnameDataGridViewTextBoxColumn.HeaderText" xml:space="preserve">
-    <value>Продукт</value>
-  </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;warehouseDataGridViewTextBoxColumn.Type" xml:space="preserve">
+  <data name="&gt;&gt;productnameDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;deliverypriceDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>deliverypriceDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;deliverypriceDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;salepriceDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>salepriceDataGridViewTextBoxColumn</value>
+  </data>
+  <data name="&gt;&gt;salepriceDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;measureDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>measureDataGridViewTextBoxColumn</value>
   </data>
   <data name="&gt;&gt;measureDataGridViewTextBoxColumn.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;quantityDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>quantityDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;quantityDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>ОК</value>
+  <data name="&gt;&gt;supplierDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>supplierDataGridViewTextBoxColumn</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;supplierDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 383</value>
+  <data name="&gt;&gt;warehouseDataGridViewTextBoxColumn.Name" xml:space="preserve">
+    <value>warehouseDataGridViewTextBoxColumn</value>
   </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Californian FB, 11.25pt</value>
+  <data name="&gt;&gt;warehouseDataGridViewTextBoxColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="salepriceDataGridViewTextBoxColumn.Width" type="System.Int32, mscorlib">
-    <value>85</value>
+  <data name="&gt;&gt;inventoryBindingSource.Name" xml:space="preserve">
+    <value>inventoryBindingSource</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 45</value>
+  <data name="&gt;&gt;inventoryBindingSource.Type" xml:space="preserve">
+    <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dB_SystemDataSet1.Name" xml:space="preserve">
     <value>dB_SystemDataSet1</value>
   </data>
-  <metadata name="inventoryBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>176, 17</value>
-  </metadata>
-  <metadata name="dB_SystemDataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="inventoryTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>357, 17</value>
-  </metadata>
+  <data name="&gt;&gt;dB_SystemDataSet1.Type" xml:space="preserve">
+    <value>Management_System.DB_SystemDataSet1, DB_SystemDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;inventoryTableAdapter.Name" xml:space="preserve">
+    <value>inventoryTableAdapter</value>
+  </data>
+  <data name="&gt;&gt;inventoryTableAdapter.Type" xml:space="preserve">
+    <value>Management_System.DB_SystemDataSet1TableAdapters.InventoryTableAdapter, DB_SystemDataSet1.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Stock_reference</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

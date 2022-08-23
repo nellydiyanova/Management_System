@@ -48,6 +48,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -123,6 +141,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_SystemDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet19.xsd</DependentUpon>
     </Compile>
     <Compile Include="DB_SystemDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -208,6 +231,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receipt.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Stock_reference.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +297,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Stock_reference.bg-BG.resx">
       <DependentUpon>Stock_reference.cs</DependentUpon>
     </EmbeddedResource>
@@ -400,6 +426,17 @@
     <None Include="DB_SystemDataSet18.xss">
       <DependentUpon>DB_SystemDataSet18.xsd</DependentUpon>
     </None>
+    <None Include="DB_SystemDataSet19.xsc">
+      <DependentUpon>DB_SystemDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet19.xss">
+      <DependentUpon>DB_SystemDataSet19.xsd</DependentUpon>
+    </None>
     <None Include="DB_SystemDataSet2.xsc">
       <DependentUpon>DB_SystemDataSet2.xsd</DependentUpon>
     </None>
@@ -488,6 +525,8 @@
     <None Include="DB_SystemDataSet9.xss">
       <DependentUpon>DB_SystemDataSet9.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Receipt.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -520,6 +559,19 @@
     <Content Include="DB_System_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DB_System.mdf</DependentUpon>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Warehouse1.jpg" />
     <None Include="Resources\Books1.jpg" />

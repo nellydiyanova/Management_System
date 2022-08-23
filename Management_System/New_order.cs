@@ -487,5 +487,11 @@ namespace Management_System
                 MessageBox.Show("Поръчката не е довършена!", "Не може да продължите напред!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //Invoice frm = new Invoice();
+            //frm.Show();
+        }
     }
 }

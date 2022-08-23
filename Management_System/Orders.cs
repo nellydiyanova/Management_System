@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Management_System
@@ -63,7 +64,7 @@ namespace Management_System
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
@@ -76,7 +77,7 @@ namespace Management_System
             comboBox1.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
         }
-        
+
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
@@ -180,6 +181,93 @@ namespace Management_System
             {
                 MessageBox.Show("Изберете поръчка за изтриване!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void DataTableToTextFile(DataTable dt, string outputFilePath)
+        {
+            int[] maxLengths = new int[dt.Columns.Count];
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                maxLengths[i] = dt.Columns[i].ColumnName.Length;
+                foreach (DataRow row in dt.Rows)
+                {
+                    if (!row.IsNull(i))
+                    {
+                        int length = row[i].ToString().Length;
+                        if (length > maxLengths[i])
+                        {
+                            maxLengths[i] = length;
+                        }
+                    }
+                }
+            }
+
+            using (StreamWriter sw = new StreamWriter(outputFilePath, false))
+            {
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    sw.Write(dt.Columns[i].ColumnName.PadRight(maxLengths[i] + 2));
+                }
+                sw.WriteLine();
+                foreach (DataRow row in dt.Rows)
+                {
+                    for (int i = 0; i < dt.Columns.Count; i++)
+                    {
+                        if (!row.IsNull(i))
+                        {
+                            sw.Write(row[i].ToString().PadRight(maxLengths[i] + 2));
+                        }
+                        else
+                        {
+                            sw.Write(new string(' ', maxLengths[i] + 2));
+                        }
+                    }
+                    sw.WriteLine();
+                }
+                sw.Close();
+            }
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string connectionString = null;
+            Login frm = new Login();
+            connectionString = frm.cs;
+
+            DataTable dt = new DataTable();
+            foreach (DataGridViewTextBoxColumn column in dataGridView1.Columns)
+            {
+                dt.Columns.Add(column.Name, column.ValueType);
+            }
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                DataRow dr = dt.NewRow();
+                foreach (DataGridViewTextBoxColumn column in dataGridView1.Columns)
+                {
+                    if (row.Cells[column.Name].Value != null)
+                    {
+                        dr[column.Name] = row.Cells[column.Name].Value.ToString();
+                    }
+                }
+                dt.Rows.Add(dr);
+            }
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = "Save text Files";
+            saveFileDialog1.CheckFileExists = true;
+            saveFileDialog1.CheckPathExists = true;
+            saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            string filePath = saveFileDialog1.FileName;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filePath = saveFileDialog1.FileName;
+            }
+
+            DataTableToTextFile(dt, filePath);
+            MessageBox.Show("Фактурата е създадена успешно!");
         }
     }
 }
