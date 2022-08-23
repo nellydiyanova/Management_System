@@ -71,6 +71,8 @@ namespace Management_System
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.suppliersTableAdapter = new Management_System.DB_SystemDataSet6TableAdapters.SuppliersTableAdapter();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -265,6 +267,8 @@ namespace Management_System
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox12);
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label11);
@@ -348,6 +352,16 @@ namespace Management_System
             // 
             this.suppliersTableAdapter.ClearBeforeFill = true;
             // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            // 
+            // textBox12
+            // 
+            resources.ApplyResources(this.textBox12, "textBox12");
+            this.textBox12.Name = "textBox12";
+            // 
             // Inventory
             // 
             resources.ApplyResources(this, "$this");
@@ -417,5 +431,7 @@ namespace Management_System
         private DB_SystemDataSet6 dB_SystemDataSet6;
         private System.Windows.Forms.BindingSource suppliersBindingSource;
         private DB_SystemDataSet6TableAdapters.SuppliersTableAdapter suppliersTableAdapter;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label12;
     }
 }

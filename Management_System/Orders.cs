@@ -157,6 +157,38 @@ namespace Management_System
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
                     MessageBox.Show("Успешно изтрита поръчка!");
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+
+                    textBox1.Clear();
+                    listBox1.Items.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
+                    dateTimePicker1.Text = "";
+                    comboBox1.Text = "";
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                try
+                {
+                    for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+                    {
+                        var new_Quantity = +int.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString());
+                        myConnection = new SqlConnection(frm.cs);
+                        myCommand = new SqlCommand("update Inventory set quantity=quantity+@new_quantity, product_name=@product_name where product_name=@product_name", myConnection);
+                        myConnection.Open();
+                        myCommand.Parameters.AddWithValue("@product_name", dataGridView1.Rows[i].Cells[1].Value.ToString());
+                        myCommand.Parameters.AddWithValue("@new_quantity", new_Quantity);
+                        myCommand.ExecuteNonQuery();
+                        myConnection.Close();
+                    }
+
                     displayData();
                     if (myConnection.State == ConnectionState.Open)
                     {

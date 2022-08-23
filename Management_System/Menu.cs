@@ -43,14 +43,14 @@ namespace Management_System
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //Form8 frm = new Form8();
-            //frm.Show();
+            New_delivery frm = new New_delivery();
+            frm.Show();
         }
         
         private void button7_Click(object sender, EventArgs e)
         {
-            //Form9 frm = new Form9();
-            //frm.Show();
+            Deliveries frm = new Deliveries();
+            frm.Show();
         }
         
         private void button8_Click(object sender, EventArgs e)

@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Management_System
 {
-    public partial class New_order : Form
+    public partial class New_delivery : Form
     {
-        public New_order()
+        public New_delivery()
         {
             InitializeComponent();
         }
@@ -69,10 +69,10 @@ namespace Management_System
                 textBox5.Text = (sale_price * quantity).ToString();
             }
         }
-        
+
         private void CalculateQuantity()
         {
-            double quantity=0, full_quantity = 0;
+            double quantity = 0, full_quantity = 0;
             quantity = Convert.ToDouble(textBox4.Text);
             full_quantity += quantity;
             textBox8.Text = Convert.ToString(full_quantity);
@@ -114,17 +114,15 @@ namespace Management_System
             myConnection.Close();
         }
 
-        private void New_order_Load(object sender, EventArgs e)
+        private void New_delivery_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_SystemDataSet26.Cart' table. You can move, or remove it, as needed.
-            this.cartTableAdapter1.Fill(this.dB_SystemDataSet26.Cart);
-            // TODO: This line of code loads data into the 'dB_SystemDataSet17.Status' table. You can move, or remove it, as needed.
-            this.statusTableAdapter.Fill(this.dB_SystemDataSet17.Status);
-            // TODO: This line of code loads data into the 'dB_SystemDataSet16.Clients' table. You can move, or remove it, as needed.
-            this.clientsTableAdapter.Fill(this.dB_SystemDataSet16.Clients);
-            // TODO: This line of code loads data into the 'dB_SystemDataSet14.Warehouses' table. You can move, or remove it, as needed.
-            this.warehousesTableAdapter.Fill(this.dB_SystemDataSet14.Warehouses);
-            
+            // TODO: This line of code loads data into the 'dB_SystemDataSet25.Suppliers' table. You can move, or remove it, as needed.
+            this.suppliersTableAdapter.Fill(this.dB_SystemDataSet25.Suppliers);
+            // TODO: This line of code loads data into the 'dB_SystemDataSet24.Warehouses' table. You can move, or remove it, as needed.
+            this.warehousesTableAdapter.Fill(this.dB_SystemDataSet24.Warehouses);
+            // TODO: This line of code loads data into the 'dB_SystemDataSet23.Cart' table. You can move, or remove it, as needed.
+            this.cartTableAdapter2.Fill(this.dB_SystemDataSet23.Cart);
+
             TreeNode parentnode = new TreeNode("Номенклатура");
             treeView1.Nodes.Add(parentnode);
             TreeNode firtsnode = treeView1.Nodes[0];
@@ -137,9 +135,7 @@ namespace Management_System
             textBox9.Enabled = false;
             textBox10.Enabled = false;
             textBox11.Enabled = false;
-            textBox10.Text = Convert.ToString(Login.passingText);
             comboBox1.Text = "";
-            comboBox2.Text = "";
             button1.BackColor = System.Drawing.Color.LightGreen;
             button3.BackColor = System.Drawing.Color.LightGreen;
             button5.BackColor = System.Drawing.Color.LightGreen;
@@ -180,8 +176,18 @@ namespace Management_System
                 myConnection.Dispose();
             }
         }
-        
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            textBox5.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -214,7 +220,7 @@ namespace Management_System
                         textBox1.Text = myreader["id_product"].ToString();
                         comboBox1.Text = myreader["warehouse"].ToString();
                         textBox2.Text = myreader["product_name"].ToString();
-                        textBox3.Text = myreader["sale_price"].ToString();
+                        textBox3.Text = myreader["delivery_price"].ToString();
                         textBox11.Text = myreader["quantity"].ToString();
                     }
 
@@ -265,7 +271,7 @@ namespace Management_System
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            
+
             else
             {
                 MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -303,7 +309,7 @@ namespace Management_System
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
@@ -377,7 +383,7 @@ namespace Management_System
 
             return null;
         }
-        
+
         private void textBox6_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -419,7 +425,7 @@ namespace Management_System
 
             return false;
         }
-        
+
         private void button4_Click(object sender, EventArgs e)
         {
             var searchFor = textBox6.Text.Trim().ToUpper();
@@ -448,24 +454,23 @@ namespace Management_System
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.Rows.Count != 0 && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && comboBox2.Text != "")
+            if (dataGridView1.Rows.Count != 0 && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "")
             {
                 try
                 {
                     myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("insert into Orders(ID, products_name, quantity, full_price, client, date, status, username) values(@ID, @products_name, @quantity, @full_price, @client, @date, @status, @username)", myConnection);
+                    myCommand = new SqlCommand("insert into Deliveries(ID, products_name, quantity, full_price, supplier, date, username) values(@ID, @products_name, @quantity, @full_price, @supplier, @date, @username)", myConnection);
                     myConnection.Open();
                     myCommand.Parameters.AddWithValue("@ID", textBox7.Text);
                     myCommand.Parameters.AddWithValue("@products_name", dataGridView1.CurrentRow.Cells[2].Value.ToString());
                     myCommand.Parameters.AddWithValue("@quantity", Convert.ToDouble(textBox8.Text));
                     myCommand.Parameters.AddWithValue("@full_price", Convert.ToDouble(textBox9.Text));
-                    myCommand.Parameters.AddWithValue("@client", listBox1.Text);
+                    myCommand.Parameters.AddWithValue("@supplier", listBox1.Text);
                     myCommand.Parameters.AddWithValue("@date", Convert.ToDateTime(dateTimePicker1.Text));
-                    myCommand.Parameters.AddWithValue("@status", comboBox2.Text);
                     myCommand.Parameters.AddWithValue("@username", textBox10.Text);
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
-                    MessageBox.Show("Успешно въведена нова поръчка!");
+                    MessageBox.Show("Успешно въведена нова доставка!");
                     if (myConnection.State == ConnectionState.Open)
                     {
                         myConnection.Dispose();
@@ -475,7 +480,6 @@ namespace Management_System
                     textBox8.Clear();
                     textBox9.Clear();
                     textBox11.Clear();
-                    comboBox2.Text = "";
                 }
 
                 catch (Exception ex)
@@ -489,7 +493,7 @@ namespace Management_System
                     {
                         var new_Quantity = +int.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
                         myConnection = new SqlConnection(frm.cs);
-                        myCommand = new SqlCommand("update Inventory set quantity=quantity-@new_quantity, id_product=@id_product, warehouse=@warehouse where id_product=@id_product", myConnection);
+                        myCommand = new SqlCommand("update Inventory set quantity=quantity+@new_quantity, id_product=@id_product, warehouse=@warehouse where id_product=@id_product", myConnection);
                         myConnection.Open();
                         myCommand.Parameters.AddWithValue("@id_product", dataGridView1.Rows[i].Cells[0].Value.ToString());
                         myCommand.Parameters.AddWithValue("@warehouse", dataGridView1.Rows[i].Cells[1].Value.ToString());
@@ -516,20 +520,14 @@ namespace Management_System
                 }
 
                 this.Hide();
-                Orders f = new Orders();
+                Deliveries f = new Deliveries();
                 f.Show();
             }
 
             else
             {
-                MessageBox.Show("Поръчката не е довършена!", "Не може да продължите напред!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Доставката не е довършена!", "Не може да продължите напред!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            //Invoice frm = new Invoice();
-            //frm.Show();
         }
     }
 }

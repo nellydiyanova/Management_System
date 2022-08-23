@@ -152,6 +152,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_SystemDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_SystemDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet22.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet22.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet23.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet23.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet24.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet24.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet25.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet25.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_SystemDataSet26.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet26.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DB_SystemDataSet3.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -187,6 +222,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_SystemDataSet9.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Deliveries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deliveries.Designer.cs">
+      <DependentUpon>Deliveries.cs</DependentUpon>
+    </Compile>
     <Compile Include="Filling_cabinet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +251,12 @@
     </Compile>
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_delivery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="New_delivery.Designer.cs">
+      <DependentUpon>New_delivery.cs</DependentUpon>
     </Compile>
     <Compile Include="New_order.cs">
       <SubType>Form</SubType>
@@ -245,6 +292,9 @@
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Deliveries.resx">
+      <DependentUpon>Deliveries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Filling_cabinet.bg-BG.resx">
       <DependentUpon>Filling_cabinet.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="New_delivery.resx">
+      <DependentUpon>New_delivery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="New_order.resx">
       <DependentUpon>New_order.cs</DependentUpon>
@@ -447,6 +500,83 @@
     </None>
     <None Include="DB_SystemDataSet2.xss">
       <DependentUpon>DB_SystemDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet20.xsc">
+      <DependentUpon>DB_SystemDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet20.xss">
+      <DependentUpon>DB_SystemDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet21.xsc">
+      <DependentUpon>DB_SystemDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet21.xss">
+      <DependentUpon>DB_SystemDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet22.xsc">
+      <DependentUpon>DB_SystemDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet22.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet22.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet22.xss">
+      <DependentUpon>DB_SystemDataSet22.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet23.xsc">
+      <DependentUpon>DB_SystemDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet23.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet23.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet23.xss">
+      <DependentUpon>DB_SystemDataSet23.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet24.xsc">
+      <DependentUpon>DB_SystemDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet24.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet24.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet24.xss">
+      <DependentUpon>DB_SystemDataSet24.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet25.xsc">
+      <DependentUpon>DB_SystemDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet25.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet25.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet25.xss">
+      <DependentUpon>DB_SystemDataSet25.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet26.xsc">
+      <DependentUpon>DB_SystemDataSet26.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet26.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet26.xss">
+      <DependentUpon>DB_SystemDataSet26.xsd</DependentUpon>
     </None>
     <None Include="DB_SystemDataSet3.xsc">
       <DependentUpon>DB_SystemDataSet3.xsd</DependentUpon>

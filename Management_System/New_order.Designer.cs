@@ -37,11 +37,11 @@ namespace Management_System
             this.idproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.warehouseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.salepriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cartBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SystemDataSet18 = new Management_System.DB_SystemDataSet18();
+            this.cartBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet26 = new Management_System.DB_SystemDataSet26();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -59,6 +59,9 @@ namespace Management_System
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.receiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cartBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet18 = new Management_System.DB_SystemDataSet18();
             this.warehousesTableAdapter = new Management_System.DB_SystemDataSet14TableAdapters.WarehousesTableAdapter();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -86,19 +89,23 @@ namespace Management_System
             this.statusTableAdapter = new Management_System.DB_SystemDataSet17TableAdapters.StatusTableAdapter();
             this.cartTableAdapter = new Management_System.DB_SystemDataSet18TableAdapters.CartTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
-            this.receiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cartTableAdapter1 = new Management_System.DB_SystemDataSet26TableAdapters.CartTableAdapter();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet26)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet18)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -112,6 +119,8 @@ namespace Management_System
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox11);
+            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button1);
@@ -144,16 +153,15 @@ namespace Management_System
             this.idproductDataGridViewTextBoxColumn,
             this.warehouseDataGridViewTextBoxColumn,
             this.productnameDataGridViewTextBoxColumn,
-            this.salepriceDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn,
             this.fullpriceDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.receiptBindingSource;
+            this.dataGridView1.DataSource = this.cartBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(10, 217);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(398, 121);
-            this.dataGridView1.TabIndex = 31;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.TabIndex = 33;
             // 
             // idproductDataGridViewTextBoxColumn
             // 
@@ -176,14 +184,13 @@ namespace Management_System
             this.productnameDataGridViewTextBoxColumn.HeaderText = "Артикул";
             this.productnameDataGridViewTextBoxColumn.Name = "productnameDataGridViewTextBoxColumn";
             this.productnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.productnameDataGridViewTextBoxColumn.Width = 200;
             // 
-            // salepriceDataGridViewTextBoxColumn
+            // priceDataGridViewTextBoxColumn
             // 
-            this.salepriceDataGridViewTextBoxColumn.DataPropertyName = "sale_price";
-            this.salepriceDataGridViewTextBoxColumn.HeaderText = "Продажна цена";
-            this.salepriceDataGridViewTextBoxColumn.Name = "salepriceDataGridViewTextBoxColumn";
-            this.salepriceDataGridViewTextBoxColumn.ReadOnly = true;
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Продажна цена";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // quantityDataGridViewTextBoxColumn
             // 
@@ -199,15 +206,15 @@ namespace Management_System
             this.fullpriceDataGridViewTextBoxColumn.Name = "fullpriceDataGridViewTextBoxColumn";
             this.fullpriceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // cartBindingSource
+            // cartBindingSource1
             // 
-            this.cartBindingSource.DataMember = "Cart";
-            this.cartBindingSource.DataSource = this.dB_SystemDataSet18;
+            this.cartBindingSource1.DataMember = "Cart";
+            this.cartBindingSource1.DataSource = this.dB_SystemDataSet26;
             // 
-            // dB_SystemDataSet18
+            // dB_SystemDataSet26
             // 
-            this.dB_SystemDataSet18.DataSetName = "DB_SystemDataSet18";
-            this.dB_SystemDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dB_SystemDataSet26.DataSetName = "DB_SystemDataSet26";
+            this.dB_SystemDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button3
             // 
@@ -248,7 +255,7 @@ namespace Management_System
             // textBox5
             // 
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(214, 145);
+            this.textBox5.Location = new System.Drawing.Point(312, 146);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(100, 26);
             this.textBox5.TabIndex = 13;
@@ -256,7 +263,7 @@ namespace Management_System
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(118, 148);
+            this.label6.Location = new System.Drawing.Point(221, 149);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 19);
             this.label6.TabIndex = 12;
@@ -361,6 +368,20 @@ namespace Management_System
             this.label1.Size = new System.Drawing.Size(28, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID:";
+            // 
+            // receiptBindingSource
+            // 
+            this.receiptBindingSource.DataSource = typeof(Management_System.Receipt);
+            // 
+            // cartBindingSource
+            // 
+            this.cartBindingSource.DataMember = "Cart";
+            this.cartBindingSource.DataSource = this.dB_SystemDataSet18;
+            // 
+            // dB_SystemDataSet18
+            // 
+            this.dB_SystemDataSet18.DataSetName = "DB_SystemDataSet18";
+            this.dB_SystemDataSet18.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // warehousesTableAdapter
             // 
@@ -594,9 +615,26 @@ namespace Management_System
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // receiptBindingSource
+            // cartTableAdapter1
             // 
-            this.receiptBindingSource.DataSource = typeof(Management_System.Receipt);
+            this.cartTableAdapter1.ClearBeforeFill = true;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Enabled = false;
+            this.textBox11.Location = new System.Drawing.Point(115, 149);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 26);
+            this.textBox11.TabIndex = 36;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 152);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 19);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Текущо к-во:";
             // 
             // New_order
             // 
@@ -620,17 +658,19 @@ namespace Management_System
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet26)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet18)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statusBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.receiptBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -685,14 +725,19 @@ namespace Management_System
         private System.Windows.Forms.BindingSource cartBindingSource;
         private DB_SystemDataSet18TableAdapters.CartTableAdapter cartTableAdapter;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.BindingSource receiptBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private DB_SystemDataSet26 dB_SystemDataSet26;
+        private System.Windows.Forms.BindingSource cartBindingSource1;
+        private DB_SystemDataSet26TableAdapters.CartTableAdapter cartTableAdapter1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idproductDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn warehouseDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn salepriceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullpriceDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.BindingSource receiptBindingSource;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label14;
     }
 }

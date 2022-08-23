@@ -35,6 +35,7 @@ namespace Management_System
             this.dB_SystemDataSet10 = new Management_System.DB_SystemDataSet10();
             this.ordersTableAdapter = new Management_System.DB_SystemDataSet10TableAdapters.OrdersTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -76,7 +77,6 @@ namespace Management_System
             this.ordersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet15 = new Management_System.DB_SystemDataSet15();
             this.ordersTableAdapter1 = new Management_System.DB_SystemDataSet15TableAdapters.OrdersTableAdapter();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet10)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -132,6 +132,20 @@ namespace Management_System
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Поръчки";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button2.Location = new System.Drawing.Point(188, 429);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 35);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Справка";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -363,6 +377,7 @@ namespace Management_System
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -377,6 +392,7 @@ namespace Management_System
             this.dataGridView1.DataSource = this.ordersBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(13, 51);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(402, 479);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -386,6 +402,7 @@ namespace Management_System
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "№";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
             this.iDDataGridViewTextBoxColumn.Width = 40;
             // 
             // productsnameDataGridViewTextBoxColumn
@@ -393,6 +410,7 @@ namespace Management_System
             this.productsnameDataGridViewTextBoxColumn.DataPropertyName = "products_name";
             this.productsnameDataGridViewTextBoxColumn.HeaderText = "Артикули";
             this.productsnameDataGridViewTextBoxColumn.Name = "productsnameDataGridViewTextBoxColumn";
+            this.productsnameDataGridViewTextBoxColumn.ReadOnly = true;
             this.productsnameDataGridViewTextBoxColumn.Width = 150;
             // 
             // quantityDataGridViewTextBoxColumn
@@ -400,6 +418,7 @@ namespace Management_System
             this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
             this.quantityDataGridViewTextBoxColumn.HeaderText = "Количество";
             this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
             this.quantityDataGridViewTextBoxColumn.Width = 90;
             // 
             // fullpriceDataGridViewTextBoxColumn
@@ -407,6 +426,7 @@ namespace Management_System
             this.fullpriceDataGridViewTextBoxColumn.DataPropertyName = "full_price";
             this.fullpriceDataGridViewTextBoxColumn.HeaderText = "Крайна цена";
             this.fullpriceDataGridViewTextBoxColumn.Name = "fullpriceDataGridViewTextBoxColumn";
+            this.fullpriceDataGridViewTextBoxColumn.ReadOnly = true;
             this.fullpriceDataGridViewTextBoxColumn.Width = 60;
             // 
             // clientDataGridViewTextBoxColumn
@@ -414,6 +434,7 @@ namespace Management_System
             this.clientDataGridViewTextBoxColumn.DataPropertyName = "client";
             this.clientDataGridViewTextBoxColumn.HeaderText = "Клиент";
             this.clientDataGridViewTextBoxColumn.Name = "clientDataGridViewTextBoxColumn";
+            this.clientDataGridViewTextBoxColumn.ReadOnly = true;
             this.clientDataGridViewTextBoxColumn.Width = 80;
             // 
             // dateDataGridViewTextBoxColumn
@@ -421,12 +442,14 @@ namespace Management_System
             this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
             this.dateDataGridViewTextBoxColumn.HeaderText = "Дата";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            this.dateDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // statusDataGridViewTextBoxColumn
             // 
             this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
             this.statusDataGridViewTextBoxColumn.HeaderText = "Статус";
             this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             this.statusDataGridViewTextBoxColumn.Width = 80;
             // 
             // usernameDataGridViewTextBoxColumn
@@ -434,6 +457,7 @@ namespace Management_System
             this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
             this.usernameDataGridViewTextBoxColumn.HeaderText = "Създател";
             this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.ReadOnly = true;
             this.usernameDataGridViewTextBoxColumn.Width = 80;
             // 
             // ordersBindingSource1
@@ -449,20 +473,6 @@ namespace Management_System
             // ordersTableAdapter1
             // 
             this.ordersTableAdapter1.ClearBeforeFill = true;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button2.Location = new System.Drawing.Point(188, 429);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 35);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Справка";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Orders
             // 

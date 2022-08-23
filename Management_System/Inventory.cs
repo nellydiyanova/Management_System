@@ -87,6 +87,8 @@ namespace Management_System
             textBox8.Enabled = true;
             textBox9.Enabled = true;
             textBox10.Enabled = true;
+            textBox12.Enabled = false;
+            //textBox12.Text = "0";
             comboBox1.Enabled = true;
             button1.Enabled = true;
             button2.Enabled = true;
@@ -461,6 +463,7 @@ namespace Management_System
                             textBox9.Text = myreader["sale_price"].ToString();
                             textBox10.Text = myreader["measure"].ToString();
                             comboBox1.Text = myreader["supplier"].ToString();
+                            textBox12.Text = myreader["quantity"].ToString();
                         }
 
                         if (myConnection.State == ConnectionState.Open)
@@ -613,7 +616,7 @@ namespace Management_System
                 try
                 {
                     myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("insert into Inventory(id_product, product_name, delivery_price, sale_price, measure, supplier, warehouse) values(@id_product, @product_name, @delivery_price, @sale_price, @measure, @supplier, @warehouse)", myConnection);
+                    myCommand = new SqlCommand("insert into Inventory(id_product, product_name, delivery_price, sale_price, measure, quantity, supplier, warehouse) values(@id_product, @product_name, @delivery_price, @sale_price, @measure, @quantity, @supplier, @warehouse)", myConnection);
                     myConnection.Open();
                     myCommand.Parameters.AddWithValue("@id_product", textBox5.Text);
                     myCommand.Parameters.AddWithValue("@warehouse", textBox6.Text);
@@ -622,6 +625,7 @@ namespace Management_System
                     myCommand.Parameters.AddWithValue("@sale_price", textBox9.Text);
                     myCommand.Parameters.AddWithValue("@measure", textBox10.Text);
                     myCommand.Parameters.AddWithValue("@supplier", comboBox1.Text);
+                    myCommand.Parameters.AddWithValue("@quantity", textBox12.Text);
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
                     MessageBox.Show("Успешно въведена нова стока!");
