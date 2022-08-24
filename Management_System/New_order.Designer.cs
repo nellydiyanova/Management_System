@@ -320,6 +320,7 @@ namespace Management_System
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.warehousesBindingSource, "warehouse", true));
             this.comboBox1.DataSource = this.warehousesBindingSource;
             this.comboBox1.DisplayMember = "warehouse";
+            this.comboBox1.Enabled = false;
             this.comboBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(287, 18);

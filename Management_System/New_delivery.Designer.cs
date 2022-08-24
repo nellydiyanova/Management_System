@@ -33,6 +33,8 @@ namespace Management_System
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_delivery));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet25 = new Management_System.DB_SystemDataSet25();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox9 = new System.Windows.Forms.TextBox();
@@ -48,7 +50,17 @@ namespace Management_System
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.warehouseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cartBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet23 = new Management_System.DB_SystemDataSet23();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -58,6 +70,8 @@ namespace Management_System
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.warehousesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet24 = new Management_System.DB_SystemDataSet24();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,38 +88,24 @@ namespace Management_System
             this.dB_SystemDataSet22 = new Management_System.DB_SystemDataSet22();
             this.cartBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cartTableAdapter1 = new Management_System.DB_SystemDataSet22TableAdapters.CartTableAdapter();
-            this.dB_SystemDataSet23 = new Management_System.DB_SystemDataSet23();
-            this.cartBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.cartTableAdapter2 = new Management_System.DB_SystemDataSet23TableAdapters.CartTableAdapter();
-            this.dB_SystemDataSet24 = new Management_System.DB_SystemDataSet24();
-            this.warehousesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.warehousesTableAdapter = new Management_System.DB_SystemDataSet24TableAdapters.WarehousesTableAdapter();
-            this.idproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.warehouseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.productnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dB_SystemDataSet25 = new Management_System.DB_SystemDataSet25();
-            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suppliersTableAdapter = new Management_System.DB_SystemDataSet25TableAdapters.SuppliersTableAdapter();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet25)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet24)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -141,6 +141,16 @@ namespace Management_System
             this.listBox1.Size = new System.Drawing.Size(337, 80);
             this.listBox1.TabIndex = 32;
             this.listBox1.ValueMember = "supplier";
+            // 
+            // suppliersBindingSource
+            // 
+            this.suppliersBindingSource.DataMember = "Suppliers";
+            this.suppliersBindingSource.DataSource = this.dB_SystemDataSet25;
+            // 
+            // dB_SystemDataSet25
+            // 
+            this.dB_SystemDataSet25.DataSetName = "DB_SystemDataSet25";
+            this.dB_SystemDataSet25.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox10
             // 
@@ -295,6 +305,23 @@ namespace Management_System
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Стока";
             // 
+            // textBox11
+            // 
+            this.textBox11.Enabled = false;
+            this.textBox11.Location = new System.Drawing.Point(115, 145);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 26);
+            this.textBox11.TabIndex = 34;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 148);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(82, 19);
+            this.label13.TabIndex = 33;
+            this.label13.Text = "Текущо к-во:";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
@@ -315,6 +342,59 @@ namespace Management_System
             this.dataGridView1.TabIndex = 32;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
+            // 
+            // idproductDataGridViewTextBoxColumn
+            // 
+            this.idproductDataGridViewTextBoxColumn.DataPropertyName = "id_product";
+            this.idproductDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idproductDataGridViewTextBoxColumn.Name = "idproductDataGridViewTextBoxColumn";
+            this.idproductDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idproductDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // warehouseDataGridViewTextBoxColumn
+            // 
+            this.warehouseDataGridViewTextBoxColumn.DataPropertyName = "warehouse";
+            this.warehouseDataGridViewTextBoxColumn.HeaderText = "Склад";
+            this.warehouseDataGridViewTextBoxColumn.Name = "warehouseDataGridViewTextBoxColumn";
+            this.warehouseDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // productnameDataGridViewTextBoxColumn
+            // 
+            this.productnameDataGridViewTextBoxColumn.DataPropertyName = "product_name";
+            this.productnameDataGridViewTextBoxColumn.HeaderText = "Артикул";
+            this.productnameDataGridViewTextBoxColumn.Name = "productnameDataGridViewTextBoxColumn";
+            this.productnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Доставна цена";
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // quantityDataGridViewTextBoxColumn
+            // 
+            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
+            this.quantityDataGridViewTextBoxColumn.HeaderText = "Количество";
+            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fullpriceDataGridViewTextBoxColumn
+            // 
+            this.fullpriceDataGridViewTextBoxColumn.DataPropertyName = "full_price";
+            this.fullpriceDataGridViewTextBoxColumn.HeaderText = "Крайна цена";
+            this.fullpriceDataGridViewTextBoxColumn.Name = "fullpriceDataGridViewTextBoxColumn";
+            this.fullpriceDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cartBindingSource2
+            // 
+            this.cartBindingSource2.DataMember = "Cart";
+            this.cartBindingSource2.DataSource = this.dB_SystemDataSet23;
+            // 
+            // dB_SystemDataSet23
+            // 
+            this.dB_SystemDataSet23.DataSetName = "DB_SystemDataSet23";
+            this.dB_SystemDataSet23.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button3
             // 
@@ -398,6 +478,7 @@ namespace Management_System
             this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.warehousesBindingSource, "warehouse", true));
             this.comboBox1.DataSource = this.warehousesBindingSource;
             this.comboBox1.DisplayMember = "warehouse";
+            this.comboBox1.Enabled = false;
             this.comboBox1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(287, 18);
@@ -405,6 +486,16 @@ namespace Management_System
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 8;
             this.comboBox1.ValueMember = "warehouse";
+            // 
+            // warehousesBindingSource
+            // 
+            this.warehousesBindingSource.DataMember = "Warehouses";
+            this.warehousesBindingSource.DataSource = this.dB_SystemDataSet24;
+            // 
+            // dB_SystemDataSet24
+            // 
+            this.dB_SystemDataSet24.DataSetName = "DB_SystemDataSet24";
+            this.dB_SystemDataSet24.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // textBox1
             // 
@@ -510,107 +601,17 @@ namespace Management_System
             // 
             this.cartTableAdapter1.ClearBeforeFill = true;
             // 
-            // dB_SystemDataSet23
-            // 
-            this.dB_SystemDataSet23.DataSetName = "DB_SystemDataSet23";
-            this.dB_SystemDataSet23.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cartBindingSource2
-            // 
-            this.cartBindingSource2.DataMember = "Cart";
-            this.cartBindingSource2.DataSource = this.dB_SystemDataSet23;
-            // 
             // cartTableAdapter2
             // 
             this.cartTableAdapter2.ClearBeforeFill = true;
-            // 
-            // dB_SystemDataSet24
-            // 
-            this.dB_SystemDataSet24.DataSetName = "DB_SystemDataSet24";
-            this.dB_SystemDataSet24.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // warehousesBindingSource
-            // 
-            this.warehousesBindingSource.DataMember = "Warehouses";
-            this.warehousesBindingSource.DataSource = this.dB_SystemDataSet24;
             // 
             // warehousesTableAdapter
             // 
             this.warehousesTableAdapter.ClearBeforeFill = true;
             // 
-            // idproductDataGridViewTextBoxColumn
-            // 
-            this.idproductDataGridViewTextBoxColumn.DataPropertyName = "id_product";
-            this.idproductDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.idproductDataGridViewTextBoxColumn.Name = "idproductDataGridViewTextBoxColumn";
-            this.idproductDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idproductDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // warehouseDataGridViewTextBoxColumn
-            // 
-            this.warehouseDataGridViewTextBoxColumn.DataPropertyName = "warehouse";
-            this.warehouseDataGridViewTextBoxColumn.HeaderText = "Склад";
-            this.warehouseDataGridViewTextBoxColumn.Name = "warehouseDataGridViewTextBoxColumn";
-            this.warehouseDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // productnameDataGridViewTextBoxColumn
-            // 
-            this.productnameDataGridViewTextBoxColumn.DataPropertyName = "product_name";
-            this.productnameDataGridViewTextBoxColumn.HeaderText = "Артикул";
-            this.productnameDataGridViewTextBoxColumn.Name = "productnameDataGridViewTextBoxColumn";
-            this.productnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // priceDataGridViewTextBoxColumn
-            // 
-            this.priceDataGridViewTextBoxColumn.DataPropertyName = "price";
-            this.priceDataGridViewTextBoxColumn.HeaderText = "Доставна цена";
-            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
-            this.priceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // quantityDataGridViewTextBoxColumn
-            // 
-            this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
-            this.quantityDataGridViewTextBoxColumn.HeaderText = "Количество";
-            this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
-            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fullpriceDataGridViewTextBoxColumn
-            // 
-            this.fullpriceDataGridViewTextBoxColumn.DataPropertyName = "full_price";
-            this.fullpriceDataGridViewTextBoxColumn.HeaderText = "Крайна цена";
-            this.fullpriceDataGridViewTextBoxColumn.Name = "fullpriceDataGridViewTextBoxColumn";
-            this.fullpriceDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dB_SystemDataSet25
-            // 
-            this.dB_SystemDataSet25.DataSetName = "DB_SystemDataSet25";
-            this.dB_SystemDataSet25.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // suppliersBindingSource
-            // 
-            this.suppliersBindingSource.DataMember = "Suppliers";
-            this.suppliersBindingSource.DataSource = this.dB_SystemDataSet25;
-            // 
             // suppliersTableAdapter
             // 
             this.suppliersTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(115, 145);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 26);
-            this.textBox11.TabIndex = 34;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 148);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(82, 19);
-            this.label13.TabIndex = 33;
-            this.label13.Text = "Текущо к-во:";
             // 
             // New_delivery
             // 
@@ -632,21 +633,21 @@ namespace Management_System
             this.Load += new System.EventHandler(this.New_delivery_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet25)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet24)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

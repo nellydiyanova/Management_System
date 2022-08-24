@@ -78,24 +78,7 @@ namespace Management_System
             textBox8.Text = Convert.ToString(full_quantity);
         }
 
-        private void RECalculateQuantity()
-        {
-            double quantity = 0, full_quantity = 0;
-            quantity = Convert.ToDouble(textBox4.Text);
-            full_quantity -= quantity;
-            textBox8.Text = Convert.ToString(full_quantity);
-        }
-
         private void CalculateTotal()
-        {
-            double full_price;
-            if (double.TryParse(textBox5.Text, out full_price))
-            {
-                textBox9.Text = full_price.ToString();
-            }
-        }
-
-        private void RECalculateTotal()
         {
             double full_price;
             if (double.TryParse(textBox5.Text, out full_price))

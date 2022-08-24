@@ -72,6 +72,7 @@ namespace Management_System
             this.warehousesTableAdapter.Fill(this.dB_SystemDataSet29.Warehouses);
             // TODO: This line of code loads data into the 'dB_SystemDataSet6.Suppliers' table. You can move, or remove it, as needed.
             this.suppliersTableAdapter.Fill(this.dB_SystemDataSet6.Suppliers);
+
             TreeNode parentnode = new TreeNode("Номенклатура");
             treeView1.Nodes.Add(parentnode);
             TreeNode firtsnode = treeView1.Nodes[0];
@@ -89,8 +90,8 @@ namespace Management_System
             textBox9.Enabled = true;
             textBox10.Enabled = true;
             textBox12.Enabled = false;
-            //textBox12.Text = "0";
             comboBox1.Enabled = true;
+            comboBox2.Enabled = false;
             button1.Enabled = true;
             button2.Enabled = true;
             button1.BackColor = System.Drawing.Color.LightGreen;
@@ -220,6 +221,7 @@ namespace Management_System
             textBox3.Clear();
             textBox4.Clear();
             textBox5.Clear();
+            comboBox2.Enabled = true;
             comboBox2.Text = "";
             textBox7.Clear();
             textBox8.Clear();
@@ -273,6 +275,7 @@ namespace Management_System
                     treeView1.SelectedNode.Text = textBox7.Text;
                     textBox5.Clear();
                     comboBox2.Text = "";
+                    comboBox2.Enabled = false;
                     textBox7.Clear();
                     textBox8.Clear();
                     textBox9.Clear();
@@ -383,6 +386,7 @@ namespace Management_System
             textBox9.Enabled = true;
             textBox10.Enabled = true;
             comboBox1.Enabled = true;
+            comboBox2.Enabled = false;
             button1.Enabled = true;
             button2.Enabled = true;
             button4.Enabled = false;
@@ -651,6 +655,7 @@ namespace Management_System
                     node.SelectedImageIndex = 1;
                     textBox5.Clear();
                     comboBox2.Text = "";
+                    comboBox2.Enabled = false;
                     textBox7.Clear();
                     textBox8.Clear();
                     textBox9.Clear();

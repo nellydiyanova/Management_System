@@ -55,8 +55,8 @@ namespace Management_System
         
         private void button8_Click(object sender, EventArgs e)
         {
-            //Form10 frm = new Form10();
-            //frm.Show();
+            Transfer frm = new Transfer();
+            frm.Show();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -70,13 +70,12 @@ namespace Management_System
             //Form12 frm = new Form12();
             //frm.Show();
         }
-        
+
         private void button11_Click(object sender, EventArgs e)
         {
             //Form13 frm = new Form13();
             //frm.Show();
         }
-        
         private void button12_Click(object sender, EventArgs e)
         {
             Application.Exit();
