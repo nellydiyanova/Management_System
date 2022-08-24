@@ -68,6 +68,8 @@ namespace Management_System
 
         private void Inventory_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_SystemDataSet29.Warehouses' table. You can move, or remove it, as needed.
+            this.warehousesTableAdapter.Fill(this.dB_SystemDataSet29.Warehouses);
             // TODO: This line of code loads data into the 'dB_SystemDataSet6.Suppliers' table. You can move, or remove it, as needed.
             this.suppliersTableAdapter.Fill(this.dB_SystemDataSet6.Suppliers);
             TreeNode parentnode = new TreeNode("Номенклатура");
@@ -82,7 +84,6 @@ namespace Management_System
             textBox3.Enabled = true;
             textBox4.Enabled = true;
             textBox5.Enabled = true;
-            textBox6.Enabled = true;
             textBox7.Enabled = true;
             textBox8.Enabled = true;
             textBox9.Enabled = true;
@@ -118,6 +119,17 @@ namespace Management_System
             }
         }
 
+        void ColorNode(TreeNodeCollection nodes, System.Drawing.Color Color)
+{
+
+    foreach (TreeNode child in nodes)
+    {
+        child.ForeColor= Color;
+        if(child.Nodes != null && child.Nodes.Count>0)
+          ColorNode(child.Nodes, Color);
+    }
+}
+
         private void новСкладToolStripMenuItem_Click(object sender, EventArgs e)
         {
             groupBox1.Visible = true;
@@ -127,7 +139,7 @@ namespace Management_System
             textBox3.Clear();
             textBox4.Clear();
             textBox5.Clear();
-            textBox6.Clear();
+            comboBox2.Text = "";
             textBox7.Clear();
             textBox8.Clear();
             textBox9.Clear();
@@ -140,7 +152,6 @@ namespace Management_System
             textBox3.Enabled = true;
             textBox4.Enabled = true;
             textBox5.Enabled = true;
-            textBox6.Enabled = true;
             textBox7.Enabled = true;
             textBox8.Enabled = true;
             textBox9.Enabled = true;
@@ -209,12 +220,13 @@ namespace Management_System
             textBox3.Clear();
             textBox4.Clear();
             textBox5.Clear();
-            textBox6.Clear();
+            comboBox2.Text = "";
             textBox7.Clear();
             textBox8.Clear();
             textBox9.Clear();
             textBox10.Clear();
             textBox11.Clear();
+            textBox12.Clear();
             comboBox1.Text = "";
             textBox5.Focus();
             textBox1.Enabled = true;
@@ -222,7 +234,6 @@ namespace Management_System
             textBox3.Enabled = true;
             textBox4.Enabled = true;
             textBox5.Enabled = true;
-            textBox6.Enabled = true;
             textBox7.Enabled = true;
             textBox8.Enabled = true;
             textBox9.Enabled = true;
@@ -237,7 +248,7 @@ namespace Management_System
         private void button2_Click(object sender, EventArgs e)
         {
             TreeNode selectedNode = treeView1.SelectedNode;
-            if (textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && textBox10.Text != "")
+            if (textBox5.Text != "" && comboBox2.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && textBox10.Text != "")
             {
                 try
                 {
@@ -245,7 +256,7 @@ namespace Management_System
                     myCommand = new SqlCommand("update Inventory set id_product=@id_product, product_name=@product_name, delivery_price=@delivery_price, sale_price=@sale_price, measure=@measure, supplier=@supplier, warehouse=@warehouse  where id_product=@id_product", myConnection);
                     myConnection.Open();
                     myCommand.Parameters.AddWithValue("@id_product", textBox5.Text);
-                    myCommand.Parameters.AddWithValue("@warehouse", textBox6.Text);
+                    myCommand.Parameters.AddWithValue("@warehouse", comboBox2.Text);
                     myCommand.Parameters.AddWithValue("@product_name", textBox7.Text);
                     myCommand.Parameters.AddWithValue("@delivery_price", textBox8.Text);
                     myCommand.Parameters.AddWithValue("@sale_price", textBox9.Text);
@@ -261,7 +272,7 @@ namespace Management_System
 
                     treeView1.SelectedNode.Text = textBox7.Text;
                     textBox5.Clear();
-                    textBox6.Clear();
+                    comboBox2.Text = "";
                     textBox7.Clear();
                     textBox8.Clear();
                     textBox9.Clear();
@@ -322,7 +333,7 @@ namespace Management_System
             }
 
             else
-            if (selectedNode != treeView1.Nodes[0] && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && textBox10.Text != "")
+            if (selectedNode != treeView1.Nodes[0] && textBox5.Text != "" && comboBox2.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && textBox10.Text != "")
             {
                 try
                 {
@@ -340,7 +351,7 @@ namespace Management_System
 
                     treeView1.SelectedNode.Remove();
                     textBox5.Clear();
-                    textBox6.Clear();
+                    comboBox2.Text = "";
                     textBox7.Clear();
                     textBox8.Clear();
                     textBox9.Clear();
@@ -367,7 +378,6 @@ namespace Management_System
             textBox3.Enabled = true;
             textBox4.Enabled = true;
             textBox5.Enabled = true;
-            textBox6.Enabled = true;
             textBox7.Enabled = true;
             textBox8.Enabled = true;
             textBox9.Enabled = true;
@@ -393,8 +403,7 @@ namespace Management_System
                 textBox4.Enabled = false;
                 textBox5.Clear();
                 textBox5.Enabled = false;
-                textBox6.Clear();
-                textBox6.Enabled = false;
+                comboBox2.Text = "";
                 textBox7.Clear();
                 textBox7.Enabled = false;
                 textBox8.Clear();
@@ -457,7 +466,7 @@ namespace Management_System
                         if (myreader.Read() == true)
                         {
                             textBox5.Text = myreader["id_product"].ToString();
-                            textBox6.Text = myreader["warehouse"].ToString();
+                            comboBox2.Text = myreader["warehouse"].ToString();
                             textBox7.Text = myreader["product_name"].ToString();
                             textBox8.Text = myreader["delivery_price"].ToString();
                             textBox9.Text = myreader["sale_price"].ToString();
@@ -537,6 +546,7 @@ namespace Management_System
                     treeView1.SelectedNode = node;
                     node.BackColor = Color.Yellow;
                 }
+
                 else
                 {
                     node.BackColor = Color.Empty;
@@ -619,7 +629,7 @@ namespace Management_System
                     myCommand = new SqlCommand("insert into Inventory(id_product, product_name, delivery_price, sale_price, measure, quantity, supplier, warehouse) values(@id_product, @product_name, @delivery_price, @sale_price, @measure, @quantity, @supplier, @warehouse)", myConnection);
                     myConnection.Open();
                     myCommand.Parameters.AddWithValue("@id_product", textBox5.Text);
-                    myCommand.Parameters.AddWithValue("@warehouse", textBox6.Text);
+                    myCommand.Parameters.AddWithValue("@warehouse", comboBox2.Text);
                     myCommand.Parameters.AddWithValue("@product_name", textBox7.Text);
                     myCommand.Parameters.AddWithValue("@delivery_price", textBox8.Text);
                     myCommand.Parameters.AddWithValue("@sale_price", textBox9.Text);
@@ -640,7 +650,7 @@ namespace Management_System
                     node.ImageIndex = 1;
                     node.SelectedImageIndex = 1;
                     textBox5.Clear();
-                    textBox6.Clear();
+                    comboBox2.Text = "";
                     textBox7.Clear();
                     textBox8.Clear();
                     textBox9.Clear();

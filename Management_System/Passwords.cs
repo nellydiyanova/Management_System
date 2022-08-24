@@ -29,15 +29,17 @@ namespace Management_System
 
         private void Passwords_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_SystemDataSet9.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.dB_SystemDataSet9.Users);
+            
             button1.BackColor = System.Drawing.Color.LightGreen;
             button2.BackColor = System.Drawing.Color.LightGreen;
             textBox1.Enabled = false;
-            // TODO: This line of code loads data into the 'dB_SystemDataSet9.Users' table. You can move, or remove it, as needed.
-            this.usersTableAdapter.Fill(this.dB_SystemDataSet9.Users);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            textBox1.Enabled = false;
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox3.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -72,7 +74,7 @@ namespace Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
+            if (textBox1.Text != "" && textBox2.Text != "")
             {
                 try
                 {
@@ -120,7 +122,7 @@ namespace Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
+            if (textBox1.Text != "" && textBox2.Text != "")
             {
                 try
                 {
@@ -166,14 +168,10 @@ namespace Management_System
             }
         }
 
-        private void стоковаСправкаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void изтрийСлужителToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
+            textBox1.Enabled = true;
+            if (textBox1.Text != "" && textBox2.Text != "")
             {
                 try
                 {

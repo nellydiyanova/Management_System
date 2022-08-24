@@ -123,9 +123,12 @@
   <metadata name="dB_SystemDataSet7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="dB_SystemDataSet7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 142</value>
+    <value>66, 142</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -243,9 +246,6 @@
   <metadata name="usersBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>647, 17</value>
   </metadata>
-  <metadata name="dB_SystemDataSet8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>488, 17</value>
-  </metadata>
   <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>111, 31</value>
   </data>
@@ -267,6 +267,15 @@
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <metadata name="usersBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>647, 17</value>
+  </metadata>
+  <metadata name="dB_SystemDataSet8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>488, 17</value>
+  </metadata>
+  <metadata name="dB_SystemDataSet8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>488, 17</value>
+  </metadata>
   <metadata name="usersTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
@@ -3254,7 +3263,7 @@
     <value>4, 4, 4, 4</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Авторизация</value>
+    <value>Оторизация</value>
   </data>
   <data name="&gt;&gt;usersBindingSource.Name" xml:space="preserve">
     <value>usersBindingSource</value>
@@ -3274,17 +3283,17 @@
   <data name="&gt;&gt;usersTableAdapter.Type" xml:space="preserve">
     <value>Management_System.DB_SystemDataSet7TableAdapters.UsersTableAdapter, DB_SystemDataSet7.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="&gt;&gt;dB_SystemDataSet8.Name" xml:space="preserve">
-    <value>dB_SystemDataSet8</value>
-  </data>
-  <data name="&gt;&gt;dB_SystemDataSet8.Type" xml:space="preserve">
-    <value>Management_System.DB_SystemDataSet8, DB_SystemDataSet8.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
   <data name="&gt;&gt;usersBindingSource1.Name" xml:space="preserve">
     <value>usersBindingSource1</value>
   </data>
   <data name="&gt;&gt;usersBindingSource1.Type" xml:space="preserve">
     <value>System.Windows.Forms.BindingSource, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dB_SystemDataSet8.Name" xml:space="preserve">
+    <value>dB_SystemDataSet8</value>
+  </data>
+  <data name="&gt;&gt;dB_SystemDataSet8.Type" xml:space="preserve">
+    <value>Management_System.DB_SystemDataSet8, DB_SystemDataSet8.Designer.cs.dll, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;usersTableAdapter1.Name" xml:space="preserve">
     <value>usersTableAdapter1</value>

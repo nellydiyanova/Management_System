@@ -54,7 +54,6 @@ namespace Management_System
             this.label9 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -62,6 +61,11 @@ namespace Management_System
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.warehousesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet29 = new Management_System.DB_SystemDataSet29();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -71,11 +75,12 @@ namespace Management_System
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.suppliersTableAdapter = new Management_System.DB_SystemDataSet6TableAdapters.SuppliersTableAdapter();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.warehousesTableAdapter = new Management_System.DB_SystemDataSet29TableAdapters.WarehousesTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet6)).BeginInit();
             this.SuspendLayout();
@@ -230,11 +235,6 @@ namespace Management_System
             resources.ApplyResources(this.textBox5, "textBox5");
             this.textBox5.Name = "textBox5";
             // 
-            // textBox6
-            // 
-            resources.ApplyResources(this.textBox6, "textBox6");
-            this.textBox6.Name = "textBox6";
-            // 
             // label5
             // 
             resources.ApplyResources(this.label5, "label5");
@@ -267,6 +267,7 @@ namespace Management_System
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.textBox12);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.button5);
@@ -283,11 +284,40 @@ namespace Management_System
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.textBox6);
             this.groupBox2.Controls.Add(this.textBox5);
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.warehousesBindingSource, "warehouse", true));
+            this.comboBox2.DataSource = this.warehousesBindingSource;
+            this.comboBox2.DisplayMember = "warehouse";
+            resources.ApplyResources(this.comboBox2, "comboBox2");
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.ValueMember = "warehouse";
+            // 
+            // warehousesBindingSource
+            // 
+            this.warehousesBindingSource.DataMember = "Warehouses";
+            this.warehousesBindingSource.DataSource = this.dB_SystemDataSet29;
+            // 
+            // dB_SystemDataSet29
+            // 
+            this.dB_SystemDataSet29.DataSetName = "DB_SystemDataSet29";
+            this.dB_SystemDataSet29.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // textBox12
+            // 
+            resources.ApplyResources(this.textBox12, "textBox12");
+            this.textBox12.Name = "textBox12";
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
             // 
             // button5
             // 
@@ -352,15 +382,9 @@ namespace Management_System
             // 
             this.suppliersTableAdapter.ClearBeforeFill = true;
             // 
-            // label12
+            // warehousesTableAdapter
             // 
-            resources.ApplyResources(this.label12, "label12");
-            this.label12.Name = "label12";
-            // 
-            // textBox12
-            // 
-            resources.ApplyResources(this.textBox12, "textBox12");
-            this.textBox12.Name = "textBox12";
+            this.warehousesTableAdapter.ClearBeforeFill = true;
             // 
             // Inventory
             // 
@@ -382,6 +406,8 @@ namespace Management_System
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet6)).EndInit();
             this.ResumeLayout(false);
@@ -412,7 +438,6 @@ namespace Management_System
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox7;
@@ -433,5 +458,9 @@ namespace Management_System
         private DB_SystemDataSet6TableAdapters.SuppliersTableAdapter suppliersTableAdapter;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private DB_SystemDataSet29 dB_SystemDataSet29;
+        private System.Windows.Forms.BindingSource warehousesBindingSource;
+        private DB_SystemDataSet29TableAdapters.WarehousesTableAdapter warehousesTableAdapter;
     }
 }

@@ -139,6 +139,9 @@ namespace Management_System
             button1.BackColor = System.Drawing.Color.LightGreen;
             button3.BackColor = System.Drawing.Color.LightGreen;
             button5.BackColor = System.Drawing.Color.LightGreen;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
 
             try
             {
@@ -179,6 +182,9 @@ namespace Management_System
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = true;
+            button3.Enabled = true;
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -189,6 +195,9 @@ namespace Management_System
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = true;
+            button3.Enabled = true;
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -199,6 +208,9 @@ namespace Management_System
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            button1.Enabled = true;
+            button2.Enabled = false;
+            button3.Enabled = false;
             TreeNode selectedNode = treeView1.SelectedNode;
             if (selectedNode != treeView1.Nodes[0] && selectedNode != null)
             {
@@ -234,6 +246,9 @@ namespace Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -275,11 +290,15 @@ namespace Management_System
             else
             {
                 MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                button1.Enabled = true;
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
             try
             {
                 myConnection = new SqlConnection(frm.cs);
@@ -312,6 +331,9 @@ namespace Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -454,6 +476,9 @@ namespace Management_System
 
         private void button5_Click(object sender, EventArgs e)
         {
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
             if (dataGridView1.Rows.Count != 0 && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "")
             {
                 try

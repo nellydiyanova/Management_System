@@ -51,6 +51,8 @@ namespace Management_System
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -65,54 +67,63 @@ namespace Management_System
             this.dataGridView1.DataSource = this.inventoryBindingSource;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             // 
             // idproductDataGridViewTextBoxColumn
             // 
             this.idproductDataGridViewTextBoxColumn.DataPropertyName = "id_product";
             resources.ApplyResources(this.idproductDataGridViewTextBoxColumn, "idproductDataGridViewTextBoxColumn");
             this.idproductDataGridViewTextBoxColumn.Name = "idproductDataGridViewTextBoxColumn";
+            this.idproductDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productnameDataGridViewTextBoxColumn
             // 
             this.productnameDataGridViewTextBoxColumn.DataPropertyName = "product_name";
             resources.ApplyResources(this.productnameDataGridViewTextBoxColumn, "productnameDataGridViewTextBoxColumn");
             this.productnameDataGridViewTextBoxColumn.Name = "productnameDataGridViewTextBoxColumn";
+            this.productnameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // deliverypriceDataGridViewTextBoxColumn
             // 
             this.deliverypriceDataGridViewTextBoxColumn.DataPropertyName = "delivery_price";
             resources.ApplyResources(this.deliverypriceDataGridViewTextBoxColumn, "deliverypriceDataGridViewTextBoxColumn");
             this.deliverypriceDataGridViewTextBoxColumn.Name = "deliverypriceDataGridViewTextBoxColumn";
+            this.deliverypriceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // salepriceDataGridViewTextBoxColumn
             // 
             this.salepriceDataGridViewTextBoxColumn.DataPropertyName = "sale_price";
             resources.ApplyResources(this.salepriceDataGridViewTextBoxColumn, "salepriceDataGridViewTextBoxColumn");
             this.salepriceDataGridViewTextBoxColumn.Name = "salepriceDataGridViewTextBoxColumn";
+            this.salepriceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // measureDataGridViewTextBoxColumn
             // 
             this.measureDataGridViewTextBoxColumn.DataPropertyName = "measure";
             resources.ApplyResources(this.measureDataGridViewTextBoxColumn, "measureDataGridViewTextBoxColumn");
             this.measureDataGridViewTextBoxColumn.Name = "measureDataGridViewTextBoxColumn";
+            this.measureDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // quantityDataGridViewTextBoxColumn
             // 
             this.quantityDataGridViewTextBoxColumn.DataPropertyName = "quantity";
             resources.ApplyResources(this.quantityDataGridViewTextBoxColumn, "quantityDataGridViewTextBoxColumn");
             this.quantityDataGridViewTextBoxColumn.Name = "quantityDataGridViewTextBoxColumn";
+            this.quantityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // supplierDataGridViewTextBoxColumn
             // 
             this.supplierDataGridViewTextBoxColumn.DataPropertyName = "supplier";
             resources.ApplyResources(this.supplierDataGridViewTextBoxColumn, "supplierDataGridViewTextBoxColumn");
             this.supplierDataGridViewTextBoxColumn.Name = "supplierDataGridViewTextBoxColumn";
+            this.supplierDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // warehouseDataGridViewTextBoxColumn
             // 
             this.warehouseDataGridViewTextBoxColumn.DataPropertyName = "warehouse";
             resources.ApplyResources(this.warehouseDataGridViewTextBoxColumn, "warehouseDataGridViewTextBoxColumn");
             this.warehouseDataGridViewTextBoxColumn.Name = "warehouseDataGridViewTextBoxColumn";
+            this.warehouseDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // inventoryBindingSource
             // 

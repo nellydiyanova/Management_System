@@ -33,6 +33,8 @@ namespace Management_System
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(New_order));
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.warehouseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -90,8 +92,6 @@ namespace Management_System
             this.cartTableAdapter = new Management_System.DB_SystemDataSet18TableAdapters.CartTableAdapter();
             this.button6 = new System.Windows.Forms.Button();
             this.cartTableAdapter1 = new Management_System.DB_SystemDataSet26TableAdapters.CartTableAdapter();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource1)).BeginInit();
@@ -144,6 +144,23 @@ namespace Management_System
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Стока";
             // 
+            // textBox11
+            // 
+            this.textBox11.Enabled = false;
+            this.textBox11.Location = new System.Drawing.Point(115, 149);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(100, 26);
+            this.textBox11.TabIndex = 36;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(6, 152);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(82, 19);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Текущо к-во:";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToDeleteRows = false;
@@ -162,6 +179,8 @@ namespace Management_System
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(398, 121);
             this.dataGridView1.TabIndex = 33;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // idproductDataGridViewTextBoxColumn
             // 
@@ -220,6 +239,7 @@ namespace Management_System
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.button3.Location = new System.Drawing.Point(248, 344);
@@ -233,6 +253,7 @@ namespace Management_System
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.Enabled = false;
             this.button1.Location = new System.Drawing.Point(153, 183);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 28);
@@ -244,6 +265,7 @@ namespace Management_System
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.Enabled = false;
             this.button2.Location = new System.Drawing.Point(67, 347);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 28);
@@ -405,7 +427,7 @@ namespace Management_System
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button5.Location = new System.Drawing.Point(507, 432);
+            this.button5.Location = new System.Drawing.Point(466, 432);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 35);
             this.button5.TabIndex = 17;
@@ -607,7 +629,7 @@ namespace Management_System
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button6.Location = new System.Drawing.Point(635, 432);
+            this.button6.Location = new System.Drawing.Point(594, 432);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(113, 35);
             this.button6.TabIndex = 25;
@@ -618,23 +640,6 @@ namespace Management_System
             // cartTableAdapter1
             // 
             this.cartTableAdapter1.ClearBeforeFill = true;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(115, 149);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(100, 26);
-            this.textBox11.TabIndex = 36;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 152);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 19);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Текущо к-во:";
             // 
             // New_order
             // 

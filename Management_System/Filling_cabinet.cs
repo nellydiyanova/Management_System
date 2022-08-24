@@ -333,7 +333,7 @@ namespace Management_System
                     myCommand.Parameters.AddWithValue("@phone", textBox16.Text);
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
-                    MessageBox.Show("Успешно въведен нов дистрибутор!");
+                    MessageBox.Show("Успешно въведен нов доставчик!");
                     displayData2();
                     if (myConnection.State == ConnectionState.Open)
                     {

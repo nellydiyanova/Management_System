@@ -39,13 +39,13 @@ namespace Management_System
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.usersTableAdapter = new Management_System.DB_SystemDataSet7TableAdapters.UsersTableAdapter();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dB_SystemDataSet8 = new Management_System.DB_SystemDataSet8();
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet8 = new Management_System.DB_SystemDataSet8();
             this.usersTableAdapter1 = new Management_System.DB_SystemDataSet8TableAdapters.UsersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet8)).BeginInit();
             this.SuspendLayout();
             // 
             // usersBindingSource
@@ -95,15 +95,15 @@ namespace Management_System
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.ValueMember = "username";
             // 
-            // dB_SystemDataSet8
-            // 
-            this.dB_SystemDataSet8.DataSetName = "DB_SystemDataSet8";
-            this.dB_SystemDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // usersBindingSource1
             // 
             this.usersBindingSource1.DataMember = "Users";
             this.usersBindingSource1.DataSource = this.dB_SystemDataSet8;
+            // 
+            // dB_SystemDataSet8
+            // 
+            this.dB_SystemDataSet8.DataSetName = "DB_SystemDataSet8";
+            this.dB_SystemDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usersTableAdapter1
             // 
@@ -124,8 +124,8 @@ namespace Management_System
             this.Load += new System.EventHandler(this.Authorization_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

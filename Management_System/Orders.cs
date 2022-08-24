@@ -163,6 +163,7 @@ namespace Management_System
                     }
 
                     textBox1.Clear();
+                    textBox2.Clear();
                     listBox1.Items.Clear();
                     textBox3.Clear();
                     textBox4.Clear();
@@ -260,7 +261,6 @@ namespace Management_System
             }
         }
 
-
         private void button2_Click(object sender, EventArgs e)
         {
             string connectionString = null;
@@ -299,7 +299,7 @@ namespace Management_System
             }
 
             DataTableToTextFile(dt, filePath);
-            MessageBox.Show("Фактурата е създадена успешно!");
+            MessageBox.Show("Справката е създадена успешно!");
         }
     }
 }

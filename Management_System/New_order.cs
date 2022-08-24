@@ -78,24 +78,7 @@ namespace Management_System
             textBox8.Text = Convert.ToString(full_quantity);
         }
 
-        private void RECalculateQuantity()
-        {
-            double quantity = 0, full_quantity = 0;
-            quantity = Convert.ToDouble(textBox4.Text);
-            full_quantity -= quantity;
-            textBox8.Text = Convert.ToString(full_quantity);
-        }
-
         private void CalculateTotal()
-        {
-            double full_price;
-            if (double.TryParse(textBox5.Text, out full_price))
-            {
-                textBox9.Text = full_price.ToString();
-            }
-        }
-
-        private void RECalculateTotal()
         {
             double full_price;
             if (double.TryParse(textBox5.Text, out full_price))
@@ -143,6 +126,9 @@ namespace Management_System
             button1.BackColor = System.Drawing.Color.LightGreen;
             button3.BackColor = System.Drawing.Color.LightGreen;
             button5.BackColor = System.Drawing.Color.LightGreen;
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
 
             try
             {
@@ -180,9 +166,25 @@ namespace Management_System
                 myConnection.Dispose();
             }
         }
-        
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            textBox4.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            textBox5.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            button1.Enabled = false;
+            button2.Enabled = true;
+            button3.Enabled = true;
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -193,6 +195,9 @@ namespace Management_System
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
+            button1.Enabled = true;
+            button2.Enabled = false;
+            button3.Enabled = false;
             TreeNode selectedNode = treeView1.SelectedNode;
             if (selectedNode != treeView1.Nodes[0] && selectedNode != null)
             {
@@ -228,6 +233,9 @@ namespace Management_System
 
         private void button1_Click(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -269,43 +277,59 @@ namespace Management_System
             else
             {
                 MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                button1.Enabled = true;
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
+            if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
-                myConnection = new SqlConnection(frm.cs);
-                myCommand = new SqlCommand("delete Cart where id_product=@id_product", myConnection);
-                myConnection.Open();
-                myCommand.Parameters.AddWithValue("@id_product", textBox1.Text);
-                myCommand.ExecuteNonQuery();
-                myConnection.Close();
-                displayData4();
-                MessageBox.Show("Успешно изтрита стока!");
-                if (myConnection.State == ConnectionState.Open)
+                try
                 {
-                    myConnection.Dispose();
+                    myConnection = new SqlConnection(frm.cs);
+                    myCommand = new SqlCommand("delete Cart where id_product=@id_product", myConnection);
+                    myConnection.Open();
+                    myCommand.Parameters.AddWithValue("@id_product", textBox1.Text);
+                    myCommand.ExecuteNonQuery();
+                    myConnection.Close();
+                    displayData4();
+                    MessageBox.Show("Успешно изтрита стока!");
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+
+                    textBox1.Clear();
+                    comboBox1.Text = "";
+                    textBox2.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
+                    textBox5.Clear();
+                    textBox11.Clear();
                 }
 
-                textBox1.Clear();
-                comboBox1.Text = "";
-                textBox2.Clear();
-                textBox3.Clear();
-                textBox4.Clear();
-                textBox5.Clear();
-                textBox11.Clear();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Изберете артикул за изтриване!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
         
         private void button3_Click(object sender, EventArgs e)
         {
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button3.Enabled = false;
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -448,6 +472,9 @@ namespace Management_System
 
         private void button5_Click(object sender, EventArgs e)
         {
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
             if (dataGridView1.Rows.Count != 0 && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && comboBox2.Text != "")
             {
                 try
