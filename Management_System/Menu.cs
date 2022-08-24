@@ -61,8 +61,8 @@ namespace Management_System
 
         private void button9_Click(object sender, EventArgs e)
         {
-            //Form11 frm = new Form11();
-            //frm.Show();
+            Revision frm = new Revision();
+            frm.Show();
         }
         
         private void button10_Click(object sender, EventArgs e)

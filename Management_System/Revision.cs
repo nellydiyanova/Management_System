@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Management_System
 {
-    public partial class Transfer : Form
+    public partial class Revision : Form
     {
-        public Transfer()
+        public Revision()
         {
             InitializeComponent();
         }
@@ -43,11 +43,8 @@ namespace Management_System
             myConnection.Close();
         }
 
-        private void Transfer_Load(object sender, EventArgs e)
+        private void Revision_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_SystemDataSet29.Warehouses' table. You can move, or remove it, as needed.
-            this.warehousesTableAdapter.Fill(this.dB_SystemDataSet29.Warehouses);
-
             TreeNode parentnode = new TreeNode("Номенклатура");
             treeView1.Nodes.Add(parentnode);
             TreeNode firtsnode = treeView1.Nodes[0];
@@ -58,9 +55,9 @@ namespace Management_System
             textBox3.Enabled = false;
             textBox4.Enabled = false;
             textBox5.Enabled = false;
-            textBox7.Enabled = false;
-            textBox8.Enabled = true;
-            comboBox1.Enabled = true;
+            textBox7.Enabled = true;
+            textBox8.Enabled = false;
+            textBox9.Enabled = true;
             button1.Enabled = true;
             button2.Enabled = true;
             button1.BackColor = System.Drawing.Color.LightGreen;
@@ -88,24 +85,24 @@ namespace Management_System
         private void button1_Click(object sender, EventArgs e)
         {
             TreeNode selectedNode = treeView1.SelectedNode;
-            if (textBox1.Text != "" && comboBox1.Text != "")
+            if (textBox1.Text != "" && textBox7.Text != "")
             {
                 try
                 {
                     myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("update Inventory set id_product=@id_product, warehouse=@warehouse where id_product=@id_product", myConnection);
+                    myCommand = new SqlCommand("update Inventory set id_product=@id_product, quantity=@quantity where id_product=@id_product", myConnection);
                     myConnection.Open();
                     myCommand.Parameters.AddWithValue("@id_product", textBox1.Text);
-                    myCommand.Parameters.AddWithValue("@warehouse", comboBox1.Text);
+                    myCommand.Parameters.AddWithValue("@quantity", textBox7.Text);
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
-                    MessageBox.Show("Успешно прехвърлен склад!");
+                    MessageBox.Show("Успешно променено количество!");
                     if (myConnection.State == ConnectionState.Open)
                     {
                         myConnection.Dispose();
                     }
 
-                    treeView1.SelectedNode.Text = textBox2.Text;
+                    treeView1.SelectedNode.Text = textBox3.Text;
                     textBox1.Clear();
                     textBox2.Clear();
                     textBox3.Clear();
@@ -113,7 +110,7 @@ namespace Management_System
                     textBox5.Clear();
                     textBox6.Clear();
                     textBox7.Clear();
-                    comboBox1.Text = "";
+                    textBox8.Clear();
                 }
 
                 catch (Exception ex)
@@ -135,9 +132,9 @@ namespace Management_System
             textBox3.Enabled = false;
             textBox4.Enabled = false;
             textBox5.Enabled = false;
-            textBox7.Enabled = false;
-            textBox8.Enabled = true;
-            comboBox1.Enabled = true;
+            textBox7.Enabled = true;
+            textBox8.Enabled = false;
+            textBox9.Enabled = true;
             button1.Enabled = true;
             button2.Enabled = true;
 
@@ -157,13 +154,13 @@ namespace Management_System
                     if (myreader.Read() == true)
                     {
                         textBox1.Text = myreader["id_product"].ToString();
-                        comboBox1.Text = myreader["warehouse"].ToString();
-                        textBox2.Text = myreader["product_name"].ToString();
-                        textBox3.Text = myreader["delivery_price"].ToString();
-                        textBox4.Text = myreader["sale_price"].ToString();
-                        textBox5.Text = myreader["measure"].ToString();
-                        textBox6.Text = myreader["quantity"].ToString();
-                        textBox7.Text = myreader["supplier"].ToString();
+                        textBox2.Text = myreader["warehouse"].ToString();
+                        textBox3.Text = myreader["product_name"].ToString();
+                        textBox4.Text = myreader["delivery_price"].ToString();
+                        textBox5.Text = myreader["sale_price"].ToString();
+                        textBox6.Text = myreader["measure"].ToString();
+                        textBox7.Text = myreader["quantity"].ToString();
+                        textBox8.Text = myreader["supplier"].ToString();
                     }
 
                     if (myConnection.State == ConnectionState.Open)
@@ -201,11 +198,11 @@ namespace Management_System
             return null;
         }
 
-        private void textBox8_KeyUp(object sender, KeyEventArgs e)
+        private void textBox9_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                var searchFor = textBox8.Text.Trim().ToUpper();
+                var searchFor = textBox9.Text.Trim().ToUpper();
                 if (searchFor != "")
                 {
                     if (treeView1.Nodes.Count > 0)
@@ -229,7 +226,6 @@ namespace Management_System
                     treeView1.SelectedNode = node;
                     node.BackColor = Color.Yellow;
                 }
-
                 else
                 {
                     node.BackColor = Color.Empty;
