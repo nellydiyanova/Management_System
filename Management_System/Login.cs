@@ -35,7 +35,7 @@ namespace Management_System
 
                 if (myreader.Read() == true)
                 {
-                    MessageBox.Show("Добре дошли, " + comboBox1.Text + "! :)");
+                    MessageBox.Show("Добре дошли, " + comboBox1.Text + "! ☺");
                     passingText = comboBox1.Text;
                     this.Hide();
                     Menu frm = new Menu();

@@ -46,13 +46,13 @@ namespace Management_System
             New_delivery frm = new New_delivery();
             frm.Show();
         }
-        
+
         private void button7_Click(object sender, EventArgs e)
         {
             Deliveries frm = new Deliveries();
             frm.Show();
         }
-        
+
         private void button8_Click(object sender, EventArgs e)
         {
             Transfer frm = new Transfer();
@@ -64,20 +64,10 @@ namespace Management_System
             Revision frm = new Revision();
             frm.Show();
         }
-        
+
         private void button10_Click(object sender, EventArgs e)
         {
-            //Form12 frm = new Form12();
-            //frm.Show();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            //Form13 frm = new Form13();
-            //frm.Show();
-        }
-        private void button12_Click(object sender, EventArgs e)
-        {
+            MessageBox.Show("Довиждане! Приятна почивка! ☺", "Изход");
             Application.Exit();
         }
     }

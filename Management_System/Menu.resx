@@ -230,7 +230,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 172</value>
@@ -254,7 +254,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
     <value>157, 172</value>
@@ -278,7 +278,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 172</value>
@@ -302,7 +302,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 257</value>
@@ -326,7 +326,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -368,7 +368,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
     <value>183, 257</value>
@@ -392,7 +392,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 331</value>
@@ -416,7 +416,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -446,7 +446,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -476,7 +476,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -506,7 +506,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -533,7 +533,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -560,7 +560,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -590,7 +590,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="button8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -617,7 +617,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -659,22 +659,22 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="button10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 331</value>
+    <value>152, 331</value>
   </data>
   <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 43</value>
   </data>
   <data name="button10.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="button10.Text" xml:space="preserve">
-    <value>Стокооборот</value>
+    <value>Изход</value>
   </data>
   <data name="&gt;&gt;button10.Name" xml:space="preserve">
     <value>button10</value>
@@ -686,60 +686,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;button10.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="button11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>288, 331</value>
-  </data>
-  <data name="button11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 43</value>
-  </data>
-  <data name="button11.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="button11.Text" xml:space="preserve">
-    <value>Настройки</value>
-  </data>
-  <data name="&gt;&gt;button11.Name" xml:space="preserve">
-    <value>button11</value>
-  </data>
-  <data name="&gt;&gt;button11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button11.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button11.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="button12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>418, 331</value>
-  </data>
-  <data name="button12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 43</value>
-  </data>
-  <data name="button12.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="button12.Text" xml:space="preserve">
-    <value>Изход</value>
-  </data>
-  <data name="&gt;&gt;button12.Name" xml:space="preserve">
-    <value>button12</value>
-  </data>
-  <data name="&gt;&gt;button12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button12.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;button12.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

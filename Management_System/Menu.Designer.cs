@@ -47,8 +47,6 @@ namespace Management_System
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -188,40 +186,18 @@ namespace Management_System
             // 
             this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button10.FlatAppearance.BorderColor = System.Drawing.Color.White;
             resources.ApplyResources(this.button10, "button10");
             this.button10.Name = "button10";
             this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.button11, "button11");
-            this.button11.Name = "button11";
-            this.button11.UseVisualStyleBackColor = false;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button12.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            resources.ApplyResources(this.button12, "button12");
-            this.button12.Name = "button12";
-            this.button12.UseVisualStyleBackColor = false;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
-            // 
             // Menu
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -265,7 +241,5 @@ namespace Management_System
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
     }
 }
