@@ -96,6 +96,7 @@ namespace Management_System
             this.button2.TabIndex = 26;
             this.button2.Text = "Търси";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox8
             // 
@@ -320,6 +321,7 @@ namespace Management_System
             this.groupBox1.Size = new System.Drawing.Size(371, 398);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Прехвърляне на склад";
             // 
             // Transfer
             // 

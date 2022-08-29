@@ -32,11 +32,10 @@ namespace Management_System
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Revision));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.warehousesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SystemDataSet29 = new Management_System.DB_SystemDataSet29();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -50,6 +49,8 @@ namespace Management_System
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.warehousesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet29 = new Management_System.DB_SystemDataSet29();
             this.suppliersTableAdapter = new Management_System.DB_SystemDataSet6TableAdapters.SuppliersTableAdapter();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -57,7 +58,6 @@ namespace Management_System
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet6 = new Management_System.DB_SystemDataSet6();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).BeginInit();
@@ -90,16 +90,7 @@ namespace Management_System
             this.groupBox1.Size = new System.Drawing.Size(371, 398);
             this.groupBox1.TabIndex = 48;
             this.groupBox1.TabStop = false;
-            // 
-            // warehousesBindingSource
-            // 
-            this.warehousesBindingSource.DataMember = "Warehouses";
-            this.warehousesBindingSource.DataSource = this.dB_SystemDataSet29;
-            // 
-            // dB_SystemDataSet29
-            // 
-            this.dB_SystemDataSet29.DataSetName = "DB_SystemDataSet29";
-            this.dB_SystemDataSet29.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.groupBox1.Text = "Ревизия";
             // 
             // textBox7
             // 
@@ -125,6 +116,14 @@ namespace Management_System
             this.label7.Size = new System.Drawing.Size(40, 19);
             this.label7.TabIndex = 40;
             this.label7.Text = "К-во:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Enabled = false;
+            this.textBox8.Location = new System.Drawing.Point(161, 178);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(115, 26);
+            this.textBox8.TabIndex = 45;
             // 
             // label8
             // 
@@ -250,6 +249,16 @@ namespace Management_System
             this.textBox1.Size = new System.Drawing.Size(100, 26);
             this.textBox1.TabIndex = 27;
             // 
+            // warehousesBindingSource
+            // 
+            this.warehousesBindingSource.DataMember = "Warehouses";
+            this.warehousesBindingSource.DataSource = this.dB_SystemDataSet29;
+            // 
+            // dB_SystemDataSet29
+            // 
+            this.dB_SystemDataSet29.DataSetName = "DB_SystemDataSet29";
+            this.dB_SystemDataSet29.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // suppliersTableAdapter
             // 
             this.suppliersTableAdapter.ClearBeforeFill = true;
@@ -298,14 +307,7 @@ namespace Management_System
             this.button2.TabIndex = 47;
             this.button2.Text = "Търси";
             this.button2.UseVisualStyleBackColor = false;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(161, 178);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(115, 26);
-            this.textBox8.TabIndex = 45;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox9
             // 

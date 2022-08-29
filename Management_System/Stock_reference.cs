@@ -17,7 +17,7 @@ namespace Management_System
         SqlCommand myCommand = default(SqlCommand);
         SqlDataAdapter adapt;
 
-        private void displayData1()
+        private void displayData()
         {
             myConnection.Open();
             DataTable dt = new DataTable();
@@ -39,7 +39,7 @@ namespace Management_System
                 myConnection.Open();
                 myCommand.ExecuteNonQuery();
                 myConnection.Close();
-                displayData1();
+                displayData();
                 if (myConnection.State == ConnectionState.Open)
                 {
                     myConnection.Dispose();

@@ -219,14 +219,17 @@ namespace Management_System
         private void DataTableToTextFile(DataTable dt, string outputFilePath)
         {
             int[] maxLengths = new int[dt.Columns.Count];
+
             for (int i = 0; i < dt.Columns.Count; i++)
             {
                 maxLengths[i] = dt.Columns[i].ColumnName.Length;
+
                 foreach (DataRow row in dt.Rows)
                 {
                     if (!row.IsNull(i))
                     {
                         int length = row[i].ToString().Length;
+
                         if (length > maxLengths[i])
                         {
                             maxLengths[i] = length;
@@ -241,7 +244,9 @@ namespace Management_System
                 {
                     sw.Write(dt.Columns[i].ColumnName.PadRight(maxLengths[i] + 2));
                 }
+
                 sw.WriteLine();
+
                 foreach (DataRow row in dt.Rows)
                 {
                     for (int i = 0; i < dt.Columns.Count; i++)
@@ -250,13 +255,16 @@ namespace Management_System
                         {
                             sw.Write(row[i].ToString().PadRight(maxLengths[i] + 2));
                         }
+
                         else
                         {
                             sw.Write(new string(' ', maxLengths[i] + 2));
                         }
                     }
+
                     sw.WriteLine();
                 }
+
                 sw.Close();
             }
         }
@@ -268,10 +276,12 @@ namespace Management_System
             connectionString = frm.cs;
 
             DataTable dt = new DataTable();
+
             foreach (DataGridViewTextBoxColumn column in dataGridView1.Columns)
             {
                 dt.Columns.Add(column.Name, column.ValueType);
             }
+
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 DataRow dr = dt.NewRow();
@@ -282,8 +292,10 @@ namespace Management_System
                         dr[column.Name] = row.Cells[column.Name].Value.ToString();
                     }
                 }
+
                 dt.Rows.Add(dr);
             }
+
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Title = "Save text Files";
             saveFileDialog1.CheckFileExists = true;

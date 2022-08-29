@@ -157,6 +157,7 @@ namespace Management_System
             {
                 textBox10.Text = myreader["username"].ToString();
             }
+
             if (myConnection.State == ConnectionState.Open)
             {
                 myConnection.Dispose();

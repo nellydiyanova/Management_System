@@ -126,6 +126,7 @@ namespace Management_System
         {
             // TODO: This line of code loads data into the 'dB_SystemDataSet8.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter1.Fill(this.dB_SystemDataSet8.Users);
+
             comboBox1.Text = "";
         }
     }

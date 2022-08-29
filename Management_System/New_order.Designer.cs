@@ -90,7 +90,6 @@ namespace Management_System
             this.clientsTableAdapter = new Management_System.DB_SystemDataSet16TableAdapters.ClientsTableAdapter();
             this.statusTableAdapter = new Management_System.DB_SystemDataSet17TableAdapters.StatusTableAdapter();
             this.cartTableAdapter = new Management_System.DB_SystemDataSet18TableAdapters.CartTableAdapter();
-            this.button6 = new System.Windows.Forms.Button();
             this.cartTableAdapter1 = new Management_System.DB_SystemDataSet26TableAdapters.CartTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -279,7 +278,7 @@ namespace Management_System
             this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(312, 146);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 26);
+            this.textBox5.Size = new System.Drawing.Size(96, 26);
             this.textBox5.TabIndex = 13;
             // 
             // label6
@@ -293,9 +292,9 @@ namespace Management_System
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(308, 103);
+            this.textBox4.Location = new System.Drawing.Point(312, 103);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 26);
+            this.textBox4.Size = new System.Drawing.Size(96, 26);
             this.textBox4.TabIndex = 11;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
@@ -428,7 +427,7 @@ namespace Management_System
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button5.Location = new System.Drawing.Point(466, 432);
+            this.button5.Location = new System.Drawing.Point(568, 432);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(113, 35);
             this.button5.TabIndex = 17;
@@ -624,20 +623,6 @@ namespace Management_System
             // 
             this.cartTableAdapter.ClearBeforeFill = true;
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button6.Location = new System.Drawing.Point(594, 432);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(113, 35);
-            this.button6.TabIndex = 25;
-            this.button6.Text = "Фактура";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // cartTableAdapter1
             // 
             this.cartTableAdapter1.ClearBeforeFill = true;
@@ -648,7 +633,6 @@ namespace Management_System
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(1062, 479);
-            this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.button5);
@@ -731,7 +715,6 @@ namespace Management_System
         private System.Windows.Forms.BindingSource cartBindingSource;
         private DB_SystemDataSet18TableAdapters.CartTableAdapter cartTableAdapter;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.BindingSource receiptBindingSource;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DB_SystemDataSet26 dB_SystemDataSet26;

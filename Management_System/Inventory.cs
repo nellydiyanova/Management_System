@@ -33,6 +33,7 @@ namespace Management_System
                 childnode.ImageIndex = 1;
                 childnode.SelectedImageIndex = 1;
             }
+
             myConnection.Close();
         }
 
@@ -119,17 +120,6 @@ namespace Management_System
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        void ColorNode(TreeNodeCollection nodes, System.Drawing.Color Color)
-{
-
-    foreach (TreeNode child in nodes)
-    {
-        child.ForeColor= Color;
-        if(child.Nodes != null && child.Nodes.Count>0)
-          ColorNode(child.Nodes, Color);
-    }
-}
 
         private void новСкладToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -493,7 +483,6 @@ namespace Management_System
                 }
             }
         }
-
 
         public TreeNode Find(TreeNodeCollection nodes, string key)
         {

@@ -45,28 +45,30 @@ namespace Management_System
             groupBox2.Visible = false;
             button1.BackColor = System.Drawing.Color.LightGreen;
             button2.BackColor = System.Drawing.Color.LightGreen;
+            button3.BackColor = System.Drawing.Color.LightGreen;
             button4.BackColor = System.Drawing.Color.LightGreen;
-            button5.BackColor = System.Drawing.Color.LightGreen;
         }
 
         private void клиентиToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_SystemDataSet3.Clients' table. You can move, or remove it, as needed.
+            this.clientsTableAdapter.Fill(this.dB_SystemDataSet3.Clients);
+
             dataGridView1.Visible = true;
             dataGridView2.Visible = false;
             groupBox1.Visible = true;
             groupBox2.Visible = false;
-            // TODO: This line of code loads data into the 'dB_SystemDataSet3.Clients' table. You can move, or remove it, as needed.
-            this.clientsTableAdapter.Fill(this.dB_SystemDataSet3.Clients);
         }
 
         private void дистрибуториToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_SystemDataSet4.Suppliers' table. You can move, or remove it, as needed.
+            this.suppliersTableAdapter.Fill(this.dB_SystemDataSet4.Suppliers);
+
             dataGridView1.Visible = false;
             dataGridView2.Visible = true;
             groupBox1.Visible = false;
             groupBox2.Visible = true;
-            // TODO: This line of code loads data into the 'dB_SystemDataSet4.Suppliers' table. You can move, or remove it, as needed.
-            this.suppliersTableAdapter.Fill(this.dB_SystemDataSet4.Suppliers);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -81,8 +83,20 @@ namespace Management_System
             textBox8.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             button1.Enabled = true;
             button2.Enabled = false;
+            button3.Enabled = false;
             button4.Enabled = false;
-            button5.Enabled = false;
+        }
+        
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+            textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+            textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            textBox5.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            textBox6.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+            textBox7.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+            textBox8.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -97,8 +111,20 @@ namespace Management_System
             textBox16.Text = dataGridView2.CurrentRow.Cells[7].Value.ToString();
             button1.Enabled = false;
             button2.Enabled = true;
+            button3.Enabled = false;
             button4.Enabled = false;
-            button5.Enabled = false;
+        }
+        
+        void dataGridView2_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            textBox9.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
+            textBox10.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            textBox11.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            textBox12.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+            textBox13.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+            textBox14.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
+            textBox15.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
+            textBox16.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
         private void новКлиентToolStripMenuItem_Click(object sender, EventArgs e)
@@ -117,9 +143,10 @@ namespace Management_System
             textBox8.Clear();
             button1.Enabled = false;
             button2.Enabled = false;
-            button4.Enabled = true;
-            button5.Enabled = false;
+            button3.Enabled = true;
+            button4.Enabled = false;
             textBox1.Focus();
+
             // TODO: This line of code loads data into the 'dB_SystemDataSet3.Clients' table. You can move, or remove it, as needed.
             this.clientsTableAdapter.Fill(this.dB_SystemDataSet3.Clients);
         }
@@ -172,18 +199,6 @@ namespace Management_System
             }
         }
 
-        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            textBox5.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            textBox6.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            textBox7.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            textBox8.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-        }
-
         private void новДистрибуторToolStripMenuItem_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = false;
@@ -200,9 +215,10 @@ namespace Management_System
             textBox16.Clear();
             button1.Enabled = false;
             button2.Enabled = false;
-            button4.Enabled = false;
-            button5.Enabled = true;
+            button3.Enabled = false;
+            button4.Enabled = true;
             textBox9.Focus();
+
             // TODO: This line of code loads data into the 'dB_SystemDataSet4.Suppliers' table. You can move, or remove it, as needed.
             this.suppliersTableAdapter.Fill(this.dB_SystemDataSet4.Suppliers);
         }
@@ -255,19 +271,7 @@ namespace Management_System
             }
         }
 
-        void dataGridView2_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            textBox9.Text = dataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString();
-            textBox10.Text = dataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            textBox11.Text = dataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
-            textBox12.Text = dataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-            textBox13.Text = dataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
-            textBox14.Text = dataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
-            textBox15.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
-            textBox16.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "")
             {
@@ -314,7 +318,7 @@ namespace Management_System
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             if (textBox9.Text != "" && textBox10.Text != "" && textBox11.Text != "" && textBox12.Text != "" && textBox13.Text != "" && textBox14.Text != "" && textBox15.Text != "" && textBox16.Text != "")
             {

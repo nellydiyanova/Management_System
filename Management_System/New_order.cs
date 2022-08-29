@@ -161,6 +161,7 @@ namespace Management_System
             {
                 textBox10.Text = myreader["username"].ToString();
             }
+
             if (myConnection.State == ConnectionState.Open)
             {
                 myConnection.Dispose();
@@ -236,6 +237,7 @@ namespace Management_System
             button1.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
+
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -286,6 +288,7 @@ namespace Management_System
             button1.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
+
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -321,7 +324,6 @@ namespace Management_System
             else
             {
                 MessageBox.Show("Изберете артикул за изтриване!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
             }
         }
         
@@ -330,6 +332,7 @@ namespace Management_System
             button1.Enabled = false;
             button2.Enabled = false;
             button3.Enabled = false;
+
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -475,6 +478,7 @@ namespace Management_System
             button1.Enabled = true;
             button2.Enabled = true;
             button3.Enabled = true;
+
             if (dataGridView1.Rows.Count != 0 && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && comboBox2.Text != "")
             {
                 try
@@ -551,12 +555,6 @@ namespace Management_System
             {
                 MessageBox.Show("Поръчката не е довършена!", "Не може да продължите напред!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            //Invoice frm = new Invoice();
-            //frm.Show();
         }
     }
 }

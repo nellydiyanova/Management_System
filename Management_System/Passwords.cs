@@ -68,6 +68,7 @@ namespace Management_System
             button2.Enabled = true;
             textBox1.Enabled = true;
             textBox1.Focus();
+            
             // TODO: This line of code loads data into the 'dB_SystemDataSet9.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.dB_SystemDataSet9.Users);
         }

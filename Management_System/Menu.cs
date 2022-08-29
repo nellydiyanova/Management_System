@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Management_System
@@ -67,7 +66,7 @@ namespace Management_System
 
         private void button10_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Довиждане! Приятна почивка! ☺", "Изход");
+            MessageBox.Show("Довиждане, " + Login.passingText + "! " + "Приятна почивка! ☺", "Изход");
             Application.Exit();
         }
     }

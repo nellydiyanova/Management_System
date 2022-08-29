@@ -32,6 +32,7 @@ namespace Management_System
                 childnode.ImageIndex = 1;
                 childnode.SelectedImageIndex = 1;
             }
+
             myConnection.Close();
         }
 
@@ -238,6 +239,22 @@ namespace Management_System
             }
 
             return false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var searchFor = textBox9.Text.Trim().ToUpper();
+            if (searchFor != "")
+            {
+                if (treeView1.Nodes.Count > 0)
+                {
+                    if (SearchRecursive(treeView1.Nodes, searchFor))
+                    {
+                        treeView1.SelectedNode.Expand();
+                        treeView1.Focus();
+                    }
+                }
+            }
         }
     }
 }
