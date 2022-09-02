@@ -64,7 +64,6 @@ namespace Management_System
             // 
             // comboBox1
             // 
-            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.usersBindingSource, "username", true));
             this.comboBox1.DataSource = this.usersBindingSource;
             this.comboBox1.DisplayMember = "username";
             this.comboBox1.FormattingEnabled = true;
