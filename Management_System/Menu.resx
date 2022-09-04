@@ -232,103 +232,103 @@
   <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
     <value>16</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="inventory_button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 172</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="inventory_button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 43</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="inventory_button1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
+  <data name="inventory_button1.Text" xml:space="preserve">
     <value>Номенклатура</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;inventory_button1.Name" xml:space="preserve">
+    <value>inventory_button1</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;inventory_button1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;inventory_button1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;inventory_button1.ZOrder" xml:space="preserve">
     <value>15</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="filling_cabinet_button2.Location" type="System.Drawing.Point, System.Drawing">
     <value>157, 172</value>
   </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="filling_cabinet_button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 43</value>
   </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+  <data name="filling_cabinet_button2.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
+  <data name="filling_cabinet_button2.Text" xml:space="preserve">
     <value>Картотека</value>
   </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
+  <data name="&gt;&gt;filling_cabinet_button2.Name" xml:space="preserve">
+    <value>filling_cabinet_button2</value>
   </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+  <data name="&gt;&gt;filling_cabinet_button2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;filling_cabinet_button2.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;filling_cabinet_button2.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="passwords_button3.Location" type="System.Drawing.Point, System.Drawing">
     <value>288, 172</value>
   </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="passwords_button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 43</value>
   </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+  <data name="passwords_button3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="button3.Text" xml:space="preserve">
+  <data name="passwords_button3.Text" xml:space="preserve">
     <value>Пароли</value>
   </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
+  <data name="&gt;&gt;passwords_button3.Name" xml:space="preserve">
+    <value>passwords_button3</value>
   </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+  <data name="&gt;&gt;passwords_button3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;passwords_button3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;passwords_button3.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="new_order_button4.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 257</value>
   </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="new_order_button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 43</value>
   </data>
-  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+  <data name="new_order_button4.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="button4.Text" xml:space="preserve">
+  <data name="new_order_button4.Text" xml:space="preserve">
     <value>Поръчки</value>
   </data>
-  <data name="&gt;&gt;button4.Name" xml:space="preserve">
-    <value>button4</value>
+  <data name="&gt;&gt;new_order_button4.Name" xml:space="preserve">
+    <value>new_order_button4</value>
   </data>
-  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+  <data name="&gt;&gt;new_order_button4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;new_order_button4.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;new_order_button4.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
-  <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="orders_button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAttJREFUOE/NkslPUwEQxp9e1OjFg0fPCoqJB9BCgoGYiCiroEiFGDZbdh7Lo5Sl
@@ -346,76 +346,76 @@
         M1JBquTym2+yPGR59BcksFzW3GL5FxHELxnB0J8dqNTRAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="orders_button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="orders_button5.Location" type="System.Drawing.Point, System.Drawing">
     <value>132, 257</value>
   </data>
-  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="orders_button5.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 43</value>
   </data>
-  <data name="button5.TabIndex" type="System.Int32, mscorlib">
+  <data name="orders_button5.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;button5.Name" xml:space="preserve">
-    <value>button5</value>
+  <data name="&gt;&gt;orders_button5.Name" xml:space="preserve">
+    <value>orders_button5</value>
   </data>
-  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+  <data name="&gt;&gt;orders_button5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;orders_button5.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;orders_button5.ZOrder" xml:space="preserve">
     <value>11</value>
   </data>
-  <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="new_delivery_button6.Location" type="System.Drawing.Point, System.Drawing">
     <value>183, 257</value>
   </data>
-  <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="new_delivery_button6.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 43</value>
   </data>
-  <data name="button6.TabIndex" type="System.Int32, mscorlib">
+  <data name="new_delivery_button6.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="button6.Text" xml:space="preserve">
+  <data name="new_delivery_button6.Text" xml:space="preserve">
     <value>Доставки</value>
   </data>
-  <data name="&gt;&gt;button6.Name" xml:space="preserve">
-    <value>button6</value>
+  <data name="&gt;&gt;new_delivery_button6.Name" xml:space="preserve">
+    <value>new_delivery_button6</value>
   </data>
-  <data name="&gt;&gt;button6.Type" xml:space="preserve">
+  <data name="&gt;&gt;new_delivery_button6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
+  <data name="&gt;&gt;new_delivery_button6.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;new_delivery_button6.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
-  <data name="button9.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="revision_button9.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 331</value>
   </data>
-  <data name="button9.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="revision_button9.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 43</value>
   </data>
-  <data name="button9.TabIndex" type="System.Int32, mscorlib">
+  <data name="revision_button9.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="button9.Text" xml:space="preserve">
+  <data name="revision_button9.Text" xml:space="preserve">
     <value>Ревизия</value>
   </data>
-  <data name="&gt;&gt;button9.Name" xml:space="preserve">
-    <value>button9</value>
+  <data name="&gt;&gt;revision_button9.Name" xml:space="preserve">
+    <value>revision_button9</value>
   </data>
-  <data name="&gt;&gt;button9.Type" xml:space="preserve">
+  <data name="&gt;&gt;revision_button9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button9.Parent" xml:space="preserve">
+  <data name="&gt;&gt;revision_button9.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button9.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;revision_button9.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
@@ -592,34 +592,34 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="button8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="transfer_button8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="transfer_button8.Location" type="System.Drawing.Point, System.Drawing">
     <value>335, 257</value>
   </data>
-  <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="transfer_button8.Size" type="System.Drawing.Size, System.Drawing">
     <value>215, 43</value>
   </data>
-  <data name="button8.TabIndex" type="System.Int32, mscorlib">
+  <data name="transfer_button8.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
-  <data name="button8.Text" xml:space="preserve">
+  <data name="transfer_button8.Text" xml:space="preserve">
     <value>Прехвърляния между складовете</value>
   </data>
-  <data name="&gt;&gt;button8.Name" xml:space="preserve">
-    <value>button8</value>
+  <data name="&gt;&gt;transfer_button8.Name" xml:space="preserve">
+    <value>transfer_button8</value>
   </data>
-  <data name="&gt;&gt;button8.Type" xml:space="preserve">
+  <data name="&gt;&gt;transfer_button8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button8.Parent" xml:space="preserve">
+  <data name="&gt;&gt;transfer_button8.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;transfer_button8.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="deliveries_button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAttJREFUOE/NkslPUwEQxp9e1OjFg0fPCoqJB9BCgoGYiCiroEiFGDZbdh7Lo5Sl
@@ -637,55 +637,55 @@
         M1JBquTym2+yPGR59BcksFzW3GL5FxHELxnB0J8dqNTRAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="deliveries_button7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="deliveries_button7.Location" type="System.Drawing.Point, System.Drawing">
     <value>286, 257</value>
   </data>
-  <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="deliveries_button7.Size" type="System.Drawing.Size, System.Drawing">
     <value>31, 43</value>
   </data>
-  <data name="button7.TabIndex" type="System.Int32, mscorlib">
+  <data name="deliveries_button7.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;button7.Name" xml:space="preserve">
-    <value>button7</value>
+  <data name="&gt;&gt;deliveries_button7.Name" xml:space="preserve">
+    <value>deliveries_button7</value>
   </data>
-  <data name="&gt;&gt;button7.Type" xml:space="preserve">
+  <data name="&gt;&gt;deliveries_button7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
+  <data name="&gt;&gt;deliveries_button7.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;deliveries_button7.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="button10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="exit_button10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="exit_button10.Location" type="System.Drawing.Point, System.Drawing">
     <value>152, 331</value>
   </data>
-  <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="exit_button10.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 43</value>
   </data>
-  <data name="button10.TabIndex" type="System.Int32, mscorlib">
+  <data name="exit_button10.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="button10.Text" xml:space="preserve">
+  <data name="exit_button10.Text" xml:space="preserve">
     <value>Изход</value>
   </data>
-  <data name="&gt;&gt;button10.Name" xml:space="preserve">
-    <value>button10</value>
+  <data name="&gt;&gt;exit_button10.Name" xml:space="preserve">
+    <value>exit_button10</value>
   </data>
-  <data name="&gt;&gt;button10.Type" xml:space="preserve">
+  <data name="&gt;&gt;exit_button10.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button10.Parent" xml:space="preserve">
+  <data name="&gt;&gt;exit_button10.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button10.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;exit_button10.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -21,10 +21,12 @@ namespace Management_System
         SqlDataAdapter adapt;
         DataTable dt = new DataTable();
 
+        public static string products;
+
         private void displayData1()
         {
             myConnection.Open();
-            adapt = new SqlDataAdapter("Select product_name from Inventory", myConnection);
+            adapt = new SqlDataAdapter("Select product_name from Inventory where status='Active'", myConnection);
             adapt.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
@@ -72,19 +74,30 @@ namespace Management_System
 
         private void CalculateQuantity()
         {
-            double quantity = 0, full_quantity = 0;
-            quantity = Convert.ToDouble(textBox4.Text);
-            full_quantity += quantity;
-            textBox8.Text = Convert.ToString(full_quantity);
+            int full_quantity = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                if (dataGridView1.Rows.Count != 0)
+                {
+                    full_quantity = full_quantity + int.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+                }
+            }
+
+            textBox8.Text = full_quantity.ToString();
         }
 
         private void CalculateTotal()
         {
-            double full_price;
-            if (double.TryParse(textBox5.Text, out full_price))
+            double full_price = 0;
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
-                textBox9.Text = full_price.ToString();
+                if (dataGridView1.Rows.Count != 0)
+                {
+                    full_price = full_price + Double.Parse(dataGridView1.Rows[i].Cells[5].Value.ToString());
+                }
             }
+
+            textBox9.Text = full_price.ToString();
         }
 
         private void deleteData()
@@ -118,18 +131,19 @@ namespace Management_System
             textBox9.Enabled = false;
             textBox10.Enabled = false;
             textBox11.Enabled = false;
+            textBox10.Text = Convert.ToString(Login.passingText);
             comboBox1.Text = "";
-            button1.BackColor = System.Drawing.Color.LightGreen;
-            button3.BackColor = System.Drawing.Color.LightGreen;
-            button5.BackColor = System.Drawing.Color.LightGreen;
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
+            add_button1.BackColor = System.Drawing.Color.LightGreen;
+            update_button3.BackColor = System.Drawing.Color.LightGreen;
+            save_button5.BackColor = System.Drawing.Color.LightGreen;
+            add_button1.Enabled = false;
+            delete_button2.Enabled = false;
+            update_button3.Enabled = false;
 
             try
             {
                 myConnection = new SqlConnection(frm.cs);
-                myCommand = new SqlCommand("Select product_name from Inventory", myConnection);
+                myCommand = new SqlCommand("Select product_name from Inventory where status='Active'", myConnection);
                 myConnection.Open();
                 myCommand.ExecuteNonQuery();
                 myConnection.Close();
@@ -166,9 +180,10 @@ namespace Management_System
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            button1.Enabled = false;
-            button2.Enabled = true;
-            button3.Enabled = true;
+            add_button1.Enabled = false;
+            delete_button2.Enabled = true;
+            update_button3.Enabled = true;
+
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -179,9 +194,10 @@ namespace Management_System
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            button1.Enabled = false;
-            button2.Enabled = true;
-            button3.Enabled = true;
+            add_button1.Enabled = false;
+            delete_button2.Enabled = true;
+            update_button3.Enabled = true;
+
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -192,9 +208,9 @@ namespace Management_System
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            button1.Enabled = true;
-            button2.Enabled = false;
-            button3.Enabled = false;
+            add_button1.Enabled = true;
+            delete_button2.Enabled = false;
+            update_button3.Enabled = false;
             TreeNode selectedNode = treeView1.SelectedNode;
             if (selectedNode != treeView1.Nodes[0] && selectedNode != null)
             {
@@ -228,11 +244,11 @@ namespace Management_System
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void add_button1_Click(object sender, EventArgs e)
         {
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
+            add_button1.Enabled = false;
+            delete_button2.Enabled = false;
+            update_button3.Enabled = false;
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -274,50 +290,60 @@ namespace Management_System
             else
             {
                 MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                button1.Enabled = true;
+                add_button1.Enabled = true;
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void delete_button2_Click(object sender, EventArgs e)
         {
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
-            try
+            add_button1.Enabled = false;
+            delete_button2.Enabled = false;
+            update_button3.Enabled = false;
+            if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
-                myConnection = new SqlConnection(frm.cs);
-                myCommand = new SqlCommand("delete Cart where id_product=@id_product", myConnection);
-                myConnection.Open();
-                myCommand.Parameters.AddWithValue("@id_product", textBox1.Text);
-                myCommand.ExecuteNonQuery();
-                myConnection.Close();
-                displayData4();
-                MessageBox.Show("Успешно изтрита стока!");
-                if (myConnection.State == ConnectionState.Open)
+                try
                 {
-                    myConnection.Dispose();
+                    myConnection = new SqlConnection(frm.cs);
+                    myCommand = new SqlCommand("delete Cart where id_product=@id_product", myConnection);
+                    myConnection.Open();
+                    myCommand.Parameters.AddWithValue("@id_product", textBox1.Text);
+                    myCommand.ExecuteNonQuery();
+                    myConnection.Close();
+                    displayData4();
+                    MessageBox.Show("Успешно изтрита стока!");
+                    if (myConnection.State == ConnectionState.Open)
+                    {
+                        myConnection.Dispose();
+                    }
+
+                    CalculateTotal();
+                    CalculateQuantity();
+                    textBox1.Clear();
+                    comboBox1.Text = "";
+                    textBox2.Clear();
+                    textBox3.Clear();
+                    textBox4.Clear();
+                    textBox5.Clear();
+                    textBox11.Clear();
                 }
 
-                textBox1.Clear();
-                comboBox1.Text = "";
-                textBox2.Clear();
-                textBox3.Clear();
-                textBox4.Clear();
-                textBox5.Clear();
-                textBox11.Clear();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
 
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Изберете артикул за изтриване!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void update_button3_Click(object sender, EventArgs e)
         {
-            button1.Enabled = false;
-            button2.Enabled = false;
-            button3.Enabled = false;
+            add_button1.Enabled = false;
+            delete_button2.Enabled = false;
+            update_button3.Enabled = false;
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -432,7 +458,7 @@ namespace Management_System
             return false;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void search_button4_Click(object sender, EventArgs e)
         {
             var searchFor = textBox6.Text.Trim().ToUpper();
             if (searchFor != "")
@@ -458,11 +484,20 @@ namespace Management_System
             CalculateFullPrice();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void save_button5_Click(object sender, EventArgs e)
         {
-            button1.Enabled = true;
-            button2.Enabled = true;
-            button3.Enabled = true;
+            add_button1.Enabled = true;
+            delete_button2.Enabled = true;
+            update_button3.Enabled = true;
+
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                if (dataGridView1.Rows.Count != 0)
+                {
+                    products = products + dataGridView1.Rows[i].Cells[2].Value.ToString() + "\n";
+                }
+            }
+
             if (dataGridView1.Rows.Count != 0 && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "")
             {
                 try
@@ -471,7 +506,7 @@ namespace Management_System
                     myCommand = new SqlCommand("insert into Deliveries(ID, products_name, quantity, full_price, supplier, date, username) values(@ID, @products_name, @quantity, @full_price, @supplier, @date, @username)", myConnection);
                     myConnection.Open();
                     myCommand.Parameters.AddWithValue("@ID", textBox7.Text);
-                    myCommand.Parameters.AddWithValue("@products_name", dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                    myCommand.Parameters.AddWithValue("@products_name", products);
                     myCommand.Parameters.AddWithValue("@quantity", Convert.ToDouble(textBox8.Text));
                     myCommand.Parameters.AddWithValue("@full_price", Convert.ToDouble(textBox9.Text));
                     myCommand.Parameters.AddWithValue("@supplier", listBox1.Text);
@@ -502,10 +537,9 @@ namespace Management_System
                     {
                         var new_Quantity = +int.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
                         myConnection = new SqlConnection(frm.cs);
-                        myCommand = new SqlCommand("update Inventory set quantity=quantity+@new_quantity, id_product=@id_product, warehouse=@warehouse where id_product=@id_product", myConnection);
+                        myCommand = new SqlCommand("update Inventory set quantity=quantity+@new_quantity where id_product=@id_product", myConnection);
                         myConnection.Open();
                         myCommand.Parameters.AddWithValue("@id_product", dataGridView1.Rows[i].Cells[0].Value.ToString());
-                        myCommand.Parameters.AddWithValue("@warehouse", dataGridView1.Rows[i].Cells[1].Value.ToString());
                         myCommand.Parameters.AddWithValue("@new_quantity", new_Quantity);
                         myCommand.ExecuteNonQuery();
                         myConnection.Close();

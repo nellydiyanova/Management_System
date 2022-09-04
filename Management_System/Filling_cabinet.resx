@@ -137,7 +137,7 @@
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>817, 24</value>
+    <value>828, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
@@ -158,52 +158,52 @@
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="create_client_button3.Location" type="System.Drawing.Point, System.Drawing">
     <value>198, 289</value>
   </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="create_client_button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 46</value>
   </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+  <data name="create_client_button3.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="button3.Text" xml:space="preserve">
+  <data name="create_client_button3.Text" xml:space="preserve">
     <value>Създай</value>
   </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
+  <data name="&gt;&gt;create_client_button3.Name" xml:space="preserve">
+    <value>create_client_button3</value>
   </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+  <data name="&gt;&gt;create_client_button3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;create_client_button3.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;create_client_button3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="update_client_button1.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 289</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="update_client_button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 46</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="update_client_button1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Запази</value>
+  <data name="update_client_button1.Text" xml:space="preserve">
+    <value>Актуализирай</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;update_client_button1.Name" xml:space="preserve">
+    <value>update_client_button1</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;update_client_button1.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;update_client_button1.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;update_client_button1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="textBox8.Location" type="System.Drawing.Point, System.Drawing">
@@ -516,13 +516,13 @@
     <value>182, 73</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 19</value>
+    <value>79, 19</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>МОЛ:</value>
+    <value>*МОЛ/Име:</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -543,13 +543,13 @@
     <value>2, 73</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 19</value>
+    <value>97, 19</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
-    <value>Булстат:</value>
+    <value>*Булстат/ЕГН:</value>
   </data>
   <data name="&gt;&gt;label2.Name" xml:space="preserve">
     <value>label2</value>
@@ -570,13 +570,13 @@
     <value>2, 22</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 19</value>
+    <value>96, 19</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Фирма:</value>
+    <value>*Фирма/Лице:</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -617,52 +617,52 @@
   <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="create_supplier_button4.Location" type="System.Drawing.Point, System.Drawing">
     <value>198, 289</value>
   </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="create_supplier_button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 46</value>
   </data>
-  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+  <data name="create_supplier_button4.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
   </data>
-  <data name="button4.Text" xml:space="preserve">
+  <data name="create_supplier_button4.Text" xml:space="preserve">
     <value>Създай</value>
   </data>
-  <data name="&gt;&gt;button4.Name" xml:space="preserve">
-    <value>button4</value>
+  <data name="&gt;&gt;create_supplier_button4.Name" xml:space="preserve">
+    <value>create_supplier_button4</value>
   </data>
-  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+  <data name="&gt;&gt;create_supplier_button4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;create_supplier_button4.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;create_supplier_button4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="update_supplier_button2.Location" type="System.Drawing.Point, System.Drawing">
     <value>37, 289</value>
   </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="update_supplier_button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 46</value>
   </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+  <data name="update_supplier_button2.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Запази</value>
+  <data name="update_supplier_button2.Text" xml:space="preserve">
+    <value>Актуализирай</value>
   </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
+  <data name="&gt;&gt;update_supplier_button2.Name" xml:space="preserve">
+    <value>update_supplier_button2</value>
   </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+  <data name="&gt;&gt;update_supplier_button2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;update_supplier_button2.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;update_supplier_button2.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="textBox16.Location" type="System.Drawing.Point, System.Drawing">
@@ -933,13 +933,13 @@
     <value>182, 71</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 19</value>
+    <value>79, 19</value>
   </data>
   <data name="label11.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
-    <value>МОЛ:</value>
+    <value>*МОЛ/Име:</value>
   </data>
   <data name="&gt;&gt;label11.Name" xml:space="preserve">
     <value>label11</value>
@@ -1002,13 +1002,13 @@
     <value>2, 72</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 19</value>
+    <value>97, 19</value>
   </data>
   <data name="label10.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
-    <value>Булстат:</value>
+    <value>*Булстат/ЕГН:</value>
   </data>
   <data name="&gt;&gt;label10.Name" xml:space="preserve">
     <value>label10</value>
@@ -1029,13 +1029,13 @@
     <value>2, 21</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 19</value>
+    <value>96, 19</value>
   </data>
   <data name="label9.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
   <data name="label9.Text" xml:space="preserve">
-    <value>Фирма:</value>
+    <value>*Фирма/Лице:</value>
   </data>
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
@@ -1083,29 +1083,23 @@
   <data name="menuStrip2.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="новКлиентToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="newClientToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 20</value>
   </data>
-  <data name="новКлиентToolStripMenuItem.Text" xml:space="preserve">
+  <data name="newClientToolStripMenuItem.Text" xml:space="preserve">
     <value>Нов клиент</value>
   </data>
-  <data name="новДистрибуторToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="newSupplierToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>114, 20</value>
   </data>
-  <data name="новДистрибуторToolStripMenuItem.Text" xml:space="preserve">
+  <data name="newSupplierToolStripMenuItem.Text" xml:space="preserve">
     <value>Нов дистрибутор</value>
-  </data>
-  <data name="изтрийToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 20</value>
-  </data>
-  <data name="изтрийToolStripMenuItem.Text" xml:space="preserve">
-    <value>Изтрий</value>
   </data>
   <data name="menuStrip2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
   </data>
   <data name="menuStrip2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>263, 24</value>
+    <value>204, 24</value>
   </data>
   <data name="menuStrip2.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -1294,7 +1288,7 @@
     <value>9, 19</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>817, 427</value>
+    <value>828, 430</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Californian FB, 12pt</value>
@@ -4285,22 +4279,16 @@
   <data name="&gt;&gt;дистрибуториToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;новКлиентToolStripMenuItem.Name" xml:space="preserve">
-    <value>новКлиентToolStripMenuItem</value>
+  <data name="&gt;&gt;newClientToolStripMenuItem.Name" xml:space="preserve">
+    <value>newClientToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;новКлиентToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;newClientToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;новДистрибуторToolStripMenuItem.Name" xml:space="preserve">
-    <value>новДистрибуторToolStripMenuItem</value>
+  <data name="&gt;&gt;newSupplierToolStripMenuItem.Name" xml:space="preserve">
+    <value>newSupplierToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;новДистрибуторToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;изтрийToolStripMenuItem.Name" xml:space="preserve">
-    <value>изтрийToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;изтрийToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;newSupplierToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;clientDataGridViewTextBoxColumn.Name" xml:space="preserve">

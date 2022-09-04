@@ -31,6 +31,12 @@ namespace Management_System
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Stock_reference));
+            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet1 = new Management_System.DB_SystemDataSet1();
+            this.inventoryTableAdapter = new Management_System.DB_SystemDataSet1TableAdapters.InventoryTableAdapter();
+            this.dB_SystemDataSet33 = new Management_System.DB_SystemDataSet33();
+            this.inventoryBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryTableAdapter1 = new Management_System.DB_SystemDataSet33TableAdapters.InventoryTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,14 +46,62 @@ namespace Management_System
             this.quantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplierDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.warehouseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SystemDataSet1 = new Management_System.DB_SystemDataSet1();
-            this.inventoryTableAdapter = new Management_System.DB_SystemDataSet1TableAdapters.InventoryTableAdapter();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.inventoryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet34 = new Management_System.DB_SystemDataSet34();
+            this.inventoryTableAdapter2 = new Management_System.DB_SystemDataSet34TableAdapters.InventoryTableAdapter();
+            this.ok_button1 = new System.Windows.Forms.Button();
+            this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet35 = new Management_System.DB_SystemDataSet35();
+            this.warehousesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet36 = new Management_System.DB_SystemDataSet36();
+            this.inventoryBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet37 = new Management_System.DB_SystemDataSet37();
+            this.suppliersTableAdapter = new Management_System.DB_SystemDataSet35TableAdapters.SuppliersTableAdapter();
+            this.warehousesTableAdapter = new Management_System.DB_SystemDataSet36TableAdapters.WarehousesTableAdapter();
+            this.inventoryTableAdapter3 = new Management_System.DB_SystemDataSet37TableAdapters.InventoryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet37)).BeginInit();
             this.SuspendLayout();
+            // 
+            // inventoryBindingSource
+            // 
+            this.inventoryBindingSource.DataMember = "Inventory";
+            this.inventoryBindingSource.DataSource = this.dB_SystemDataSet1;
+            // 
+            // dB_SystemDataSet1
+            // 
+            this.dB_SystemDataSet1.DataSetName = "DB_SystemDataSet1";
+            this.dB_SystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventoryTableAdapter
+            // 
+            this.inventoryTableAdapter.ClearBeforeFill = true;
+            // 
+            // dB_SystemDataSet33
+            // 
+            this.dB_SystemDataSet33.DataSetName = "DB_SystemDataSet33";
+            this.dB_SystemDataSet33.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventoryBindingSource1
+            // 
+            this.inventoryBindingSource1.DataMember = "Inventory";
+            this.inventoryBindingSource1.DataSource = this.dB_SystemDataSet33;
+            // 
+            // inventoryTableAdapter1
+            // 
+            this.inventoryTableAdapter1.ClearBeforeFill = true;
             // 
             // dataGridView1
             // 
@@ -63,8 +117,9 @@ namespace Management_System
             this.measureDataGridViewTextBoxColumn,
             this.quantityDataGridViewTextBoxColumn,
             this.supplierDataGridViewTextBoxColumn,
-            this.warehouseDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.inventoryBindingSource;
+            this.warehouseDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.inventoryBindingSource2;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -125,51 +180,115 @@ namespace Management_System
             this.warehouseDataGridViewTextBoxColumn.Name = "warehouseDataGridViewTextBoxColumn";
             this.warehouseDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // inventoryBindingSource
+            // statusDataGridViewTextBoxColumn
             // 
-            this.inventoryBindingSource.DataMember = "Inventory";
-            this.inventoryBindingSource.DataSource = this.dB_SystemDataSet1;
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            resources.ApplyResources(this.statusDataGridViewTextBoxColumn, "statusDataGridViewTextBoxColumn");
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // dB_SystemDataSet1
+            // inventoryBindingSource2
             // 
-            this.dB_SystemDataSet1.DataSetName = "DB_SystemDataSet1";
-            this.dB_SystemDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.inventoryBindingSource2.DataMember = "Inventory";
+            this.inventoryBindingSource2.DataSource = this.dB_SystemDataSet34;
             // 
-            // inventoryTableAdapter
+            // dB_SystemDataSet34
             // 
-            this.inventoryTableAdapter.ClearBeforeFill = true;
+            this.dB_SystemDataSet34.DataSetName = "DB_SystemDataSet34";
+            this.dB_SystemDataSet34.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
+            // inventoryTableAdapter2
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.inventoryTableAdapter2.ClearBeforeFill = true;
+            // 
+            // ok_button1
+            // 
+            this.ok_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.ok_button1, "ok_button1");
+            this.ok_button1.Name = "ok_button1";
+            this.ok_button1.UseVisualStyleBackColor = false;
+            this.ok_button1.Click += new System.EventHandler(this.ok_button1_Click);
+            // 
+            // suppliersBindingSource
+            // 
+            this.suppliersBindingSource.DataMember = "Suppliers";
+            this.suppliersBindingSource.DataSource = this.dB_SystemDataSet35;
+            // 
+            // dB_SystemDataSet35
+            // 
+            this.dB_SystemDataSet35.DataSetName = "DB_SystemDataSet35";
+            this.dB_SystemDataSet35.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // warehousesBindingSource
+            // 
+            this.warehousesBindingSource.DataMember = "Warehouses";
+            this.warehousesBindingSource.DataSource = this.dB_SystemDataSet36;
+            // 
+            // dB_SystemDataSet36
+            // 
+            this.dB_SystemDataSet36.DataSetName = "DB_SystemDataSet36";
+            this.dB_SystemDataSet36.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // inventoryBindingSource3
+            // 
+            this.inventoryBindingSource3.DataMember = "Inventory";
+            this.inventoryBindingSource3.DataSource = this.dB_SystemDataSet37;
+            // 
+            // dB_SystemDataSet37
+            // 
+            this.dB_SystemDataSet37.DataSetName = "DB_SystemDataSet37";
+            this.dB_SystemDataSet37.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // suppliersTableAdapter
+            // 
+            this.suppliersTableAdapter.ClearBeforeFill = true;
+            // 
+            // warehousesTableAdapter
+            // 
+            this.warehousesTableAdapter.ClearBeforeFill = true;
+            // 
+            // inventoryTableAdapter3
+            // 
+            this.inventoryTableAdapter3.ClearBeforeFill = true;
             // 
             // Stock_reference
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ok_button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Stock_reference";
             this.Load += new System.EventHandler(this.Stock_reference_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.warehousesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet37)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataGridView1;
         private DB_SystemDataSet1 dB_SystemDataSet1;
         private System.Windows.Forms.BindingSource inventoryBindingSource;
         private DB_SystemDataSet1TableAdapters.InventoryTableAdapter inventoryTableAdapter;
-        private System.Windows.Forms.Button button1;
+        private DB_SystemDataSet33 dB_SystemDataSet33;
+        private System.Windows.Forms.BindingSource inventoryBindingSource1;
+        private DB_SystemDataSet33TableAdapters.InventoryTableAdapter inventoryTableAdapter1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private DB_SystemDataSet34 dB_SystemDataSet34;
+        private System.Windows.Forms.BindingSource inventoryBindingSource2;
+        private DB_SystemDataSet34TableAdapters.InventoryTableAdapter inventoryTableAdapter2;
+        private System.Windows.Forms.Button ok_button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idproductDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliverypriceDataGridViewTextBoxColumn;
@@ -178,5 +297,15 @@ namespace Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplierDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn warehouseDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private DB_SystemDataSet35 dB_SystemDataSet35;
+        private System.Windows.Forms.BindingSource suppliersBindingSource;
+        private DB_SystemDataSet35TableAdapters.SuppliersTableAdapter suppliersTableAdapter;
+        private DB_SystemDataSet36 dB_SystemDataSet36;
+        private System.Windows.Forms.BindingSource warehousesBindingSource;
+        private DB_SystemDataSet36TableAdapters.WarehousesTableAdapter warehousesTableAdapter;
+        private DB_SystemDataSet37 dB_SystemDataSet37;
+        private System.Windows.Forms.BindingSource inventoryBindingSource3;
+        private DB_SystemDataSet37TableAdapters.InventoryTableAdapter inventoryTableAdapter3;
     }
 }

@@ -62,9 +62,10 @@ namespace Management_System
             textBox7.Enabled = false;
             textBox8.Enabled = true;
             comboBox1.Enabled = true;
-            button1.Enabled = true;
-            button2.Enabled = true;
-            button1.BackColor = System.Drawing.Color.LightGreen;
+            comboBox1.Text = "";
+            update_warehouse_button1.Enabled = true;
+            search_button2.Enabled = true;
+            update_warehouse_button1.BackColor = System.Drawing.Color.LightGreen;
 
             try
             {
@@ -86,7 +87,7 @@ namespace Management_System
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void update_warehouse_button1_Click(object sender, EventArgs e)
         {
             TreeNode selectedNode = treeView1.SelectedNode;
             if (textBox1.Text != "" && comboBox1.Text != "")
@@ -94,7 +95,7 @@ namespace Management_System
                 try
                 {
                     myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("update Inventory set id_product=@id_product, warehouse=@warehouse where id_product=@id_product", myConnection);
+                    myCommand = new SqlCommand("update Inventory set warehouse=@warehouse where id_product=@id_product", myConnection);
                     myConnection.Open();
                     myCommand.Parameters.AddWithValue("@id_product", textBox1.Text);
                     myCommand.Parameters.AddWithValue("@warehouse", comboBox1.Text);
@@ -139,8 +140,8 @@ namespace Management_System
             textBox7.Enabled = false;
             textBox8.Enabled = true;
             comboBox1.Enabled = true;
-            button1.Enabled = true;
-            button2.Enabled = true;
+            update_warehouse_button1.Enabled = true;
+            search_button2.Enabled = true;
 
             TreeNode selectedNode = treeView1.SelectedNode;
             if (selectedNode != treeView1.Nodes[0] && selectedNode != null)
@@ -245,7 +246,7 @@ namespace Management_System
             return false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void search_button2_Click(object sender, EventArgs e)
         {
             var searchFor = textBox8.Text.Trim().ToUpper();
             if (searchFor != "")

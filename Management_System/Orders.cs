@@ -68,11 +68,10 @@ namespace Management_System
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            listBox1.Items.Clear();
-            listBox1.Items.Add(dataGridView1.CurrentRow.Cells[1].Value.ToString());
+            richTextBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString() + "\n";
             textBox3.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             textBox4.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            listBox2.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            listBox1.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             dateTimePicker1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
@@ -81,17 +80,16 @@ namespace Management_System
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            listBox1.Items.Clear();
-            listBox1.Items.Add(dataGridView1.CurrentRow.Cells[1].Value.ToString());
+            richTextBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString() + "\n";
             textBox3.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             textBox4.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            listBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+            listBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
             dateTimePicker1.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
             comboBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void update_button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && comboBox1.Text != "")
             {
@@ -103,7 +101,7 @@ namespace Management_System
                     myCommand.Parameters.AddWithValue("@ID", textBox1.Text);
                     myCommand.Parameters.AddWithValue("@quantity", Convert.ToDouble(textBox3.Text));
                     myCommand.Parameters.AddWithValue("@full_price", Convert.ToDouble(textBox4.Text));
-                    myCommand.Parameters.AddWithValue("@client", listBox2.Text);
+                    myCommand.Parameters.AddWithValue("@client", listBox1.Text);
                     myCommand.Parameters.AddWithValue("@date", Convert.ToDateTime(dateTimePicker1.Text));
                     myCommand.Parameters.AddWithValue("@status", comboBox1.Text);
                     myCommand.Parameters.AddWithValue("@username", textBox2.Text);
@@ -118,7 +116,7 @@ namespace Management_System
 
                     textBox1.Clear();
                     textBox2.Clear();
-                    listBox1.Items.Clear();
+                    richTextBox1.Text = "";
                     textBox3.Clear();
                     textBox4.Clear();
                     dateTimePicker1.Text = "";
@@ -137,83 +135,11 @@ namespace Management_System
             }
         }
 
-        private void новаПоръчкаToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
             New_order frm = new New_order();
             frm.Show();
-        }
-
-        private void изтрийПоръчкаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (textBox1.Text != "")
-            {
-                try
-                {
-                    myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("delete Orders where ID=@ID", myConnection);
-                    myConnection.Open();
-                    myCommand.Parameters.AddWithValue("@ID", textBox1.Text);
-                    myCommand.ExecuteNonQuery();
-                    myConnection.Close();
-                    MessageBox.Show("Успешно изтрита поръчка!");
-                    if (myConnection.State == ConnectionState.Open)
-                    {
-                        myConnection.Dispose();
-                    }
-
-                    textBox1.Clear();
-                    textBox2.Clear();
-                    listBox1.Items.Clear();
-                    textBox3.Clear();
-                    textBox4.Clear();
-                    dateTimePicker1.Text = "";
-                    comboBox1.Text = "";
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-                try
-                {
-                    for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
-                    {
-                        var new_Quantity = +int.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString());
-                        myConnection = new SqlConnection(frm.cs);
-                        myCommand = new SqlCommand("update Inventory set quantity=quantity+@new_quantity, product_name=@product_name where product_name=@product_name", myConnection);
-                        myConnection.Open();
-                        myCommand.Parameters.AddWithValue("@product_name", dataGridView1.Rows[i].Cells[1].Value.ToString());
-                        myCommand.Parameters.AddWithValue("@new_quantity", new_Quantity);
-                        myCommand.ExecuteNonQuery();
-                        myConnection.Close();
-                    }
-
-                    displayData();
-                    if (myConnection.State == ConnectionState.Open)
-                    {
-                        myConnection.Dispose();
-                    }
-
-                    textBox1.Clear();
-                    listBox1.Items.Clear();
-                    textBox3.Clear();
-                    textBox4.Clear();
-                    dateTimePicker1.Text = "";
-                    comboBox1.Text = "";
-                }
-
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("Изберете поръчка за изтриване!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void DataTableToTextFile(DataTable dt, string outputFilePath)
@@ -269,7 +195,7 @@ namespace Management_System
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void report_button2_Click(object sender, EventArgs e)
         {
             string connectionString = null;
             Login frm = new Login();

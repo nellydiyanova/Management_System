@@ -35,8 +35,8 @@ namespace Management_System
             this.клиентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.дистрибуториToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.create_client_button3 = new System.Windows.Forms.Button();
+            this.update_client_button1 = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -54,8 +54,8 @@ namespace Management_System
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.create_supplier_button4 = new System.Windows.Forms.Button();
+            this.update_supplier_button2 = new System.Windows.Forms.Button();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
@@ -73,9 +73,8 @@ namespace Management_System
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.новКлиентToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.новДистрибуторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.изтрийToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -135,18 +134,18 @@ namespace Management_System
             // 
             this.клиентиToolStripMenuItem.Name = "клиентиToolStripMenuItem";
             resources.ApplyResources(this.клиентиToolStripMenuItem, "клиентиToolStripMenuItem");
-            this.клиентиToolStripMenuItem.Click += new System.EventHandler(this.клиентиToolStripMenuItem_Click);
+            this.клиентиToolStripMenuItem.Click += new System.EventHandler(this.clientsToolStripMenuItem_Click);
             // 
             // дистрибуториToolStripMenuItem
             // 
             this.дистрибуториToolStripMenuItem.Name = "дистрибуториToolStripMenuItem";
             resources.ApplyResources(this.дистрибуториToolStripMenuItem, "дистрибуториToolStripMenuItem");
-            this.дистрибуториToolStripMenuItem.Click += new System.EventHandler(this.дистрибуториToolStripMenuItem_Click);
+            this.дистрибуториToolStripMenuItem.Click += new System.EventHandler(this.suppliersToolStripMenuItem_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.create_client_button3);
+            this.groupBox1.Controls.Add(this.update_client_button1);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
@@ -167,21 +166,21 @@ namespace Management_System
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // button3
+            // create_client_button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.create_client_button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.create_client_button3, "create_client_button3");
+            this.create_client_button3.Name = "create_client_button3";
+            this.create_client_button3.UseVisualStyleBackColor = false;
+            this.create_client_button3.Click += new System.EventHandler(this.create_client_button3_Click);
             // 
-            // button1
+            // update_client_button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.update_client_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.update_client_button1, "update_client_button1");
+            this.update_client_button1.Name = "update_client_button1";
+            this.update_client_button1.UseVisualStyleBackColor = false;
+            this.update_client_button1.Click += new System.EventHandler(this.update_client_button1_Click);
             // 
             // textBox8
             // 
@@ -265,8 +264,8 @@ namespace Management_System
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.create_supplier_button4);
+            this.groupBox2.Controls.Add(this.update_supplier_button2);
             this.groupBox2.Controls.Add(this.textBox16);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.textBox15);
@@ -287,21 +286,21 @@ namespace Management_System
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // button4
+            // create_supplier_button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.create_supplier_button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.create_supplier_button4, "create_supplier_button4");
+            this.create_supplier_button4.Name = "create_supplier_button4";
+            this.create_supplier_button4.UseVisualStyleBackColor = false;
+            this.create_supplier_button4.Click += new System.EventHandler(this.create_supplier_button4_Click);
             // 
-            // button2
+            // update_supplier_button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.update_supplier_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.update_supplier_button2, "update_supplier_button2");
+            this.update_supplier_button2.Name = "update_supplier_button2";
+            this.update_supplier_button2.UseVisualStyleBackColor = false;
+            this.update_supplier_button2.Click += new System.EventHandler(this.update_supplier_button2_Click);
             // 
             // textBox16
             // 
@@ -387,28 +386,21 @@ namespace Management_System
             // 
             resources.ApplyResources(this.menuStrip2, "menuStrip2");
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.новКлиентToolStripMenuItem,
-            this.новДистрибуторToolStripMenuItem,
-            this.изтрийToolStripMenuItem});
+            this.newClientToolStripMenuItem,
+            this.newSupplierToolStripMenuItem});
             this.menuStrip2.Name = "menuStrip2";
             // 
-            // новКлиентToolStripMenuItem
+            // newClientToolStripMenuItem
             // 
-            this.новКлиентToolStripMenuItem.Name = "новКлиентToolStripMenuItem";
-            resources.ApplyResources(this.новКлиентToolStripMenuItem, "новКлиентToolStripMenuItem");
-            this.новКлиентToolStripMenuItem.Click += new System.EventHandler(this.новКлиентToolStripMenuItem_Click);
+            this.newClientToolStripMenuItem.Name = "newClientToolStripMenuItem";
+            resources.ApplyResources(this.newClientToolStripMenuItem, "newClientToolStripMenuItem");
+            this.newClientToolStripMenuItem.Click += new System.EventHandler(this.newClientToolStripMenuItem_Click);
             // 
-            // новДистрибуторToolStripMenuItem
+            // newSupplierToolStripMenuItem
             // 
-            this.новДистрибуторToolStripMenuItem.Name = "новДистрибуторToolStripMenuItem";
-            resources.ApplyResources(this.новДистрибуторToolStripMenuItem, "новДистрибуторToolStripMenuItem");
-            this.новДистрибуторToolStripMenuItem.Click += new System.EventHandler(this.новДистрибуторToolStripMenuItem_Click);
-            // 
-            // изтрийToolStripMenuItem
-            // 
-            this.изтрийToolStripMenuItem.Name = "изтрийToolStripMenuItem";
-            resources.ApplyResources(this.изтрийToolStripMenuItem, "изтрийToolStripMenuItem");
-            this.изтрийToolStripMenuItem.Click += new System.EventHandler(this.изтрийToolStripMenuItem_Click);
+            this.newSupplierToolStripMenuItem.Name = "newSupplierToolStripMenuItem";
+            resources.ApplyResources(this.newSupplierToolStripMenuItem, "newSupplierToolStripMenuItem");
+            this.newSupplierToolStripMenuItem.Click += new System.EventHandler(this.newSupplierToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 
@@ -667,10 +659,10 @@ namespace Management_System
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button update_client_button1;
         private System.Windows.Forms.BindingSource suppliersBindingSource;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button update_supplier_button2;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox15;
@@ -714,9 +706,8 @@ namespace Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn2;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem новКлиентToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem новДистрибуторToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem изтрийToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newSupplierToolStripMenuItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DB_SystemDataSet3 dB_SystemDataSet3;
         private System.Windows.Forms.BindingSource clientsBindingSource;
@@ -728,8 +719,8 @@ namespace Management_System
         private DB_SystemDataSet5 dB_SystemDataSet5;
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private DB_SystemDataSet5TableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button create_client_button3;
+        private System.Windows.Forms.Button create_supplier_button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn clientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

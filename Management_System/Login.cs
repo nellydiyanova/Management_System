@@ -18,7 +18,7 @@ namespace Management_System
 
         public static string passingText;
 
-        private void button1_Click(object sender, EventArgs e)
+        private void login_button1_Click(object sender, EventArgs e)
         {
             try
             {

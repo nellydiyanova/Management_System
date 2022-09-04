@@ -133,7 +133,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAe
-        CgAAAk1TRnQBSQFMAgEBAwEAAdQBAAHUAQABEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        CgAAAk1TRnQBSQFMAgEBAwEAAWQBAQFkAQEBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -213,29 +213,23 @@
   <data name="menuStrip1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Californian FB, 12pt</value>
   </data>
-  <data name="новСкладToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="newWarehouseToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 23</value>
   </data>
-  <data name="новСкладToolStripMenuItem.Text" xml:space="preserve">
+  <data name="newWarehouseToolStripMenuItem.Text" xml:space="preserve">
     <value>Нов склад</value>
   </data>
-  <data name="новаСтокаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="newProductToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>87, 23</value>
   </data>
-  <data name="новаСтокаToolStripMenuItem.Text" xml:space="preserve">
+  <data name="newProductToolStripMenuItem.Text" xml:space="preserve">
     <value>Нова стока</value>
   </data>
-  <data name="стоковаСправкаToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="stockReferenceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 23</value>
   </data>
-  <data name="стоковаСправкаToolStripMenuItem.Text" xml:space="preserve">
+  <data name="stockReferenceToolStripMenuItem.Text" xml:space="preserve">
     <value>Стокова справка</value>
-  </data>
-  <data name="изтриванеToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>85, 23</value>
-  </data>
-  <data name="изтриванеToolStripMenuItem.Text" xml:space="preserve">
-    <value>Изтриване</value>
   </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>236, 0</value>
@@ -244,7 +238,7 @@
     <value>390, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>390, 27</value>
+    <value>295, 27</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -268,16 +262,16 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>209, 11</value>
+    <value>201, 11</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 19</value>
+    <value>55, 19</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
-    <value>Склад:</value>
+    <value>*Склад:</value>
   </data>
   <data name="&gt;&gt;label1.Name" xml:space="preserve">
     <value>label1</value>
@@ -289,7 +283,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>55, 8</value>
@@ -310,7 +304,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>262, 8</value>
@@ -331,7 +325,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -358,7 +352,7 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
     <value>54, 40</value>
@@ -379,22 +373,22 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 11</value>
+    <value>2, 11</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 19</value>
+    <value>36, 19</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>ID:</value>
+    <value>*ID:</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -406,10 +400,10 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="textBox4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 76</value>
+    <value>105, 72</value>
   </data>
   <data name="textBox4.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 26</value>
@@ -427,13 +421,13 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;textBox4.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 79</value>
+    <value>2, 75</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>93, 19</value>
@@ -454,55 +448,82 @@
     <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
-  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="create_warehouse_button4.Location" type="System.Drawing.Point, System.Drawing">
     <value>209, 118</value>
   </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="create_warehouse_button4.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 35</value>
   </data>
-  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+  <data name="create_warehouse_button4.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="button4.Text" xml:space="preserve">
+  <data name="create_warehouse_button4.Text" xml:space="preserve">
     <value>Създай</value>
   </data>
-  <data name="&gt;&gt;button4.Name" xml:space="preserve">
-    <value>button4</value>
+  <data name="&gt;&gt;create_warehouse_button4.Name" xml:space="preserve">
+    <value>create_warehouse_button4</value>
   </data>
-  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+  <data name="&gt;&gt;create_warehouse_button4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;create_warehouse_button4.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;create_warehouse_button4.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>68, 118</value>
+  <data name="checkBox1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>98, 35</value>
+  <data name="checkBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>285, 74</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="checkBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 23</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>Запази</value>
+  <data name="checkBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="checkBox1.Text" xml:space="preserve">
+    <value>Активен</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;checkBox1.Name" xml:space="preserve">
+    <value>checkBox1</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;checkBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox1.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;checkBox1.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="update_warehouse_button1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>68, 118</value>
+  </data>
+  <data name="update_warehouse_button1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 35</value>
+  </data>
+  <data name="update_warehouse_button1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="update_warehouse_button1.Text" xml:space="preserve">
+    <value>Актуализирай</value>
+  </data>
+  <data name="&gt;&gt;update_warehouse_button1.Name" xml:space="preserve">
+    <value>update_warehouse_button1</value>
+  </data>
+  <data name="&gt;&gt;update_warehouse_button1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;update_warehouse_button1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;update_warehouse_button1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>242, 30</value>
@@ -535,13 +556,13 @@
     <value>3, 45</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 19</value>
+    <value>55, 19</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
   <data name="label7.Text" xml:space="preserve">
-    <value>Стока:</value>
+    <value>*Стока:</value>
   </data>
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
@@ -553,13 +574,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 86</value>
+    <value>3, 86</value>
   </data>
   <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 19</value>
@@ -580,13 +601,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 118</value>
+    <value>3, 118</value>
   </data>
   <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
     <value>103, 19</value>
@@ -607,10 +628,10 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="textBox10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 102</value>
+    <value>282, 120</value>
   </data>
   <data name="textBox10.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 26</value>
@@ -628,61 +649,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;textBox10.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>56, 7</value>
-  </data>
-  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 26</value>
-  </data>
-  <data name="textBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
-    <value>textBox5</value>
-  </data>
-  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 10</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 19</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>ID:</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>8</value>
   </data>
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 13</value>
+    <value>202, 10</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>47, 19</value>
@@ -703,13 +676,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="textBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 42</value>
+    <value>56, 42</value>
   </data>
   <data name="textBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 26</value>
+    <value>306, 26</value>
   </data>
   <data name="textBox7.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -724,7 +697,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;textBox7.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="textBox8.Location" type="System.Drawing.Point, System.Drawing">
     <value>111, 83</value>
@@ -745,7 +718,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;textBox8.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="textBox9.Location" type="System.Drawing.Point, System.Drawing">
     <value>111, 115</value>
@@ -766,13 +739,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;textBox9.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 105</value>
+    <value>226, 123</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 19</value>
@@ -793,7 +766,37 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
+  </data>
+  <data name="checkBox2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="checkBox2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="checkBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>286, 74</value>
+  </data>
+  <data name="checkBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 23</value>
+  </data>
+  <data name="checkBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="checkBox2.Text" xml:space="preserve">
+    <value>Активна</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Name" xml:space="preserve">
+    <value>checkBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;checkBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="warehousesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>183, 56</value>
@@ -826,13 +829,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;comboBox2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="textBox12.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
   <data name="textBox12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 147</value>
+    <value>282, 152</value>
   </data>
   <data name="textBox12.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 26</value>
@@ -850,7 +853,7 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;textBox12.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -859,7 +862,7 @@
     <value>NoControl</value>
   </data>
   <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>226, 150</value>
+    <value>226, 154</value>
   </data>
   <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
     <value>40, 19</value>
@@ -880,31 +883,31 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
-  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="create_product_button5.Location" type="System.Drawing.Point, System.Drawing">
     <value>210, 188</value>
   </data>
-  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="create_product_button5.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 35</value>
   </data>
-  <data name="button5.TabIndex" type="System.Int32, mscorlib">
+  <data name="create_product_button5.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="button5.Text" xml:space="preserve">
+  <data name="create_product_button5.Text" xml:space="preserve">
     <value>Създай</value>
   </data>
-  <data name="&gt;&gt;button5.Name" xml:space="preserve">
-    <value>button5</value>
+  <data name="&gt;&gt;create_product_button5.Name" xml:space="preserve">
+    <value>create_product_button5</value>
   </data>
-  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+  <data name="&gt;&gt;create_product_button5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;create_product_button5.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;create_product_button5.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <metadata name="suppliersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>506, 17</value>
@@ -931,13 +934,13 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="label11.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 154</value>
+    <value>3, 154</value>
   </data>
   <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
     <value>74, 19</value>
@@ -958,31 +961,85 @@
     <value>groupBox2</value>
   </data>
   <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
-  <data name="button2.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="update_product_button2.Location" type="System.Drawing.Point, System.Drawing">
     <value>69, 188</value>
   </data>
-  <data name="button2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="update_product_button2.Size" type="System.Drawing.Size, System.Drawing">
     <value>98, 35</value>
   </data>
-  <data name="button2.TabIndex" type="System.Int32, mscorlib">
+  <data name="update_product_button2.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="button2.Text" xml:space="preserve">
-    <value>Запази</value>
+  <data name="update_product_button2.Text" xml:space="preserve">
+    <value>Актуализирай</value>
   </data>
-  <data name="&gt;&gt;button2.Name" xml:space="preserve">
-    <value>button2</value>
+  <data name="&gt;&gt;update_product_button2.Name" xml:space="preserve">
+    <value>update_product_button2</value>
   </data>
-  <data name="&gt;&gt;button2.Type" xml:space="preserve">
+  <data name="&gt;&gt;update_product_button2.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;update_product_button2.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="&gt;&gt;button2.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="&gt;&gt;update_product_button2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 10</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 19</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>*ID:</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="textBox5.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="textBox5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>56, 7</value>
+  </data>
+  <data name="textBox5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 26</value>
+  </data>
+  <data name="textBox5.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Name" xml:space="preserve">
+    <value>textBox5</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBox5.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;textBox5.ZOrder" xml:space="preserve">
+    <value>18</value>
   </data>
   <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
     <value>241, 200</value>
@@ -1029,28 +1086,28 @@
   <data name="&gt;&gt;textBox11.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="search_button3.Location" type="System.Drawing.Point, System.Drawing">
     <value>162, 0</value>
   </data>
-  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="search_button3.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 27</value>
   </data>
-  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+  <data name="search_button3.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="button3.Text" xml:space="preserve">
+  <data name="search_button3.Text" xml:space="preserve">
     <value>Търси</value>
   </data>
-  <data name="&gt;&gt;button3.Name" xml:space="preserve">
-    <value>button3</value>
+  <data name="&gt;&gt;search_button3.Name" xml:space="preserve">
+    <value>search_button3</value>
   </data>
-  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+  <data name="&gt;&gt;search_button3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;search_button3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;search_button3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="suppliersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -4054,28 +4111,22 @@
   <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;новСкладToolStripMenuItem.Name" xml:space="preserve">
-    <value>новСкладToolStripMenuItem</value>
+  <data name="&gt;&gt;newWarehouseToolStripMenuItem.Name" xml:space="preserve">
+    <value>newWarehouseToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;новСкладToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;newWarehouseToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;новаСтокаToolStripMenuItem.Name" xml:space="preserve">
-    <value>новаСтокаToolStripMenuItem</value>
+  <data name="&gt;&gt;newProductToolStripMenuItem.Name" xml:space="preserve">
+    <value>newProductToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;новаСтокаToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;newProductToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;стоковаСправкаToolStripMenuItem.Name" xml:space="preserve">
-    <value>стоковаСправкаToolStripMenuItem</value>
+  <data name="&gt;&gt;stockReferenceToolStripMenuItem.Name" xml:space="preserve">
+    <value>stockReferenceToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;стоковаСправкаToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;изтриванеToolStripMenuItem.Name" xml:space="preserve">
-    <value>изтриванеToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;изтриванеToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;stockReferenceToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;warehousesBindingSource.Name" xml:space="preserve">

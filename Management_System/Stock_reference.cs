@@ -29,8 +29,8 @@ namespace Management_System
 
         private void Stock_reference_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_SystemDataSet1.Inventory' table. You can move, or remove it, as needed.
-            this.inventoryTableAdapter.Fill(this.dB_SystemDataSet1.Inventory);
+            // TODO: This line of code loads data into the 'dB_SystemDataSet34.Inventory' table. You can move, or remove it, as needed.
+            this.inventoryTableAdapter2.Fill(this.dB_SystemDataSet34.Inventory);
 
             try
             {
@@ -52,7 +52,7 @@ namespace Management_System
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ok_button1_Click(object sender, EventArgs e)
         {
             this.Hide();
         }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Management_System
@@ -44,8 +45,21 @@ namespace Management_System
             myConnection.Close();
         }
 
+        private void displayData3()
+        {
+            myConnection.Open();
+            DataTable dt = new DataTable();
+            adapt = new SqlDataAdapter("Select * from Inventory", myConnection);
+            adapt.Fill(dt);
+            dataGridView1.DataSource = dt;
+            myConnection.Close();
+        }
+
         private void Revision_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dB_SystemDataSet32.Inventory' table. You can move, or remove it, as needed.
+            this.inventoryTableAdapter.Fill(this.dB_SystemDataSet32.Inventory);
+
             TreeNode parentnode = new TreeNode("Номенклатура");
             treeView1.Nodes.Add(parentnode);
             TreeNode firtsnode = treeView1.Nodes[0];
@@ -59,9 +73,9 @@ namespace Management_System
             textBox7.Enabled = true;
             textBox8.Enabled = false;
             textBox9.Enabled = true;
-            button1.Enabled = true;
-            button2.Enabled = true;
-            button1.BackColor = System.Drawing.Color.LightGreen;
+            update_quantity_button1.Enabled = true;
+            search_button2.Enabled = true;
+            update_quantity_button1.BackColor = System.Drawing.Color.LightGreen;
 
             try
             {
@@ -83,7 +97,7 @@ namespace Management_System
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void update_quantity_button1_Click(object sender, EventArgs e)
         {
             TreeNode selectedNode = treeView1.SelectedNode;
             if (textBox1.Text != "" && textBox7.Text != "")
@@ -91,12 +105,13 @@ namespace Management_System
                 try
                 {
                     myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("update Inventory set id_product=@id_product, quantity=@quantity where id_product=@id_product", myConnection);
+                    myCommand = new SqlCommand("update Inventory set quantity=@quantity where id_product=@id_product", myConnection);
                     myConnection.Open();
                     myCommand.Parameters.AddWithValue("@id_product", textBox1.Text);
                     myCommand.Parameters.AddWithValue("@quantity", textBox7.Text);
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
+                    displayData3();
                     MessageBox.Show("Успешно променено количество!");
                     if (myConnection.State == ConnectionState.Open)
                     {
@@ -136,8 +151,8 @@ namespace Management_System
             textBox7.Enabled = true;
             textBox8.Enabled = false;
             textBox9.Enabled = true;
-            button1.Enabled = true;
-            button2.Enabled = true;
+            update_quantity_button1.Enabled = true;
+            search_button2.Enabled = true;
 
             TreeNode selectedNode = treeView1.SelectedNode;
             if (selectedNode != treeView1.Nodes[0] && selectedNode != null)
@@ -241,7 +256,7 @@ namespace Management_System
             return false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void search_button2_Click(object sender, EventArgs e)
         {
             var searchFor = textBox9.Text.Trim().ToUpper();
             if (searchFor != "")
@@ -255,6 +270,104 @@ namespace Management_System
                     }
                 }
             }
+        }
+
+        private void DataTableToTextFile(DataTable dt, string outputFilePath)
+        {
+            int[] maxLengths = new int[dt.Columns.Count];
+
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                maxLengths[i] = dt.Columns[i].ColumnName.Length;
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    if (!row.IsNull(i))
+                    {
+                        int length = row[i].ToString().Length;
+
+                        if (length > maxLengths[i])
+                        {
+                            maxLengths[i] = length;
+                        }
+                    }
+                }
+            }
+
+            using (StreamWriter sw = new StreamWriter(outputFilePath, false))
+            {
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    sw.Write(dt.Columns[i].ColumnName.PadRight(maxLengths[i] + 2));
+                }
+
+                sw.WriteLine();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    for (int i = 0; i < dt.Columns.Count; i++)
+                    {
+                        if (!row.IsNull(i))
+                        {
+                            sw.Write(row[i].ToString().PadRight(maxLengths[i] + 2));
+                        }
+
+                        else
+                        {
+                            sw.Write(new string(' ', maxLengths[i] + 2));
+                        }
+                    }
+
+                    sw.WriteLine();
+                }
+
+                sw.Close();
+            }
+        }
+
+        private void report_button2_Click(object sender, EventArgs e)
+        {
+            string connectionString = null;
+            Login frm = new Login();
+            connectionString = frm.cs;
+
+            DataTable dt = new DataTable();
+
+            foreach (DataGridViewTextBoxColumn column in dataGridView1.Columns)
+            {
+                dt.Columns.Add(column.Name, column.ValueType);
+            }
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                DataRow dr = dt.NewRow();
+                foreach (DataGridViewTextBoxColumn column in dataGridView1.Columns)
+                {
+                    if (row.Cells[column.Name].Value != null)
+                    {
+                        dr[column.Name] = row.Cells[column.Name].Value.ToString();
+                    }
+                }
+
+                dt.Rows.Add(dr);
+            }
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = "Save text Files";
+            saveFileDialog1.CheckFileExists = true;
+            saveFileDialog1.CheckPathExists = true;
+            saveFileDialog1.DefaultExt = "txt";
+            saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            string filePath = saveFileDialog1.FileName;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filePath = saveFileDialog1.FileName;
+            }
+
+            DataTableToTextFile(dt, filePath);
+            MessageBox.Show("Справката е създадена успешно!");
         }
     }
 }

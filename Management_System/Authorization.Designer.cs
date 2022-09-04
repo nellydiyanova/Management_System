@@ -33,7 +33,7 @@ namespace Management_System
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Authorization));
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet7 = new Management_System.DB_SystemDataSet7();
-            this.button1 = new System.Windows.Forms.Button();
+            this.check_button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -58,14 +58,14 @@ namespace Management_System
             this.dB_SystemDataSet7.DataSetName = "DB_SystemDataSet7";
             this.dB_SystemDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
+            // check_button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.check_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.check_button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.check_button1, "check_button1");
+            this.check_button1.Name = "check_button1";
+            this.check_button1.UseVisualStyleBackColor = false;
+            this.check_button1.Click += new System.EventHandler(this.check_button1_Click);
             // 
             // label2
             // 
@@ -111,13 +111,13 @@ namespace Management_System
             // 
             // Authorization
             // 
-            this.AcceptButton = this.button1;
+            this.AcceptButton = this.check_button1;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.check_button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Authorization";
@@ -132,7 +132,7 @@ namespace Management_System
         }
 
         #endregion
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button check_button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;

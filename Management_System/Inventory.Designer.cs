@@ -34,10 +34,9 @@ namespace Management_System
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.новСкладToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.новаСтокаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.стоковаСправкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.изтриванеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newWarehouseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockReferenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -47,33 +46,35 @@ namespace Management_System
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.create_warehouse_button4 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.update_warehouse_button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.warehousesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet29 = new Management_System.DB_SystemDataSet29();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.create_product_button5 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet6 = new Management_System.DB_SystemDataSet6();
             this.label11 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.update_product_button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.search_button3 = new System.Windows.Forms.Button();
             this.suppliersTableAdapter = new Management_System.DB_SystemDataSet6TableAdapters.SuppliersTableAdapter();
             this.warehousesTableAdapter = new Management_System.DB_SystemDataSet29TableAdapters.WarehousesTableAdapter();
             this.menuStrip1.SuspendLayout();
@@ -104,35 +105,28 @@ namespace Management_System
             // 
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.новСкладToolStripMenuItem,
-            this.новаСтокаToolStripMenuItem,
-            this.стоковаСправкаToolStripMenuItem,
-            this.изтриванеToolStripMenuItem});
+            this.newWarehouseToolStripMenuItem,
+            this.newProductToolStripMenuItem,
+            this.stockReferenceToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             // 
-            // новСкладToolStripMenuItem
+            // newWarehouseToolStripMenuItem
             // 
-            this.новСкладToolStripMenuItem.Name = "новСкладToolStripMenuItem";
-            resources.ApplyResources(this.новСкладToolStripMenuItem, "новСкладToolStripMenuItem");
-            this.новСкладToolStripMenuItem.Click += new System.EventHandler(this.новСкладToolStripMenuItem_Click);
+            this.newWarehouseToolStripMenuItem.Name = "newWarehouseToolStripMenuItem";
+            resources.ApplyResources(this.newWarehouseToolStripMenuItem, "newWarehouseToolStripMenuItem");
+            this.newWarehouseToolStripMenuItem.Click += new System.EventHandler(this.newWarehouseToolStripMenuItem_Click);
             // 
-            // новаСтокаToolStripMenuItem
+            // newProductToolStripMenuItem
             // 
-            this.новаСтокаToolStripMenuItem.Name = "новаСтокаToolStripMenuItem";
-            resources.ApplyResources(this.новаСтокаToolStripMenuItem, "новаСтокаToolStripMenuItem");
-            this.новаСтокаToolStripMenuItem.Click += new System.EventHandler(this.новаСтокаToolStripMenuItem_Click);
+            this.newProductToolStripMenuItem.Name = "newProductToolStripMenuItem";
+            resources.ApplyResources(this.newProductToolStripMenuItem, "newProductToolStripMenuItem");
+            this.newProductToolStripMenuItem.Click += new System.EventHandler(this.newProductToolStripMenuItem_Click);
             // 
-            // стоковаСправкаToolStripMenuItem
+            // stockReferenceToolStripMenuItem
             // 
-            this.стоковаСправкаToolStripMenuItem.Name = "стоковаСправкаToolStripMenuItem";
-            resources.ApplyResources(this.стоковаСправкаToolStripMenuItem, "стоковаСправкаToolStripMenuItem");
-            this.стоковаСправкаToolStripMenuItem.Click += new System.EventHandler(this.стоковаСправкаToolStripMenuItem_Click);
-            // 
-            // изтриванеToolStripMenuItem
-            // 
-            this.изтриванеToolStripMenuItem.Name = "изтриванеToolStripMenuItem";
-            resources.ApplyResources(this.изтриванеToolStripMenuItem, "изтриванеToolStripMenuItem");
-            this.изтриванеToolStripMenuItem.Click += new System.EventHandler(this.изтриванеToolStripMenuItem_Click);
+            this.stockReferenceToolStripMenuItem.Name = "stockReferenceToolStripMenuItem";
+            resources.ApplyResources(this.stockReferenceToolStripMenuItem, "stockReferenceToolStripMenuItem");
+            this.stockReferenceToolStripMenuItem.Click += new System.EventHandler(this.stockReferenceToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -176,8 +170,9 @@ namespace Management_System
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.create_warehouse_button4);
+            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.update_warehouse_button1);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label1);
@@ -190,25 +185,31 @@ namespace Management_System
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // button4
+            // create_warehouse_button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.button4, "button4");
-            this.button4.Name = "button4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.create_warehouse_button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.create_warehouse_button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.create_warehouse_button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.create_warehouse_button4, "create_warehouse_button4");
+            this.create_warehouse_button4.Name = "create_warehouse_button4";
+            this.create_warehouse_button4.UseVisualStyleBackColor = false;
+            this.create_warehouse_button4.Click += new System.EventHandler(this.create_warehouse_button4_Click);
             // 
-            // button1
+            // checkBox1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.checkBox1, "checkBox1");
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // update_warehouse_button1
+            // 
+            this.update_warehouse_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update_warehouse_button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update_warehouse_button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.update_warehouse_button1, "update_warehouse_button1");
+            this.update_warehouse_button1.Name = "update_warehouse_button1";
+            this.update_warehouse_button1.UseVisualStyleBackColor = false;
+            this.update_warehouse_button1.Click += new System.EventHandler(this.update_warehouse_button1_Click);
             // 
             // label7
             // 
@@ -229,16 +230,6 @@ namespace Management_System
             // 
             resources.ApplyResources(this.textBox10, "textBox10");
             this.textBox10.Name = "textBox10";
-            // 
-            // textBox5
-            // 
-            resources.ApplyResources(this.textBox5, "textBox5");
-            this.textBox5.Name = "textBox5";
-            // 
-            // label5
-            // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.Name = "label5";
             // 
             // label6
             // 
@@ -267,13 +258,14 @@ namespace Management_System
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.comboBox2);
             this.groupBox2.Controls.Add(this.textBox12);
             this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.create_product_button5);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.update_product_button2);
             this.groupBox2.Controls.Add(this.textBox10);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.textBox9);
@@ -288,6 +280,12 @@ namespace Management_System
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
+            // 
+            // checkBox2
+            // 
+            resources.ApplyResources(this.checkBox2, "checkBox2");
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // comboBox2
             // 
@@ -319,15 +317,15 @@ namespace Management_System
             resources.ApplyResources(this.label12, "label12");
             this.label12.Name = "label12";
             // 
-            // button5
+            // create_product_button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.button5, "button5");
-            this.button5.Name = "button5";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.create_product_button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.create_product_button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.create_product_button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.create_product_button5, "create_product_button5");
+            this.create_product_button5.Name = "create_product_button5";
+            this.create_product_button5.UseVisualStyleBackColor = false;
+            this.create_product_button5.Click += new System.EventHandler(this.create_product_button5_Click);
             // 
             // comboBox1
             // 
@@ -354,15 +352,25 @@ namespace Management_System
             resources.ApplyResources(this.label11, "label11");
             this.label11.Name = "label11";
             // 
-            // button2
+            // update_product_button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.update_product_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update_product_button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update_product_button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.update_product_button2, "update_product_button2");
+            this.update_product_button2.Name = "update_product_button2";
+            this.update_product_button2.UseVisualStyleBackColor = false;
+            this.update_product_button2.Click += new System.EventHandler(this.update_product_button2_Click);
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // textBox5
+            // 
+            resources.ApplyResources(this.textBox5, "textBox5");
+            this.textBox5.Name = "textBox5";
             // 
             // textBox11
             // 
@@ -370,13 +378,13 @@ namespace Management_System
             this.textBox11.Name = "textBox11";
             this.textBox11.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox11_KeyUp);
             // 
-            // button3
+            // search_button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.search_button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            resources.ApplyResources(this.search_button3, "search_button3");
+            this.search_button3.Name = "search_button3";
+            this.search_button3.UseVisualStyleBackColor = false;
+            this.search_button3.Click += new System.EventHandler(this.search_button3_Click);
             // 
             // suppliersTableAdapter
             // 
@@ -391,7 +399,7 @@ namespace Management_System
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.search_button3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.groupBox1);
@@ -419,10 +427,9 @@ namespace Management_System
 
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem новСкладToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem новаСтокаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem стоковаСправкаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem изтриванеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newWarehouseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stockReferenceToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -432,27 +439,25 @@ namespace Management_System
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button update_warehouse_button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button update_product_button2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ImageList imageList1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button search_button3;
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button create_warehouse_button4;
+        private System.Windows.Forms.Button create_product_button5;
         private DB_SystemDataSet6 dB_SystemDataSet6;
         private System.Windows.Forms.BindingSource suppliersBindingSource;
         private DB_SystemDataSet6TableAdapters.SuppliersTableAdapter suppliersTableAdapter;
@@ -462,5 +467,9 @@ namespace Management_System
         private DB_SystemDataSet29 dB_SystemDataSet29;
         private System.Windows.Forms.BindingSource warehousesBindingSource;
         private DB_SystemDataSet29TableAdapters.WarehousesTableAdapter warehousesTableAdapter;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }
