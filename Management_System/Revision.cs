@@ -99,7 +99,6 @@ namespace Management_System
 
         private void update_quantity_button1_Click(object sender, EventArgs e)
         {
-            TreeNode selectedNode = treeView1.SelectedNode;
             if (textBox1.Text != "" && textBox7.Text != "")
             {
                 try

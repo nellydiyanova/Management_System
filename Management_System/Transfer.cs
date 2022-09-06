@@ -89,7 +89,6 @@ namespace Management_System
 
         private void update_warehouse_button1_Click(object sender, EventArgs e)
         {
-            TreeNode selectedNode = treeView1.SelectedNode;
             if (textBox1.Text != "" && comboBox1.Text != "")
             {
                 try
