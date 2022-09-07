@@ -249,6 +249,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_SystemDataSet37.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DB_SystemDataSet38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_SystemDataSet38.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DB_SystemDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -784,6 +789,17 @@
     </None>
     <None Include="DB_SystemDataSet37.xss">
       <DependentUpon>DB_SystemDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet38.xsc">
+      <DependentUpon>DB_SystemDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="DB_SystemDataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_SystemDataSet38.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_SystemDataSet38.xss">
+      <DependentUpon>DB_SystemDataSet38.xsd</DependentUpon>
     </None>
     <None Include="DB_SystemDataSet4.xsc">
       <DependentUpon>DB_SystemDataSet4.xsd</DependentUpon>

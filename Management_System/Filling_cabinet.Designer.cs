@@ -105,6 +105,9 @@ namespace Management_System
             this.companiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet38 = new Management_System.DB_SystemDataSet38();
+            this.clientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.clientsTableAdapter1 = new Management_System.DB_SystemDataSet38TableAdapters.ClientsTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -120,6 +123,8 @@ namespace Management_System
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -416,7 +421,7 @@ namespace Management_System
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dataGridView1.DataSource = this.clientsBindingSource;
+            this.dataGridView1.DataSource = this.clientsBindingSource1;
             resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -598,6 +603,20 @@ namespace Management_System
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // dB_SystemDataSet38
+            // 
+            this.dB_SystemDataSet38.DataSetName = "DB_SystemDataSet38";
+            this.dB_SystemDataSet38.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientsBindingSource1
+            // 
+            this.clientsBindingSource1.DataMember = "Clients";
+            this.clientsBindingSource1.DataSource = this.dB_SystemDataSet38;
+            // 
+            // clientsTableAdapter1
+            // 
+            this.clientsTableAdapter1.ClearBeforeFill = true;
+            // 
             // Filling_cabinet
             // 
             resources.ApplyResources(this, "$this");
@@ -631,6 +650,8 @@ namespace Management_System
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -737,5 +758,8 @@ namespace Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private DB_SystemDataSet38 dB_SystemDataSet38;
+        private System.Windows.Forms.BindingSource clientsBindingSource1;
+        private DB_SystemDataSet38TableAdapters.ClientsTableAdapter clientsTableAdapter1;
     }
 }

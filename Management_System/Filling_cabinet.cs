@@ -64,8 +64,8 @@ namespace Management_System
 
         private void clientsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dB_SystemDataSet3.Clients' table. You can move, or remove it, as needed.
-            this.clientsTableAdapter.Fill(this.dB_SystemDataSet3.Clients);
+            // TODO: This line of code loads data into the 'dB_SystemDataSet38.Clients' table. You can move, or remove it, as needed.
+            this.clientsTableAdapter1.Fill(this.dB_SystemDataSet38.Clients);
 
             dataGridView1.Visible = true;
             dataGridView2.Visible = false;
@@ -172,8 +172,8 @@ namespace Management_System
             create_supplier_button4.Enabled = false;
             textBox1.Focus();
 
-            // TODO: This line of code loads data into the 'dB_SystemDataSet3.Clients' table. You can move, or remove it, as needed.
-            this.clientsTableAdapter.Fill(this.dB_SystemDataSet3.Clients);
+            // TODO: This line of code loads data into the 'dB_SystemDataSet38.Clients' table. You can move, or remove it, as needed.
+            this.clientsTableAdapter1.Fill(this.dB_SystemDataSet38.Clients);
         }
 
         private void update_client_button1_Click(object sender, EventArgs e)
