@@ -56,13 +56,13 @@ namespace Management_System
             dataGridView2.Visible = false;
             groupBox1.Visible = false;
             groupBox2.Visible = false;
-            update_client_button1.BackColor = System.Drawing.Color.LightGreen;
-            update_supplier_button2.BackColor = System.Drawing.Color.LightGreen;
-            create_client_button3.BackColor = System.Drawing.Color.LightGreen;
-            create_supplier_button4.BackColor = System.Drawing.Color.LightGreen;
+            update_client.BackColor = System.Drawing.Color.LightGreen;
+            update_supplier.BackColor = System.Drawing.Color.LightGreen;
+            create_client.BackColor = System.Drawing.Color.LightGreen;
+            create_supplier.BackColor = System.Drawing.Color.LightGreen;
         }
 
-        private void clientsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void clients_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dB_SystemDataSet38.Clients' table. You can move, or remove it, as needed.
             this.clientsTableAdapter1.Fill(this.dB_SystemDataSet38.Clients);
@@ -73,7 +73,7 @@ namespace Management_System
             groupBox2.Visible = false;
         }
 
-        private void suppliersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void suppliers_Click(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dB_SystemDataSet4.Suppliers' table. You can move, or remove it, as needed.
             this.suppliersTableAdapter.Fill(this.dB_SystemDataSet4.Suppliers);
@@ -95,10 +95,10 @@ namespace Management_System
             textBox7.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             textBox8.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
 
-            update_client_button1.Enabled = true;
-            update_supplier_button2.Enabled = false;
-            create_client_button3.Enabled = false;
-            create_supplier_button4.Enabled = false;
+            update_client.Enabled = true;
+            update_supplier.Enabled = false;
+            create_client.Enabled = false;
+            create_supplier.Enabled = false;
         }
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -112,10 +112,10 @@ namespace Management_System
             textBox7.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
             textBox8.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
 
-            update_client_button1.Enabled = true;
-            update_supplier_button2.Enabled = false;
-            create_client_button3.Enabled = false;
-            create_supplier_button4.Enabled = false;
+            update_client.Enabled = true;
+            update_supplier.Enabled = false;
+            create_client.Enabled = false;
+            create_supplier.Enabled = false;
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -129,10 +129,10 @@ namespace Management_System
             textBox15.Text = dataGridView2.CurrentRow.Cells[6].Value.ToString();
             textBox16.Text = dataGridView2.CurrentRow.Cells[7].Value.ToString();
 
-            update_client_button1.Enabled = false;
-            update_supplier_button2.Enabled = true;
-            create_client_button3.Enabled = false;
-            create_supplier_button4.Enabled = false;
+            update_client.Enabled = false;
+            update_supplier.Enabled = true;
+            create_client.Enabled = false;
+            create_supplier.Enabled = false;
         }
 
         void dataGridView2_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -146,13 +146,13 @@ namespace Management_System
             textBox15.Text = dataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
             textBox16.Text = dataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
 
-            update_client_button1.Enabled = false;
-            update_supplier_button2.Enabled = true;
-            create_client_button3.Enabled = false;
-            create_supplier_button4.Enabled = false;
+            update_client.Enabled = false;
+            update_supplier.Enabled = true;
+            create_client.Enabled = false;
+            create_supplier.Enabled = false;
         }
 
-        private void newClientToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newClient_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = true;
             dataGridView2.Visible = false;
@@ -166,17 +166,17 @@ namespace Management_System
             textBox6.Clear();
             textBox7.Clear();
             textBox8.Clear();
-            update_client_button1.Enabled = false;
-            update_supplier_button2.Enabled = false;
-            create_client_button3.Enabled = true;
-            create_supplier_button4.Enabled = false;
+            update_client.Enabled = false;
+            update_supplier.Enabled = false;
+            create_client.Enabled = true;
+            create_supplier.Enabled = false;
             textBox1.Focus();
 
             // TODO: This line of code loads data into the 'dB_SystemDataSet38.Clients' table. You can move, or remove it, as needed.
             this.clientsTableAdapter1.Fill(this.dB_SystemDataSet38.Clients);
         }
 
-        private void update_client_button1_Click(object sender, EventArgs e)
+        private void update_client_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
             {
@@ -239,7 +239,7 @@ namespace Management_System
             }
         }
 
-        private void newSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newSupplier_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = false;
             dataGridView2.Visible = true;
@@ -253,17 +253,17 @@ namespace Management_System
             textBox14.Clear();
             textBox15.Clear();
             textBox16.Clear();
-            update_client_button1.Enabled = false;
-            update_supplier_button2.Enabled = false;
-            create_client_button3.Enabled = false;
-            create_supplier_button4.Enabled = true;
+            update_client.Enabled = false;
+            update_supplier.Enabled = false;
+            create_client.Enabled = false;
+            create_supplier.Enabled = true;
             textBox9.Focus();
 
             // TODO: This line of code loads data into the 'dB_SystemDataSet4.Suppliers' table. You can move, or remove it, as needed.
             this.suppliersTableAdapter.Fill(this.dB_SystemDataSet4.Suppliers);
         }
 
-        private void update_supplier_button2_Click(object sender, EventArgs e)
+        private void update_supplier_Click(object sender, EventArgs e)
         {
             if (textBox9.Text != "" && textBox10.Text != "" && textBox11.Text != "")
             {
@@ -326,7 +326,7 @@ namespace Management_System
             }
         }
 
-        private void create_client_button3_Click(object sender, EventArgs e)
+        private void create_client_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "")
             {
@@ -388,7 +388,7 @@ namespace Management_System
             }
         }
 
-        private void create_supplier_button4_Click(object sender, EventArgs e)
+        private void create_supplier_Click(object sender, EventArgs e)
         {
             if (textBox9.Text != "" && textBox10.Text != "" && textBox11.Text != "")
             {

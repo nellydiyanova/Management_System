@@ -32,11 +32,11 @@ namespace Management_System
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Filling_cabinet));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.клиентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.дистрибуториToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clients = new System.Windows.Forms.ToolStripMenuItem();
+            this.suppliers = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.create_client_button3 = new System.Windows.Forms.Button();
-            this.update_client_button1 = new System.Windows.Forms.Button();
+            this.create_client = new System.Windows.Forms.Button();
+            this.update_client = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -54,8 +54,8 @@ namespace Management_System
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.create_supplier_button4 = new System.Windows.Forms.Button();
-            this.update_supplier_button2 = new System.Windows.Forms.Button();
+            this.create_supplier = new System.Windows.Forms.Button();
+            this.update_supplier = new System.Windows.Forms.Button();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox15 = new System.Windows.Forms.TextBox();
@@ -73,8 +73,8 @@ namespace Management_System
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.newClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newClient = new System.Windows.Forms.ToolStripMenuItem();
+            this.newSupplier = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.clientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -84,6 +84,8 @@ namespace Management_System
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dB_SystemDataSet38 = new Management_System.DB_SystemDataSet38();
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet3 = new Management_System.DB_SystemDataSet3();
             this.clientsTableAdapter = new Management_System.DB_SystemDataSet3TableAdapters.ClientsTableAdapter();
@@ -105,14 +107,14 @@ namespace Management_System
             this.companiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dB_SystemDataSet38 = new Management_System.DB_SystemDataSet38();
-            this.clientsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.clientsTableAdapter1 = new Management_System.DB_SystemDataSet38TableAdapters.ClientsTableAdapter();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet38)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -123,34 +125,32 @@ namespace Management_System
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet38)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.клиентиToolStripMenuItem,
-            this.дистрибуториToolStripMenuItem});
+            this.clients,
+            this.suppliers});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
-            // клиентиToolStripMenuItem
+            // clients
             // 
-            this.клиентиToolStripMenuItem.Name = "клиентиToolStripMenuItem";
-            resources.ApplyResources(this.клиентиToolStripMenuItem, "клиентиToolStripMenuItem");
-            this.клиентиToolStripMenuItem.Click += new System.EventHandler(this.clientsToolStripMenuItem_Click);
+            this.clients.Name = "clients";
+            resources.ApplyResources(this.clients, "clients");
+            this.clients.Click += new System.EventHandler(this.clients_Click);
             // 
-            // дистрибуториToolStripMenuItem
+            // suppliers
             // 
-            this.дистрибуториToolStripMenuItem.Name = "дистрибуториToolStripMenuItem";
-            resources.ApplyResources(this.дистрибуториToolStripMenuItem, "дистрибуториToolStripMenuItem");
-            this.дистрибуториToolStripMenuItem.Click += new System.EventHandler(this.suppliersToolStripMenuItem_Click);
+            this.suppliers.Name = "suppliers";
+            resources.ApplyResources(this.suppliers, "suppliers");
+            this.suppliers.Click += new System.EventHandler(this.suppliers_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.create_client_button3);
-            this.groupBox1.Controls.Add(this.update_client_button1);
+            this.groupBox1.Controls.Add(this.create_client);
+            this.groupBox1.Controls.Add(this.update_client);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
@@ -171,21 +171,21 @@ namespace Management_System
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // create_client_button3
+            // create_client
             // 
-            this.create_client_button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.create_client_button3, "create_client_button3");
-            this.create_client_button3.Name = "create_client_button3";
-            this.create_client_button3.UseVisualStyleBackColor = false;
-            this.create_client_button3.Click += new System.EventHandler(this.create_client_button3_Click);
+            this.create_client.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.create_client, "create_client");
+            this.create_client.Name = "create_client";
+            this.create_client.UseVisualStyleBackColor = false;
+            this.create_client.Click += new System.EventHandler(this.create_client_Click);
             // 
-            // update_client_button1
+            // update_client
             // 
-            this.update_client_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.update_client_button1, "update_client_button1");
-            this.update_client_button1.Name = "update_client_button1";
-            this.update_client_button1.UseVisualStyleBackColor = false;
-            this.update_client_button1.Click += new System.EventHandler(this.update_client_button1_Click);
+            this.update_client.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.update_client, "update_client");
+            this.update_client.Name = "update_client";
+            this.update_client.UseVisualStyleBackColor = false;
+            this.update_client.Click += new System.EventHandler(this.update_client_Click);
             // 
             // textBox8
             // 
@@ -269,8 +269,8 @@ namespace Management_System
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.create_supplier_button4);
-            this.groupBox2.Controls.Add(this.update_supplier_button2);
+            this.groupBox2.Controls.Add(this.create_supplier);
+            this.groupBox2.Controls.Add(this.update_supplier);
             this.groupBox2.Controls.Add(this.textBox16);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.textBox15);
@@ -291,21 +291,21 @@ namespace Management_System
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
-            // create_supplier_button4
+            // create_supplier
             // 
-            this.create_supplier_button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.create_supplier_button4, "create_supplier_button4");
-            this.create_supplier_button4.Name = "create_supplier_button4";
-            this.create_supplier_button4.UseVisualStyleBackColor = false;
-            this.create_supplier_button4.Click += new System.EventHandler(this.create_supplier_button4_Click);
+            this.create_supplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.create_supplier, "create_supplier");
+            this.create_supplier.Name = "create_supplier";
+            this.create_supplier.UseVisualStyleBackColor = false;
+            this.create_supplier.Click += new System.EventHandler(this.create_supplier_Click);
             // 
-            // update_supplier_button2
+            // update_supplier
             // 
-            this.update_supplier_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.update_supplier_button2, "update_supplier_button2");
-            this.update_supplier_button2.Name = "update_supplier_button2";
-            this.update_supplier_button2.UseVisualStyleBackColor = false;
-            this.update_supplier_button2.Click += new System.EventHandler(this.update_supplier_button2_Click);
+            this.update_supplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.update_supplier, "update_supplier");
+            this.update_supplier.Name = "update_supplier";
+            this.update_supplier.UseVisualStyleBackColor = false;
+            this.update_supplier.Click += new System.EventHandler(this.update_supplier_Click);
             // 
             // textBox16
             // 
@@ -391,21 +391,21 @@ namespace Management_System
             // 
             resources.ApplyResources(this.menuStrip2, "menuStrip2");
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newClientToolStripMenuItem,
-            this.newSupplierToolStripMenuItem});
+            this.newClient,
+            this.newSupplier});
             this.menuStrip2.Name = "menuStrip2";
             // 
-            // newClientToolStripMenuItem
+            // newClient
             // 
-            this.newClientToolStripMenuItem.Name = "newClientToolStripMenuItem";
-            resources.ApplyResources(this.newClientToolStripMenuItem, "newClientToolStripMenuItem");
-            this.newClientToolStripMenuItem.Click += new System.EventHandler(this.newClientToolStripMenuItem_Click);
+            this.newClient.Name = "newClient";
+            resources.ApplyResources(this.newClient, "newClient");
+            this.newClient.Click += new System.EventHandler(this.newClient_Click);
             // 
-            // newSupplierToolStripMenuItem
+            // newSupplier
             // 
-            this.newSupplierToolStripMenuItem.Name = "newSupplierToolStripMenuItem";
-            resources.ApplyResources(this.newSupplierToolStripMenuItem, "newSupplierToolStripMenuItem");
-            this.newSupplierToolStripMenuItem.Click += new System.EventHandler(this.newSupplierToolStripMenuItem_Click);
+            this.newSupplier.Name = "newSupplier";
+            resources.ApplyResources(this.newSupplier, "newSupplier");
+            this.newSupplier.Click += new System.EventHandler(this.newSupplier_Click);
             // 
             // dataGridView1
             // 
@@ -483,6 +483,16 @@ namespace Management_System
             resources.ApplyResources(this.dataGridViewTextBoxColumn7, "dataGridViewTextBoxColumn7");
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // clientsBindingSource1
+            // 
+            this.clientsBindingSource1.DataMember = "Clients";
+            this.clientsBindingSource1.DataSource = this.dB_SystemDataSet38;
+            // 
+            // dB_SystemDataSet38
+            // 
+            this.dB_SystemDataSet38.DataSetName = "DB_SystemDataSet38";
+            this.dB_SystemDataSet38.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clientsBindingSource
             // 
@@ -603,16 +613,6 @@ namespace Management_System
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
-            // dB_SystemDataSet38
-            // 
-            this.dB_SystemDataSet38.DataSetName = "DB_SystemDataSet38";
-            this.dB_SystemDataSet38.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clientsBindingSource1
-            // 
-            this.clientsBindingSource1.DataMember = "Clients";
-            this.clientsBindingSource1.DataSource = this.dB_SystemDataSet38;
-            // 
             // clientsTableAdapter1
             // 
             this.clientsTableAdapter1.ClearBeforeFill = true;
@@ -640,6 +640,8 @@ namespace Management_System
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet38)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -650,8 +652,6 @@ namespace Management_System
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dB_SystemDataSet38)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -660,8 +660,8 @@ namespace Management_System
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem клиентиToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem дистрибуториToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clients;
+        private System.Windows.Forms.ToolStripMenuItem suppliers;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.BindingSource companiesBindingSource;
         private System.Windows.Forms.TextBox textBox8;
@@ -680,10 +680,10 @@ namespace Management_System
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button update_client_button1;
+        private System.Windows.Forms.Button update_client;
         private System.Windows.Forms.BindingSource suppliersBindingSource;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button update_supplier_button2;
+        private System.Windows.Forms.Button update_supplier;
         private System.Windows.Forms.TextBox textBox16;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox15;
@@ -727,8 +727,8 @@ namespace Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn2;
         private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem newClientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem newSupplierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newClient;
+        private System.Windows.Forms.ToolStripMenuItem newSupplier;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DB_SystemDataSet3 dB_SystemDataSet3;
         private System.Windows.Forms.BindingSource clientsBindingSource;
@@ -740,8 +740,8 @@ namespace Management_System
         private DB_SystemDataSet5 dB_SystemDataSet5;
         private System.Windows.Forms.BindingSource usersBindingSource1;
         private DB_SystemDataSet5TableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.Button create_client_button3;
-        private System.Windows.Forms.Button create_supplier_button4;
+        private System.Windows.Forms.Button create_client;
+        private System.Windows.Forms.Button create_supplier;
         private System.Windows.Forms.DataGridViewTextBoxColumn clientDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

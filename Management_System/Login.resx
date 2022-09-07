@@ -180,31 +180,34 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="login_button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="entry.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="entry.Location" type="System.Drawing.Point, System.Drawing">
     <value>67, 141</value>
   </data>
-  <data name="login_button1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="entry.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 5, 4, 5</value>
   </data>
-  <data name="login_button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="entry.Size" type="System.Drawing.Size, System.Drawing">
     <value>111, 40</value>
   </data>
-  <data name="login_button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="entry.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="login_button1.Text" xml:space="preserve">
+  <data name="entry.Text" xml:space="preserve">
     <value>Вход</value>
   </data>
-  <data name="&gt;&gt;login_button1.Name" xml:space="preserve">
-    <value>login_button1</value>
+  <data name="&gt;&gt;entry.Name" xml:space="preserve">
+    <value>entry</value>
   </data>
-  <data name="&gt;&gt;login_button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;entry.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;login_button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;entry.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;login_button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;entry.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <metadata name="usersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

@@ -82,7 +82,7 @@ namespace Management_System
             textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
         }
 
-        private void update_button1_Click(object sender, EventArgs e)
+        private void update_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
             {
@@ -126,7 +126,7 @@ namespace Management_System
             }
         }
 
-        private void newDeliveryToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newDelivery_Click(object sender, EventArgs e)
         {
             this.Hide();
             New_delivery frm = new New_delivery();
@@ -185,7 +185,7 @@ namespace Management_System
             }
         }
 
-        private void report_button2_Click(object sender, EventArgs e)
+        private void report_Click(object sender, EventArgs e)
         {
             string connectionString = null;
             Login frm = new Login();

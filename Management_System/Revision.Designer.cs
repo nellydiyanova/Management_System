@@ -32,7 +32,7 @@ namespace Management_System
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Revision));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.report_button2 = new System.Windows.Forms.Button();
+            this.report = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idproductDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +50,7 @@ namespace Management_System
             this.label7 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.update_quantity_button1 = new System.Windows.Forms.Button();
+            this.update_quantity = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -70,7 +70,7 @@ namespace Management_System
             this.warehousesTableAdapter = new Management_System.DB_SystemDataSet29TableAdapters.WarehousesTableAdapter();
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet6 = new Management_System.DB_SystemDataSet6();
-            this.search_button2 = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.inventoryTableAdapter = new Management_System.DB_SystemDataSet32TableAdapters.InventoryTableAdapter();
             this.groupBox1.SuspendLayout();
@@ -85,14 +85,14 @@ namespace Management_System
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.report_button2);
+            this.groupBox1.Controls.Add(this.report);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.textBox8);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.update_quantity_button1);
+            this.groupBox1.Controls.Add(this.update_quantity);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -111,19 +111,19 @@ namespace Management_System
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ревизия";
             // 
-            // report_button2
+            // report
             // 
-            this.report_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.report_button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.report_button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.report_button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.report_button2.Location = new System.Drawing.Point(213, 226);
-            this.report_button2.Name = "report_button2";
-            this.report_button2.Size = new System.Drawing.Size(103, 35);
-            this.report_button2.TabIndex = 47;
-            this.report_button2.Text = "Справка";
-            this.report_button2.UseVisualStyleBackColor = false;
-            this.report_button2.Click += new System.EventHandler(this.report_button2_Click);
+            this.report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.report.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.report.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.report.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.report.Location = new System.Drawing.Point(213, 226);
+            this.report.Name = "report";
+            this.report.Size = new System.Drawing.Size(103, 35);
+            this.report.TabIndex = 47;
+            this.report.Text = "Справка";
+            this.report.UseVisualStyleBackColor = false;
+            this.report.Click += new System.EventHandler(this.report_Click);
             // 
             // dataGridView1
             // 
@@ -271,19 +271,19 @@ namespace Management_System
             this.label8.TabIndex = 39;
             this.label8.Text = "Доставчик:";
             // 
-            // update_quantity_button1
+            // update_quantity
             // 
-            this.update_quantity_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.update_quantity_button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.update_quantity_button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.update_quantity_button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.update_quantity_button1.Location = new System.Drawing.Point(55, 226);
-            this.update_quantity_button1.Name = "update_quantity_button1";
-            this.update_quantity_button1.Size = new System.Drawing.Size(109, 35);
-            this.update_quantity_button1.TabIndex = 31;
-            this.update_quantity_button1.Text = "Актуализирай";
-            this.update_quantity_button1.UseVisualStyleBackColor = false;
-            this.update_quantity_button1.Click += new System.EventHandler(this.update_quantity_button1_Click);
+            this.update_quantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update_quantity.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update_quantity.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update_quantity.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.update_quantity.Location = new System.Drawing.Point(55, 226);
+            this.update_quantity.Name = "update_quantity";
+            this.update_quantity.Size = new System.Drawing.Size(109, 35);
+            this.update_quantity.TabIndex = 31;
+            this.update_quantity.Text = "Актуализирай";
+            this.update_quantity.UseVisualStyleBackColor = false;
+            this.update_quantity.Click += new System.EventHandler(this.update_quantity_Click);
             // 
             // textBox5
             // 
@@ -433,17 +433,17 @@ namespace Management_System
             this.dB_SystemDataSet6.DataSetName = "DB_SystemDataSet6";
             this.dB_SystemDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // search_button2
+            // search
             // 
-            this.search_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.search_button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.search_button2.Location = new System.Drawing.Point(162, 0);
-            this.search_button2.Name = "search_button2";
-            this.search_button2.Size = new System.Drawing.Size(71, 27);
-            this.search_button2.TabIndex = 47;
-            this.search_button2.Text = "Търси";
-            this.search_button2.UseVisualStyleBackColor = false;
-            this.search_button2.Click += new System.EventHandler(this.search_button2_Click);
+            this.search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.search.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.search.Location = new System.Drawing.Point(162, 0);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(71, 27);
+            this.search.TabIndex = 47;
+            this.search.Text = "Търси";
+            this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // textBox9
             // 
@@ -466,7 +466,7 @@ namespace Management_System
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.search_button2);
+            this.Controls.Add(this.search);
             this.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -496,7 +496,7 @@ namespace Management_System
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button update_quantity_button1;
+        private System.Windows.Forms.Button update_quantity;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
@@ -514,14 +514,14 @@ namespace Management_System
         private DB_SystemDataSet29TableAdapters.WarehousesTableAdapter warehousesTableAdapter;
         private System.Windows.Forms.BindingSource suppliersBindingSource;
         private DB_SystemDataSet6 dB_SystemDataSet6;
-        private System.Windows.Forms.Button search_button2;
+        private System.Windows.Forms.Button search;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DB_SystemDataSet32 dB_SystemDataSet32;
         private System.Windows.Forms.BindingSource inventoryBindingSource;
         private DB_SystemDataSet32TableAdapters.InventoryTableAdapter inventoryTableAdapter;
-        private System.Windows.Forms.Button report_button2;
+        private System.Windows.Forms.Button report;
         private System.Windows.Forms.DataGridViewTextBoxColumn idproductDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliverypriceDataGridViewTextBoxColumn;

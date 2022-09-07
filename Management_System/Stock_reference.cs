@@ -52,7 +52,7 @@ namespace Management_System
             }
         }
 
-        private void ok_button1_Click(object sender, EventArgs e)
+        private void ok_Click(object sender, EventArgs e)
         {
             this.Hide();
         }

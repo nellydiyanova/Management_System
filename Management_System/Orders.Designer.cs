@@ -36,8 +36,8 @@ namespace Management_System
             this.ordersTableAdapter = new Management_System.DB_SystemDataSet10TableAdapters.OrdersTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.report_button2 = new System.Windows.Forms.Button();
-            this.update_button1 = new System.Windows.Forms.Button();
+            this.report = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -63,7 +63,7 @@ namespace Management_System
             this.clientsTableAdapter = new Management_System.DB_SystemDataSet12TableAdapters.ClientsTableAdapter();
             this.statusTableAdapter = new Management_System.DB_SystemDataSet13TableAdapters.StatusTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.newOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newOrder = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.productsnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,8 +108,8 @@ namespace Management_System
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.richTextBox1);
-            this.groupBox1.Controls.Add(this.report_button2);
-            this.groupBox1.Controls.Add(this.update_button1);
+            this.groupBox1.Controls.Add(this.report);
+            this.groupBox1.Controls.Add(this.update);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label8);
@@ -141,33 +141,33 @@ namespace Management_System
             this.richTextBox1.TabIndex = 30;
             this.richTextBox1.Text = "";
             // 
-            // report_button2
+            // report
             // 
-            this.report_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.report_button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.report_button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.report_button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.report_button2.Location = new System.Drawing.Point(188, 429);
-            this.report_button2.Name = "report_button2";
-            this.report_button2.Size = new System.Drawing.Size(118, 35);
-            this.report_button2.TabIndex = 29;
-            this.report_button2.Text = "Справка";
-            this.report_button2.UseVisualStyleBackColor = false;
-            this.report_button2.Click += new System.EventHandler(this.report_button2_Click);
+            this.report.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.report.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.report.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.report.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.report.Location = new System.Drawing.Point(188, 429);
+            this.report.Name = "report";
+            this.report.Size = new System.Drawing.Size(118, 35);
+            this.report.TabIndex = 29;
+            this.report.Text = "Справка";
+            this.report.UseVisualStyleBackColor = false;
+            this.report.Click += new System.EventHandler(this.report_Click);
             // 
-            // update_button1
+            // update
             // 
-            this.update_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.update_button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.update_button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.update_button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.update_button1.Location = new System.Drawing.Point(39, 429);
-            this.update_button1.Name = "update_button1";
-            this.update_button1.Size = new System.Drawing.Size(118, 35);
-            this.update_button1.TabIndex = 28;
-            this.update_button1.Text = "Актуализирай";
-            this.update_button1.UseVisualStyleBackColor = false;
-            this.update_button1.Click += new System.EventHandler(this.update_button1_Click);
+            this.update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.update.Location = new System.Drawing.Point(39, 429);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(118, 35);
+            this.update.TabIndex = 28;
+            this.update.Text = "Актуализирай";
+            this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // label2
             // 
@@ -351,19 +351,19 @@ namespace Management_System
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newOrderToolStripMenuItem});
+            this.newOrder});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(805, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // newOrderToolStripMenuItem
+            // newOrder
             // 
-            this.newOrderToolStripMenuItem.Name = "newOrderToolStripMenuItem";
-            this.newOrderToolStripMenuItem.Size = new System.Drawing.Size(97, 20);
-            this.newOrderToolStripMenuItem.Text = "Нова поръчка";
-            this.newOrderToolStripMenuItem.Click += new System.EventHandler(this.newOrderToolStripMenuItem_Click);
+            this.newOrder.Name = "newOrder";
+            this.newOrder.Size = new System.Drawing.Size(97, 20);
+            this.newOrder.Text = "Нова поръчка";
+            this.newOrder.Click += new System.EventHandler(this.newOrder_Click);
             // 
             // dataGridView1
             // 
@@ -525,7 +525,7 @@ namespace Management_System
         private System.Windows.Forms.BindingSource statusBindingSource;
         private DB_SystemDataSet13TableAdapters.StatusTableAdapter statusTableAdapter;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem newOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newOrder;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DB_SystemDataSet15 dB_SystemDataSet15;
         private System.Windows.Forms.BindingSource ordersBindingSource1;
@@ -535,7 +535,7 @@ namespace Management_System
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button update_button1;
+        private System.Windows.Forms.Button update;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productsnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantityDataGridViewTextBoxColumn;
@@ -544,7 +544,7 @@ namespace Management_System
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button report_button2;
+        private System.Windows.Forms.Button report;
         private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

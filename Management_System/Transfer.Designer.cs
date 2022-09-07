@@ -35,7 +35,7 @@ namespace Management_System
             this.dB_SystemDataSet29 = new Management_System.DB_SystemDataSet29();
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet6 = new Management_System.DB_SystemDataSet6();
-            this.search_button2 = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.warehousesTableAdapter = new Management_System.DB_SystemDataSet29TableAdapters.WarehousesTableAdapter();
             this.treeView1 = new System.Windows.Forms.TreeView();
@@ -46,7 +46,7 @@ namespace Management_System
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.update_warehouse_button1 = new System.Windows.Forms.Button();
+            this.update_warehouse = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -86,17 +86,17 @@ namespace Management_System
             this.dB_SystemDataSet6.DataSetName = "DB_SystemDataSet6";
             this.dB_SystemDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // search_button2
+            // search
             // 
-            this.search_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.search_button2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.search_button2.Location = new System.Drawing.Point(163, 1);
-            this.search_button2.Name = "search_button2";
-            this.search_button2.Size = new System.Drawing.Size(71, 27);
-            this.search_button2.TabIndex = 26;
-            this.search_button2.Text = "Търси";
-            this.search_button2.UseVisualStyleBackColor = false;
-            this.search_button2.Click += new System.EventHandler(this.search_button2_Click);
+            this.search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.search.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.search.Location = new System.Drawing.Point(163, 1);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(71, 27);
+            this.search.TabIndex = 26;
+            this.search.Text = "Търси";
+            this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // textBox8
             // 
@@ -183,19 +183,19 @@ namespace Management_System
             this.label8.TabIndex = 39;
             this.label8.Text = "Доставчик:";
             // 
-            // update_warehouse_button1
+            // update_warehouse
             // 
-            this.update_warehouse_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.update_warehouse_button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.update_warehouse_button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.update_warehouse_button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.update_warehouse_button1.Location = new System.Drawing.Point(134, 238);
-            this.update_warehouse_button1.Name = "update_warehouse_button1";
-            this.update_warehouse_button1.Size = new System.Drawing.Size(107, 43);
-            this.update_warehouse_button1.TabIndex = 31;
-            this.update_warehouse_button1.Text = "Актуализирай";
-            this.update_warehouse_button1.UseVisualStyleBackColor = false;
-            this.update_warehouse_button1.Click += new System.EventHandler(this.update_warehouse_button1_Click);
+            this.update_warehouse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update_warehouse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update_warehouse.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update_warehouse.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.update_warehouse.Location = new System.Drawing.Point(134, 238);
+            this.update_warehouse.Name = "update_warehouse";
+            this.update_warehouse.Size = new System.Drawing.Size(107, 43);
+            this.update_warehouse.TabIndex = 31;
+            this.update_warehouse.Text = "Актуализирай";
+            this.update_warehouse.UseVisualStyleBackColor = false;
+            this.update_warehouse.Click += new System.EventHandler(this.update_warehouse_Click);
             // 
             // textBox5
             // 
@@ -304,7 +304,7 @@ namespace Management_System
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.update_warehouse_button1);
+            this.groupBox1.Controls.Add(this.update_warehouse);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -330,7 +330,7 @@ namespace Management_System
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(632, 441);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.search_button2);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.treeView1);
             this.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,7 +355,7 @@ namespace Management_System
         private DB_SystemDataSet29 dB_SystemDataSet29;
         private System.Windows.Forms.BindingSource suppliersBindingSource;
         private DB_SystemDataSet6 dB_SystemDataSet6;
-        private System.Windows.Forms.Button search_button2;
+        private System.Windows.Forms.Button search;
         private System.Windows.Forms.TextBox textBox8;
         private DB_SystemDataSet29TableAdapters.WarehousesTableAdapter warehousesTableAdapter;
         private System.Windows.Forms.TreeView treeView1;
@@ -366,7 +366,7 @@ namespace Management_System
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button update_warehouse_button1;
+        private System.Windows.Forms.Button update_warehouse;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;

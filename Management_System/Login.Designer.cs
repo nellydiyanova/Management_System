@@ -33,7 +33,7 @@ namespace Management_System
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.login_button1 = new System.Windows.Forms.Button();
+            this.entry = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet2 = new Management_System.DB_SystemDataSet2();
@@ -53,14 +53,14 @@ namespace Management_System
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
-            // login_button1
+            // entry
             // 
-            this.login_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.login_button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            resources.ApplyResources(this.login_button1, "login_button1");
-            this.login_button1.Name = "login_button1";
-            this.login_button1.UseVisualStyleBackColor = false;
-            this.login_button1.Click += new System.EventHandler(this.login_button1_Click);
+            this.entry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.entry.Cursor = System.Windows.Forms.Cursors.Hand;
+            resources.ApplyResources(this.entry, "entry");
+            this.entry.Name = "entry";
+            this.entry.UseVisualStyleBackColor = false;
+            this.entry.Click += new System.EventHandler(this.entry_Click);
             // 
             // comboBox1
             // 
@@ -92,13 +92,13 @@ namespace Management_System
             // 
             // Login
             // 
-            this.AcceptButton = this.login_button1;
+            this.AcceptButton = this.entry;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.login_button1);
+            this.Controls.Add(this.entry);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -115,7 +115,7 @@ namespace Management_System
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button login_button1;
+        private System.Windows.Forms.Button entry;
         private System.Windows.Forms.ComboBox comboBox1;
         private DB_SystemDataSet2 dB_SystemDataSet2;
         private System.Windows.Forms.BindingSource usersBindingSource;

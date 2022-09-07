@@ -94,12 +94,12 @@ namespace Management_System
             textBox12.Enabled = false;
             comboBox1.Enabled = true;
             comboBox2.Enabled = false;
-            update_warehouse_button1.Enabled = true;
-            update_product_button2.Enabled = true;
-            update_warehouse_button1.BackColor = System.Drawing.Color.LightGreen;
-            update_product_button2.BackColor = System.Drawing.Color.LightGreen;
-            create_warehouse_button4.BackColor = System.Drawing.Color.LightGreen;
-            create_product_button5.BackColor = System.Drawing.Color.LightGreen;
+            update_warehouse.Enabled = true;
+            update_product.Enabled = true;
+            update_warehouse.BackColor = System.Drawing.Color.LightGreen;
+            update_product.BackColor = System.Drawing.Color.LightGreen;
+            create_warehouse.BackColor = System.Drawing.Color.LightGreen;
+            create_product.BackColor = System.Drawing.Color.LightGreen;
 
             try
             {
@@ -122,7 +122,7 @@ namespace Management_System
             }
         }
 
-        private void newWarehouseToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newWarehouse_Click(object sender, EventArgs e)
         {
             foreach (TreeNode node in treeView1.Nodes)
             {
@@ -155,14 +155,14 @@ namespace Management_System
             textBox9.Enabled = true;
             textBox10.Enabled = true;
             comboBox1.Enabled = true;
-            update_warehouse_button1.Enabled = false;
-            update_product_button2.Enabled = false;
-            create_warehouse_button4.Enabled = true;
-            create_product_button5.Enabled = true;
+            update_warehouse.Enabled = false;
+            update_product.Enabled = false;
+            create_warehouse.Enabled = true;
+            create_product.Enabled = true;
             checkBox1.Checked = true;
         }
 
-        private void update_warehouse_button1_Click(object sender, EventArgs e)
+        private void update_warehouse_Click(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
             {
@@ -216,7 +216,7 @@ namespace Management_System
             }
         }
 
-        private void newProductToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newProduct_Click(object sender, EventArgs e)
         {
             foreach (TreeNode node in treeView1.Nodes)
             {
@@ -251,14 +251,14 @@ namespace Management_System
             textBox9.Enabled = true;
             textBox10.Enabled = true;
             comboBox1.Enabled = true;
-            update_warehouse_button1.Enabled = false;
-            update_product_button2.Enabled = false;
-            create_warehouse_button4.Enabled = false;
-            create_product_button5.Enabled = true;
+            update_warehouse.Enabled = false;
+            update_product.Enabled = false;
+            create_warehouse.Enabled = false;
+            create_product.Enabled = true;
             checkBox2.Checked = true;
         }
 
-        private void update_product_button2_Click(object sender, EventArgs e)
+        private void update_product_Click(object sender, EventArgs e)
         {
             if (checkBox2.Checked == true)
             {
@@ -318,7 +318,7 @@ namespace Management_System
             }
         }
 
-        private void stockReferenceToolStripMenuItem_Click(object sender, EventArgs e)
+        private void stockReference_Click(object sender, EventArgs e)
         {
             Stock_reference frm = new Stock_reference();
             frm.Show();
@@ -337,10 +337,10 @@ namespace Management_System
             textBox10.Enabled = true;
             comboBox1.Enabled = true;
             comboBox2.Enabled = false;
-            update_warehouse_button1.Enabled = true;
-            update_product_button2.Enabled = true;
-            create_warehouse_button4.Enabled = false;
-            create_product_button5.Enabled = false;
+            update_warehouse.Enabled = true;
+            update_product.Enabled = true;
+            create_warehouse.Enabled = false;
+            create_product.Enabled = false;
 
             TreeNode selectedNode = treeView1.SelectedNode;
             if (selectedNode == treeView1.Nodes[0])
@@ -368,10 +368,10 @@ namespace Management_System
                 textBox10.Enabled = false;
                 comboBox1.Text = "";
                 comboBox1.Enabled = false;
-                update_warehouse_button1.Enabled = false;
-                update_product_button2.Enabled = false;
-                create_warehouse_button4.Enabled = false;
-                create_product_button5.Enabled = false;
+                update_warehouse.Enabled = false;
+                update_product.Enabled = false;
+                create_warehouse.Enabled = false;
+                create_product.Enabled = false;
             }
 
             else
@@ -534,7 +534,7 @@ namespace Management_System
             return false; 
         }
 
-        private void search_button3_Click(object sender, EventArgs e)
+        private void search_Click(object sender, EventArgs e)
         {
             var searchFor = textBox11.Text.Trim().ToUpper();
             if (searchFor != "")
@@ -550,7 +550,7 @@ namespace Management_System
             }
         }
 
-        private void create_warehouse_button4_Click(object sender, EventArgs e)
+        private void create_warehouse_Click(object sender, EventArgs e)
         {
             if (checkBox1.Checked == true)
             {
@@ -603,7 +603,7 @@ namespace Management_System
             }
         }
 
-        private void create_product_button5_Click(object sender, EventArgs e)
+        private void create_product_Click(object sender, EventArgs e)
         {
             if (checkBox2.Checked == true)
             {

@@ -16,7 +16,7 @@ namespace Management_System
         SqlConnection myConnection;
         SqlCommand myCommand = default(SqlCommand);
 
-        private void check_button1_Click(object sender, EventArgs e)
+        private void check_Click(object sender, EventArgs e)
         {
             if (comboBox1.Text == "admin")
             {

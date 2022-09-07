@@ -45,8 +45,8 @@ namespace Management_System
             // TODO: This line of code loads data into the 'dB_SystemDataSet9.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.dB_SystemDataSet9.Users);
 
-            update_user_button1.BackColor = System.Drawing.Color.LightGreen;
-            create_user_button2.BackColor = System.Drawing.Color.LightGreen;
+            update_user.BackColor = System.Drawing.Color.LightGreen;
+            create_user.BackColor = System.Drawing.Color.LightGreen;
             textBox1.Enabled = false;
         }
 
@@ -62,11 +62,11 @@ namespace Management_System
             textBox7.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             textBox8.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
 
-            update_user_button1.Enabled = true;
-            create_user_button2.Enabled = false;
+            update_user.Enabled = true;
+            create_user.Enabled = false;
         }
 
-        private void newUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newUser_Click(object sender, EventArgs e)
         {
             dataGridView1.Visible = true;
             groupBox1.Visible = true;
@@ -78,13 +78,13 @@ namespace Management_System
             textBox6.Clear();
             textBox7.Clear();
             textBox8.Clear();
-            update_user_button1.Enabled = false;
-            create_user_button2.Enabled = true;
+            update_user.Enabled = false;
+            create_user.Enabled = true;
             textBox1.Enabled = true;
             textBox1.Focus();
         }
 
-        private void update_user_button1_Click(object sender, EventArgs e)
+        private void update_user_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "")
             {
@@ -147,7 +147,7 @@ namespace Management_System
             }
         }
 
-        private void create_user_button2_Click(object sender, EventArgs e)
+        private void create_user_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "")
             {

@@ -73,9 +73,9 @@ namespace Management_System
             textBox7.Enabled = true;
             textBox8.Enabled = false;
             textBox9.Enabled = true;
-            update_quantity_button1.Enabled = true;
-            search_button2.Enabled = true;
-            update_quantity_button1.BackColor = System.Drawing.Color.LightGreen;
+            update_quantity.Enabled = true;
+            search.Enabled = true;
+            update_quantity.BackColor = System.Drawing.Color.LightGreen;
 
             try
             {
@@ -97,7 +97,7 @@ namespace Management_System
             }
         }
 
-        private void update_quantity_button1_Click(object sender, EventArgs e)
+        private void update_quantity_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox7.Text != "")
             {
@@ -150,8 +150,8 @@ namespace Management_System
             textBox7.Enabled = true;
             textBox8.Enabled = false;
             textBox9.Enabled = true;
-            update_quantity_button1.Enabled = true;
-            search_button2.Enabled = true;
+            update_quantity.Enabled = true;
+            search.Enabled = true;
 
             TreeNode selectedNode = treeView1.SelectedNode;
             if (selectedNode != treeView1.Nodes[0] && selectedNode != null)
@@ -255,7 +255,7 @@ namespace Management_System
             return false;
         }
 
-        private void search_button2_Click(object sender, EventArgs e)
+        private void search_Click(object sender, EventArgs e)
         {
             var searchFor = textBox9.Text.Trim().ToUpper();
             if (searchFor != "")
@@ -324,7 +324,7 @@ namespace Management_System
             }
         }
 
-        private void report_button2_Click(object sender, EventArgs e)
+        private void report_Click(object sender, EventArgs e)
         {
             string connectionString = null;
             Login frm = new Login();

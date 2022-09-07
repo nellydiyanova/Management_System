@@ -89,14 +89,15 @@ namespace Management_System
             textBox2.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
         }
 
-        private void update_button1_Click(object sender, EventArgs e)
+        private void update_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && comboBox1.Text != "")
             {
                 try
                 {
                     myConnection = new SqlConnection(frm.cs);
-                    myCommand = new SqlCommand("update Orders set ID=@ID, quantity=@quantity, full_price=@full_price, client=@client, date=@date, status=@status, username=@username where ID=@ID", myConnection);
+                    myCommand = new SqlCommand("select * from Orders count(ID)", myConnection);
+                    myCommand = new SqlCommand("update Orders set quantity=@quantity, full_price=@full_price, client=@client, date=@date, status=@status, username=@username where ID=@ID", myConnection);
                     myConnection.Open();
                     myCommand.Parameters.AddWithValue("@ID", textBox1.Text);
                     myCommand.Parameters.AddWithValue("@quantity", Convert.ToDouble(textBox3.Text));
@@ -135,7 +136,7 @@ namespace Management_System
             }
         }
 
-        private void newOrderToolStripMenuItem_Click(object sender, EventArgs e)
+        private void newOrder_Click(object sender, EventArgs e)
         {
             this.Hide();
             New_order frm = new New_order();
@@ -195,7 +196,7 @@ namespace Management_System
             }
         }
 
-        private void report_button2_Click(object sender, EventArgs e)
+        private void report_Click(object sender, EventArgs e)
         {
             string connectionString = null;
             Login frm = new Login();

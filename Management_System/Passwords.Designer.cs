@@ -43,8 +43,8 @@ namespace Management_System
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet9 = new Management_System.DB_SystemDataSet9();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.create_user_button2 = new System.Windows.Forms.Button();
-            this.update_user_button1 = new System.Windows.Forms.Button();
+            this.create_user = new System.Windows.Forms.Button();
+            this.update_user = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -62,7 +62,7 @@ namespace Management_System
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.newUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newUser = new System.Windows.Forms.ToolStripMenuItem();
             this.usersTableAdapter = new Management_System.DB_SystemDataSet9TableAdapters.UsersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
@@ -159,8 +159,8 @@ namespace Management_System
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.create_user_button2);
-            this.groupBox1.Controls.Add(this.update_user_button1);
+            this.groupBox1.Controls.Add(this.create_user);
+            this.groupBox1.Controls.Add(this.update_user);
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.textBox6);
             this.groupBox1.Controls.Add(this.textBox8);
@@ -181,21 +181,21 @@ namespace Management_System
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             // 
-            // create_user_button2
+            // create_user
             // 
-            this.create_user_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.create_user_button2, "create_user_button2");
-            this.create_user_button2.Name = "create_user_button2";
-            this.create_user_button2.UseVisualStyleBackColor = false;
-            this.create_user_button2.Click += new System.EventHandler(this.create_user_button2_Click);
+            this.create_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.create_user, "create_user");
+            this.create_user.Name = "create_user";
+            this.create_user.UseVisualStyleBackColor = false;
+            this.create_user.Click += new System.EventHandler(this.create_user_Click);
             // 
-            // update_user_button1
+            // update_user
             // 
-            this.update_user_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.update_user_button1, "update_user_button1");
-            this.update_user_button1.Name = "update_user_button1";
-            this.update_user_button1.UseVisualStyleBackColor = false;
-            this.update_user_button1.Click += new System.EventHandler(this.update_user_button1_Click);
+            this.update_user.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.update_user, "update_user");
+            this.update_user.Name = "update_user";
+            this.update_user.UseVisualStyleBackColor = false;
+            this.update_user.Click += new System.EventHandler(this.update_user_Click);
             // 
             // textBox7
             // 
@@ -280,15 +280,15 @@ namespace Management_System
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newUserToolStripMenuItem});
+            this.newUser});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
-            // newUserToolStripMenuItem
+            // newUser
             // 
-            this.newUserToolStripMenuItem.Name = "newUserToolStripMenuItem";
-            resources.ApplyResources(this.newUserToolStripMenuItem, "newUserToolStripMenuItem");
-            this.newUserToolStripMenuItem.Click += new System.EventHandler(this.newUserToolStripMenuItem_Click);
+            this.newUser.Name = "newUser";
+            resources.ApplyResources(this.newUser, "newUser");
+            this.newUser.Click += new System.EventHandler(this.newUser_Click);
             // 
             // usersTableAdapter
             // 
@@ -337,10 +337,10 @@ namespace Management_System
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button update_user_button1;
-        private System.Windows.Forms.Button create_user_button2;
+        private System.Windows.Forms.Button update_user;
+        private System.Windows.Forms.Button create_user;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem newUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newUser;
         private DB_SystemDataSet9 dB_SystemDataSet9;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private DB_SystemDataSet9TableAdapters.UsersTableAdapter usersTableAdapter;

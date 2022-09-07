@@ -133,12 +133,12 @@ namespace Management_System
             textBox11.Enabled = false;
             textBox10.Text = Convert.ToString(Login.passingText);
             comboBox1.Text = "";
-            add_button1.BackColor = System.Drawing.Color.LightGreen;
-            update_button3.BackColor = System.Drawing.Color.LightGreen;
+            add.BackColor = System.Drawing.Color.LightGreen;
+            update.BackColor = System.Drawing.Color.LightGreen;
             save_button5.BackColor = System.Drawing.Color.LightGreen;
-            add_button1.Enabled = false;
-            delete_button2.Enabled = false;
-            update_button3.Enabled = false;
+            add.Enabled = false;
+            delete.Enabled = false;
+            update.Enabled = false;
 
             try
             {
@@ -180,9 +180,9 @@ namespace Management_System
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            add_button1.Enabled = false;
-            delete_button2.Enabled = true;
-            update_button3.Enabled = true;
+            add.Enabled = false;
+            delete.Enabled = true;
+            update.Enabled = true;
 
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -194,9 +194,9 @@ namespace Management_System
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            add_button1.Enabled = false;
-            delete_button2.Enabled = true;
-            update_button3.Enabled = true;
+            add.Enabled = false;
+            delete.Enabled = true;
+            update.Enabled = true;
 
             textBox1.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             comboBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -208,9 +208,9 @@ namespace Management_System
 
         private void treeView1_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            add_button1.Enabled = true;
-            delete_button2.Enabled = false;
-            update_button3.Enabled = false;
+            add.Enabled = true;
+            delete.Enabled = false;
+            update.Enabled = false;
             TreeNode selectedNode = treeView1.SelectedNode;
             if (selectedNode != treeView1.Nodes[0] && selectedNode != null)
             {
@@ -244,11 +244,11 @@ namespace Management_System
             }
         }
 
-        private void add_button1_Click(object sender, EventArgs e)
+        private void add_Click(object sender, EventArgs e)
         {
-            add_button1.Enabled = false;
-            delete_button2.Enabled = false;
-            update_button3.Enabled = false;
+            add.Enabled = false;
+            delete.Enabled = false;
+            update.Enabled = false;
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -290,15 +290,15 @@ namespace Management_System
             else
             {
                 MessageBox.Show("Въведете празните полета!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                add_button1.Enabled = true;
+                add.Enabled = true;
             }
         }
 
-        private void delete_button2_Click(object sender, EventArgs e)
+        private void delete_Click(object sender, EventArgs e)
         {
-            add_button1.Enabled = false;
-            delete_button2.Enabled = false;
-            update_button3.Enabled = false;
+            add.Enabled = false;
+            delete.Enabled = false;
+            update.Enabled = false;
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -339,11 +339,11 @@ namespace Management_System
             }
         }
 
-        private void update_button3_Click(object sender, EventArgs e)
+        private void update_Click(object sender, EventArgs e)
         {
-            add_button1.Enabled = false;
-            delete_button2.Enabled = false;
-            update_button3.Enabled = false;
+            add.Enabled = false;
+            delete.Enabled = false;
+            update.Enabled = false;
             if (textBox1.Text != "" && comboBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "" && textBox5.Text != "")
             {
                 try
@@ -458,7 +458,7 @@ namespace Management_System
             return false;
         }
 
-        private void search_button4_Click(object sender, EventArgs e)
+        private void search_Click(object sender, EventArgs e)
         {
             var searchFor = textBox6.Text.Trim().ToUpper();
             if (searchFor != "")
@@ -484,11 +484,11 @@ namespace Management_System
             CalculateFullPrice();
         }
 
-        private void save_button5_Click(object sender, EventArgs e)
+        private void save_Click(object sender, EventArgs e)
         {
-            add_button1.Enabled = true;
-            delete_button2.Enabled = true;
-            update_button3.Enabled = true;
+            add.Enabled = true;
+            delete.Enabled = true;
+            update.Enabled = true;
 
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {

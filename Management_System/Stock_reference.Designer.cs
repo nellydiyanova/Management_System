@@ -50,7 +50,7 @@ namespace Management_System
             this.inventoryBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet34 = new Management_System.DB_SystemDataSet34();
             this.inventoryTableAdapter2 = new Management_System.DB_SystemDataSet34TableAdapters.InventoryTableAdapter();
-            this.ok_button1 = new System.Windows.Forms.Button();
+            this.ok = new System.Windows.Forms.Button();
             this.suppliersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet35 = new Management_System.DB_SystemDataSet35();
             this.warehousesBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -201,13 +201,13 @@ namespace Management_System
             // 
             this.inventoryTableAdapter2.ClearBeforeFill = true;
             // 
-            // ok_button1
+            // ok
             // 
-            this.ok_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            resources.ApplyResources(this.ok_button1, "ok_button1");
-            this.ok_button1.Name = "ok_button1";
-            this.ok_button1.UseVisualStyleBackColor = false;
-            this.ok_button1.Click += new System.EventHandler(this.ok_button1_Click);
+            this.ok.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            resources.ApplyResources(this.ok, "ok");
+            this.ok.Name = "ok";
+            this.ok.UseVisualStyleBackColor = false;
+            this.ok.Click += new System.EventHandler(this.ok_Click);
             // 
             // suppliersBindingSource
             // 
@@ -256,7 +256,7 @@ namespace Management_System
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.Controls.Add(this.ok_button1);
+            this.Controls.Add(this.ok);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Stock_reference";
             this.Load += new System.EventHandler(this.Stock_reference_Load);
@@ -288,7 +288,7 @@ namespace Management_System
         private DB_SystemDataSet34 dB_SystemDataSet34;
         private System.Windows.Forms.BindingSource inventoryBindingSource2;
         private DB_SystemDataSet34TableAdapters.InventoryTableAdapter inventoryTableAdapter2;
-        private System.Windows.Forms.Button ok_button1;
+        private System.Windows.Forms.Button ok;
         private System.Windows.Forms.DataGridViewTextBoxColumn idproductDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn productnameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deliverypriceDataGridViewTextBoxColumn;

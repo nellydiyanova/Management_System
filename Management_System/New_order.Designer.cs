@@ -44,9 +44,9 @@ namespace Management_System
             this.fullpriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cartBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet26 = new Management_System.DB_SystemDataSet26();
-            this.update_button3 = new System.Windows.Forms.Button();
-            this.add_button1 = new System.Windows.Forms.Button();
-            this.delete_button2 = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -65,8 +65,8 @@ namespace Management_System
             this.cartBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dB_SystemDataSet18 = new Management_System.DB_SystemDataSet18();
             this.warehousesTableAdapter = new Management_System.DB_SystemDataSet14TableAdapters.WarehousesTableAdapter();
-            this.search_button4 = new System.Windows.Forms.Button();
-            this.save_button5 = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.Button();
+            this.save = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -121,9 +121,9 @@ namespace Management_System
             this.groupBox1.Controls.Add(this.textBox11);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Controls.Add(this.update_button3);
-            this.groupBox1.Controls.Add(this.add_button1);
-            this.groupBox1.Controls.Add(this.delete_button2);
+            this.groupBox1.Controls.Add(this.update);
+            this.groupBox1.Controls.Add(this.add);
+            this.groupBox1.Controls.Add(this.delete);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox4);
@@ -234,44 +234,44 @@ namespace Management_System
             this.dB_SystemDataSet26.DataSetName = "DB_SystemDataSet26";
             this.dB_SystemDataSet26.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // update_button3
+            // update
             // 
-            this.update_button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.update_button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.update_button3.Enabled = false;
-            this.update_button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.update_button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.update_button3.Location = new System.Drawing.Point(248, 344);
-            this.update_button3.Name = "update_button3";
-            this.update_button3.Size = new System.Drawing.Size(98, 35);
-            this.update_button3.TabIndex = 31;
-            this.update_button3.Text = "Промени";
-            this.update_button3.UseVisualStyleBackColor = false;
-            this.update_button3.Click += new System.EventHandler(this.update_button3_Click);
+            this.update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.update.Enabled = false;
+            this.update.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.update.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.update.Location = new System.Drawing.Point(248, 344);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(98, 35);
+            this.update.TabIndex = 31;
+            this.update.Text = "Промени";
+            this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
-            // add_button1
+            // add
             // 
-            this.add_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.add_button1.Enabled = false;
-            this.add_button1.Location = new System.Drawing.Point(153, 183);
-            this.add_button1.Name = "add_button1";
-            this.add_button1.Size = new System.Drawing.Size(115, 28);
-            this.add_button1.TabIndex = 30;
-            this.add_button1.Text = "Добави стока ⬇";
-            this.add_button1.UseVisualStyleBackColor = false;
-            this.add_button1.Click += new System.EventHandler(this.add_button1_Click);
+            this.add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.add.Enabled = false;
+            this.add.Location = new System.Drawing.Point(153, 183);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(115, 28);
+            this.add.TabIndex = 30;
+            this.add.Text = "Добави стока ⬇";
+            this.add.UseVisualStyleBackColor = false;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
-            // delete_button2
+            // delete
             // 
-            this.delete_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.delete_button2.Enabled = false;
-            this.delete_button2.Location = new System.Drawing.Point(67, 347);
-            this.delete_button2.Name = "delete_button2";
-            this.delete_button2.Size = new System.Drawing.Size(115, 28);
-            this.delete_button2.TabIndex = 16;
-            this.delete_button2.Text = "Изтрий стока ⬆";
-            this.delete_button2.UseVisualStyleBackColor = false;
-            this.delete_button2.Click += new System.EventHandler(this.delete_button2_Click);
+            this.delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.delete.Enabled = false;
+            this.delete.Location = new System.Drawing.Point(67, 347);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(115, 28);
+            this.delete.TabIndex = 16;
+            this.delete.Text = "Изтрий стока ⬆";
+            this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // textBox5
             // 
@@ -408,31 +408,31 @@ namespace Management_System
             // 
             this.warehousesTableAdapter.ClearBeforeFill = true;
             // 
-            // search_button4
+            // search
             // 
-            this.search_button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.search_button4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.search_button4.Location = new System.Drawing.Point(162, 0);
-            this.search_button4.Name = "search_button4";
-            this.search_button4.Size = new System.Drawing.Size(71, 27);
-            this.search_button4.TabIndex = 22;
-            this.search_button4.Text = "Търси";
-            this.search_button4.UseVisualStyleBackColor = false;
-            this.search_button4.Click += new System.EventHandler(this.search_button4_Click);
+            this.search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.search.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.search.Location = new System.Drawing.Point(162, 0);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(71, 27);
+            this.search.TabIndex = 22;
+            this.search.Text = "Търси";
+            this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
-            // save_button5
+            // save
             // 
-            this.save_button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.save_button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.save_button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.save_button5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.save_button5.Location = new System.Drawing.Point(568, 432);
-            this.save_button5.Name = "save_button5";
-            this.save_button5.Size = new System.Drawing.Size(113, 35);
-            this.save_button5.TabIndex = 17;
-            this.save_button5.Text = "Запази";
-            this.save_button5.UseVisualStyleBackColor = false;
-            this.save_button5.Click += new System.EventHandler(this.save_button5_Click);
+            this.save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.save.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.save.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.save.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.save.Location = new System.Drawing.Point(568, 432);
+            this.save.Name = "save";
+            this.save.Size = new System.Drawing.Size(113, 35);
+            this.save.TabIndex = 17;
+            this.save.Text = "Запази";
+            this.save.UseVisualStyleBackColor = false;
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // textBox6
             // 
@@ -635,8 +635,8 @@ namespace Management_System
             this.ClientSize = new System.Drawing.Size(1062, 479);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.save_button5);
-            this.Controls.Add(this.search_button4);
+            this.Controls.Add(this.save);
+            this.Controls.Add(this.search);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.treeView1);
             this.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -685,11 +685,11 @@ namespace Management_System
         private DB_SystemDataSet14TableAdapters.WarehousesTableAdapter warehousesTableAdapter;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button delete_button2;
-        private System.Windows.Forms.Button search_button4;
-        private System.Windows.Forms.Button save_button5;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button search;
+        private System.Windows.Forms.Button save;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button add_button1;
+        private System.Windows.Forms.Button add;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
@@ -704,7 +704,7 @@ namespace Management_System
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button update_button3;
+        private System.Windows.Forms.Button update;
         private DB_SystemDataSet16 dB_SystemDataSet16;
         private System.Windows.Forms.BindingSource clientsBindingSource;
         private DB_SystemDataSet16TableAdapters.ClientsTableAdapter clientsTableAdapter;
