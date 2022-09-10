@@ -23,6 +23,8 @@ namespace Management_System
         DataTable dt1 = new DataTable();
 
         public static string Status;
+        public static int product_exist;
+        public static int warehouse_exist;
         private void displayData1()
         {
             myConnection.Open();
@@ -570,25 +572,35 @@ namespace Management_System
                     myCommand = new SqlCommand("select * from Warehouses count(id_warehouse)", myConnection);
                     myCommand = new SqlCommand("insert into Warehouses(warehouse, address, zip_code, status) values(@warehouse, @address, @zip_code, @status)", myConnection);
                     myConnection.Open();
+                    myCommand = new SqlCommand("select count(*) from Warehouses where warehouse=@warehouse", myConnection);
                     myCommand.Parameters.AddWithValue("@warehouse", textBox2.Text);
                     myCommand.Parameters.AddWithValue("@address", textBox3.Text);
                     myCommand.Parameters.AddWithValue("@zip_code", textBox4.Text);
                     myCommand.Parameters.AddWithValue("@status", Status);
+                    warehouse_exist = (int)myCommand.ExecuteScalar();
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
-                    MessageBox.Show("Успешно въведен нов склад!");
-                    if (myConnection.State == ConnectionState.Open)
+                    if (warehouse_exist > 0)
                     {
-                        myConnection.Dispose();
+                        MessageBox.Show("Такъв склад вече съществува!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                    TreeNode node = new TreeNode(textBox2.Text);
-                    treeView1.Nodes.Add(node);
-                    textBox1.Clear();
-                    textBox2.Clear();
-                    textBox3.Clear();
-                    textBox4.Clear();
-                    groupBox1.Visible = false;
+                    else
+                    {
+                        MessageBox.Show("Успешно въведен нов склад!");
+                        if (myConnection.State == ConnectionState.Open)
+                        {
+                            myConnection.Dispose();
+                        }
+
+                        TreeNode node = new TreeNode(textBox2.Text);
+                        treeView1.Nodes.Add(node);
+                        textBox1.Clear();
+                        textBox2.Clear();
+                        textBox3.Clear();
+                        textBox4.Clear();
+                        groupBox1.Visible = false;
+                    }
                 }
 
                 catch (Exception ex)
@@ -623,6 +635,7 @@ namespace Management_System
                     myCommand = new SqlCommand("select * from Inventory count(id_product)", myConnection);
                     myCommand = new SqlCommand("insert into Inventory(product_name, delivery_price, sale_price, measure, quantity, supplier, warehouse, status) values(@product_name, @delivery_price, @sale_price, @measure, @quantity, @supplier, @warehouse, @status)", myConnection);
                     myConnection.Open();
+                    myCommand = new SqlCommand("select count(*) from Inventory where product_name=@product_name", myConnection);
                     myCommand.Parameters.AddWithValue("@warehouse", comboBox2.Text);
                     myCommand.Parameters.AddWithValue("@product_name", textBox7.Text);
                     myCommand.Parameters.AddWithValue("@delivery_price", textBox8.Text);
@@ -631,28 +644,37 @@ namespace Management_System
                     myCommand.Parameters.AddWithValue("@supplier", comboBox1.Text);
                     myCommand.Parameters.AddWithValue("@quantity", textBox12.Text);
                     myCommand.Parameters.AddWithValue("@status", Status);
+                    product_exist = (int)myCommand.ExecuteScalar();
                     myCommand.ExecuteNonQuery();
                     myConnection.Close();
-                    MessageBox.Show("Успешно въведена нова стока!");
-                    if (myConnection.State == ConnectionState.Open)
+                    if (product_exist > 0)
                     {
-                        myConnection.Dispose();
+                        MessageBox.Show("Такъв артикул вече съществува!", "Операцията не може да се осъществи!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                    TreeNode node = new TreeNode(textBox7.Text);
-                    TreeNode childnode = treeView1.Nodes[0];
-                    childnode.Nodes.Add(node);
-                    node.ImageIndex = 1;
-                    node.SelectedImageIndex = 1;
-                    textBox5.Clear();
-                    comboBox2.Text = "";
-                    comboBox2.Enabled = false;
-                    textBox7.Clear();
-                    textBox8.Clear();
-                    textBox9.Clear();
-                    textBox10.Clear();
-                    comboBox1.Text = "";
-                    groupBox2.Visible = false;
+                    else
+                    {
+                        MessageBox.Show("Успешно въведена нова стока!");
+                        if (myConnection.State == ConnectionState.Open)
+                        {
+                            myConnection.Dispose();
+                        }
+
+                        TreeNode node = new TreeNode(textBox7.Text);
+                        TreeNode childnode = treeView1.Nodes[0];
+                        childnode.Nodes.Add(node);
+                        node.ImageIndex = 1;
+                        node.SelectedImageIndex = 1;
+                        textBox5.Clear();
+                        comboBox2.Text = "";
+                        comboBox2.Enabled = false;
+                        textBox7.Clear();
+                        textBox8.Clear();
+                        textBox9.Clear();
+                        textBox10.Clear();
+                        comboBox1.Text = "";
+                        groupBox2.Visible = false;
+                    }
                 }
 
                 catch (Exception ex)
